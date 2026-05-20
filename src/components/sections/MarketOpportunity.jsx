@@ -26,7 +26,7 @@ export default function MarketOpportunity() {
 
         <Card className="p-8 bg-primary-foreground/10 border border-primary-foreground/20">
           <h3 className="text-2xl font-bold mb-4 text-[#fff5f5]">Our Findings</h3>
-          <p className="text-lg leading-relaxed opacity-90 text-[#ffffff]">Our market research in Halifax revealed that 86% of people with disabilities have actively avoided venues or attractions in the past year simply because they had no way to verify accessibility features beforehand. This isn't just a compliance problem - it's a revenue blocker. TrekIQ solves both at once.
+          <p className="text-lg leading-relaxed opacity-90 text-[#ffffff]">Our market research in Halifax revealed that 86% of people with disabilities have actively avoided venues or attractions in the past year simply because they had no way to verify accessibility features beforehand. This isn't just a compliance problem - it's a revenue block. Trek IQ solves both at once.
 
           </p>
         </Card>

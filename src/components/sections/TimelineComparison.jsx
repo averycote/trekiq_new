@@ -5,8 +5,8 @@ export default function TimelineComparison() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-primary text-center mb-16">
-          The Old Way vs. TrekIQ Way
+        <h2 className="text-4xl font-bold text-primary text-center mb-16">The Old Way vs. Trek IQ Way
+
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -39,7 +39,7 @@ export default function TimelineComparison() {
 
           {/* TrekIQ Way */}
           <Card className="p-8 bg-white border-2 border-teal-500">
-            <h3 className="text-2xl font-bold text-teal-500 mb-6">TrekIQ Automated</h3>
+            <h3 className="text-2xl font-bold text-teal-500 mb-6">Trek IQ Automated</h3>
             <div className="space-y-6">
               <div>
                 <div className="text-sm font-semibold text-teal-500 mb-2">Day 1</div>
@@ -65,6 +65,6 @@ export default function TimelineComparison() {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
