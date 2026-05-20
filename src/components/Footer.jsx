@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-75">
-          <p>© 2026 TrekIQ. All rights reserved. | WCAG 2.1 AA Compliant</p>
+          <p>© 2026 Trek  IQ. All rights reserved. | WCAG 2.1 AA Compliant</p>
         </div>
       </div>
     </footer>);
