@@ -12,12 +12,12 @@ export default function HowItWorks() {
   {
     number: '02',
     title: 'Automated Audit & Verification',
-    description: 'TrekIQ verifies your accessibility data with photo documentation and compliance reporting.'
+    description: "Trek IQ verifies your accessibility data with photo documentation and compliance reporting."
   },
   {
     number: '03',
     title: 'Live Public Profile',
-    description: 'Your verified accessibility profile goes live on TrekIQ, discoverable by 86% of disability travelers.'
+    description: "Your verified accessibility profile goes live on Trek IQ, discoverable by 86% of ."
   }];
 
 

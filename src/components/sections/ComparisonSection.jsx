@@ -41,7 +41,7 @@ export default function ComparisonSection() {
 
           {/* TrekIQ Verified */}
           <Card className="p-8 bg-white border-2 border-teal-500">
-            <h3 className="text-2xl font-bold text-teal-500 mb-6">TrekIQ Verified</h3>
+            <h3 className="text-2xl font-bold text-teal-500 mb-6">Trek IQ Verified</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" />
@@ -63,6 +63,6 @@ export default function ComparisonSection() {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
