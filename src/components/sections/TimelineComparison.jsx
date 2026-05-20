@@ -43,7 +43,7 @@ export default function TimelineComparison() {
             <div className="space-y-6">
               <div>
                 <div className="text-sm font-semibold text-teal-500 mb-2">Day 1</div>
-                <p className="text-foreground">Submit venue details to TrekIQ</p>
+                <p className="text-foreground">Submit venue details to Trek IQ</p>
               </div>
               <div>
                 <div className="text-sm font-semibold text-teal-500 mb-2">Days 2-3</div>
