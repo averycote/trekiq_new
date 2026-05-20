@@ -9,7 +9,11 @@ export default function BookDemo() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (formData) => {
-    await base44.entities.DemoRequest.create(formData);
+    await base44.integrations.Core.SendEmail({
+      to: 'founder@trekiq.ca',
+      subject: `New Demo Request from ${formData.name} – ${formData.organization}`,
+      body: `New demo request received:\n\nName: ${formData.name}\nOrganization: ${formData.organization}\nVenue Type: ${formData.venue_type}\nEmail: ${formData.email}\nMessage: ${formData.message || 'N/A'}`
+    });
     setSubmitted(true);
   };
 
