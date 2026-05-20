@@ -8,8 +8,8 @@ export default function WhyVerifyHero() {
         <h1 className="text-5xl font-bold text-primary mb-6">
           Why Accessibility Verification Matters
         </h1>
-        <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-          Accessibility compliance isn't just about legal risk—it's about unlocking a $21B market. When you automate audits and create a verified public profile, you save money while attracting disability travelers who currently have no way to trust that your venue is truly accessible.
+        <p className="text-xl text-muted-foreground mb-12 leading-relaxed">Accessibility compliance isn't just about legal risk - it's about unlocking a $21B market. When you automate audits and create a verified public profile, you save money while attracting travellers with disabilities who currently have no way to trust that your venue is truly accessible.
+
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -58,6 +58,6 @@ export default function WhyVerifyHero() {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
