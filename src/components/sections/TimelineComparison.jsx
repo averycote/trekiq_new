@@ -55,7 +55,7 @@ export default function TimelineComparison() {
               </div>
               <div>
                 <div className="text-sm font-semibold text-teal-500 mb-2">Ongoing</div>
-                <p className="text-foreground">Real-time updates, visible to travellers</p>
+                <p className="text-foreground">Real-time updates, visible to travellers with disabilities </p>
               </div>
               <div className="pt-4 border-t border-border">
                 <div className="text-2xl font-bold text-teal-500">$3K–$8K</div>

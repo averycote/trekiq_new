@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="font-bold text-lg mb-4">TrekIQ</h3>
+            <h3 className="font-bold text-lg mb-4">Trek IQ</h3>
             <p className="text-sm opacity-90">
               Automate accessibility audits. Unlock untapped markets.
             </p>
