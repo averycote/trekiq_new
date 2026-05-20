@@ -168,8 +168,8 @@ export default function PublicProfileView() {
               </span>
               <span className="text-gray-400 text-sm">Since January 2025</span>
             </div>
-            <h1 className="text-4xl font-extrabold text-gray-900 mb-1">Main Street Restau</h1>
-            <p className="text-gray-500 text-sm">1215 Lower Water Street</p>
+            <h1 className="text-4xl font-extrabold text-gray-900 mb-1">Main Street Restaurant</h1>
+            <p className="text-gray-500 text-sm">123 Halifax St.</p>
             <p className="text-gray-500 text-sm mb-3">Halifax, Nova Scotia B3J 3Y6</p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <Clock className="w-3.5 h-3.5" />
