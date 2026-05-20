@@ -17,7 +17,7 @@ export default function HowItWorks() {
   {
     number: '03',
     title: 'Live Public Profile',
-    description: "Your verified accessibility profile goes live on Trek IQ, discoverable by 86% of ."
+    description: "Your verified accessibility profile goes live on Trek IQ, discoverable by 86% of travellers with disabilities."
   }];
 
 

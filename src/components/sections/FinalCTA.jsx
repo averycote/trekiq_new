@@ -10,20 +10,20 @@ export default function FinalCTA() {
         <h2 className="text-4xl font-bold mb-6">
           Ready to Automate Compliance?
         </h2>
-        <p className="text-xl opacity-90 mb-10 max-w-2xl mx-auto">
-          Book a demo and see how TrekIQ can save your venue time, money, and unlock the disability travel market.
+        <p className="text-xl opacity-90 mb-10 max-w-2xl mx-auto">Book a demo and see how Trek IQ can save your venue time, money, and unlock the disability travel market.
+
         </p>
         <Link to="/book-demo">
           <Button
             size="lg"
             className="h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2 mx-auto"
-            style={{ backgroundColor: 'hsl(37 92% 65%)' }}
-          >
+            style={{ backgroundColor: 'hsl(37 92% 65%)' }}>
+            
             Book a Demo Now
             <ArrowRight className="w-4 h-4" />
           </Button>
         </Link>
       </div>
-    </section>
-  );
+    </section>);
+
 }
