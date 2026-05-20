@@ -57,25 +57,25 @@ export default function HeroSection() {
               className="absolute inset-0 rounded-2xl blur-3xl opacity-20"
               style={{ backgroundColor: 'hsl(171 55% 45%)' }}>
             </div>
-            <div className="relative bg-white rounded-xl shadow-2xl p-6 border border-border max-w-sm hidden">
-              <div className="bg-gradient-to-b from-teal-500 to-teal-400 rounded-lg h-48 flex items-center justify-center text-white font-bold text-lg">
-                TrekIQ Verified Profile
-              </div>
-              <div className="mt-4 space-y-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-teal-500"></div>
-                  <span className="text-sm font-medium text-foreground">Wheelchair accessible</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-teal-500"></div>
-                  <span className="text-sm font-medium text-foreground">Accessible parking</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-teal-500"></div>
-                  <span className="text-sm font-medium text-foreground">Service animals welcome</span>
-                </div>
-              </div>
-            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
           </div>
         </div>
       </div>
