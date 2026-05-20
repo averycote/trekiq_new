@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import DemoForm from '../components/DemoForm';
@@ -9,12 +9,16 @@ export default function BookDemo() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (formData) => {
-    await base44.integrations.Core.SendEmail({
-      to: 'founder@trekiq.ca',
-      subject: `New Demo Request from ${formData.name} – ${formData.organization}`,
-      body: `New demo request received:\n\nName: ${formData.name}\nOrganization: ${formData.organization}\nVenue Type: ${formData.venue_type}\nEmail: ${formData.email}\nMessage: ${formData.message || 'N/A'}`
+    const response = await fetch('https://formspree.io/f/mpwvynrr', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(formData)
     });
-    setSubmitted(true);
+    if (response.ok) {
+      setSubmitted(true);
+    } else {
+      alert('Failed to submit. Please try again.');
+    }
   };
 
   return (
