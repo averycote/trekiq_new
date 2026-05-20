@@ -12,25 +12,25 @@ export default function MarketOpportunity() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <Card className="p-8 bg-primary-foreground/10 border border-primary-foreground/20 text-center">
             <div className="text-5xl font-bold text-amber-400 mb-4">$21B</div>
-            <p className="text-lg font-semibold">Annual visitor economy potential</p>
+            <p className="text-lg font-semibold text-[#ffffff]">Annual visitor economy potential</p>
           </Card>
           <Card className="p-8 bg-primary-foreground/10 border border-primary-foreground/20 text-center">
             <div className="text-5xl font-bold text-amber-400 mb-4">86%</div>
-            <p className="text-lg font-semibold">Avoided venues due to lack of info</p>
+            <p className="text-lg font-semibold text-[#ffffff]">Avoided venues due to lack of info</p>
           </Card>
           <Card className="p-8 bg-primary-foreground/10 border border-primary-foreground/20 text-center">
             <div className="text-5xl font-bold text-amber-400 mb-4">1 in 4</div>
-            <p className="text-lg font-semibold">Canadians have a disability</p>
+            <p className="text-lg font-semibold text-[#ffffff]">Canadians have a disability</p>
           </Card>
         </div>
 
         <Card className="p-8 bg-primary-foreground/10 border border-primary-foreground/20">
           <h3 className="text-2xl font-bold mb-4">The Halifax Research Finding</h3>
-          <p className="text-lg leading-relaxed opacity-90">
-            Our market research in Halifax revealed that 86% of people with disabilities have actively avoided venues or attractions in the past year simply because they had no way to verify accessibility features beforehand. This isn't a compliance problem—it's a <span className="font-bold">revenue problem</span>. TrekIQ solves both at once.
+          <p className="text-lg leading-relaxed opacity-90 text-[#ffffff]">Our market research in Halifax revealed that 86% of people with disabilities have actively avoided venues or attractions in the past year simply because they had no way to verify accessibility features beforehand. This isn't a compliance problem—it's a revenue problem. TrekIQ solves both at once.
+
           </p>
         </Card>
       </div>
-    </section>
-  );
+    </section>);
+
 }
