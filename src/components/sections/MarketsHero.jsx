@@ -7,8 +7,8 @@ export default function MarketsHero() {
         <h1 className="text-5xl font-bold text-primary mb-6">Your Venue Type, Powered by Trek IQ
 
         </h1>
-        <p className="text-xl text-muted-foreground leading-relaxed">
-          Whether you operate a hotel, convention center, or major attraction, TrekIQ is built for the visitor economy. Automate compliance, unlock growth, and differentiate in your market segment.
+        <p className="text-xl text-muted-foreground leading-relaxed">Whether you operate a hotel, convention center, or major attraction, Trek IQ is built for the visitor economy. Automate compliance, unlock growth, and differentiate in your market segment.
+
         </p>
       </div>
     </section>);
