@@ -52,12 +52,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right: Mockup */}
-          <div className="relative h-96 lg:h-auto flex items-center justify-center hidden">
-            <div
-              className="absolute inset-0 rounded-2xl blur-3xl opacity-20 hidden"
-              style={{ backgroundColor: 'hsl(171 55% 45%)' }}>
-            </div>
-            
+          
 
 
 
@@ -75,8 +70,13 @@ export default function HeroSection() {
 
 
 
-            
-          </div>
+
+
+
+
+
+
+          
         </div>
       </div>
     </section>);
