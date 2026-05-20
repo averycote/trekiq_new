@@ -18,11 +18,11 @@ export default function SampleAudit() {
           <span className="inline-block px-3 py-1 text-xs font-semibold bg-teal-100 text-teal-700 rounded-full mb-4 uppercase tracking-wider">
             Live Demo
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            See TrekIQ in Action
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">See Trek IQ in Action
+
           </h1>
-          <p className="text-lg text-muted-foreground mb-10">
-            From professional audit to public accessibility profile — see the full journey in one place.
+          <p className="text-lg text-muted-foreground mb-10">From professional audit to public accessibility profile - see the full journey in one place.
+
           </p>
 
           {/* Toggle */}
@@ -30,22 +30,22 @@ export default function SampleAudit() {
             <button
               onClick={() => setActiveView('audit')}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all ${
-                activeView === 'audit'
-                  ? 'bg-primary text-primary-foreground shadow'
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
+              activeView === 'audit' ?
+              'bg-primary text-primary-foreground shadow' :
+              'text-muted-foreground hover:text-foreground'}`
+              }>
+              
               <ClipboardList className="w-4 h-4" />
               Audit Report
             </button>
             <button
               onClick={() => setActiveView('profile')}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all ${
-                activeView === 'profile'
-                  ? 'bg-accent text-accent-foreground shadow'
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
+              activeView === 'profile' ?
+              'bg-accent text-accent-foreground shadow' :
+              'text-muted-foreground hover:text-foreground'}`
+              }>
+              
               <Globe className="w-4 h-4" />
               Public Profile
             </button>
@@ -69,27 +69,27 @@ export default function SampleAudit() {
       {/* View Container */}
       <section className="pb-20 px-4">
         <div className="max-w-5xl mx-auto">
-          {activeView === 'audit' ? (
-            <div className="animate-in fade-in slide-in-from-bottom-4 duration-300">
+          {activeView === 'audit' ?
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-300">
               <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-800 flex items-center gap-3">
                 <ClipboardList className="w-5 h-5 flex-shrink-0" />
                 <span><strong>This is the auditor's view</strong> — what TrekIQ staff see when conducting and managing an accessibility audit for a venue.</span>
               </div>
               <AuditReportView />
-            </div>
-          ) : (
-            <div className="animate-in fade-in slide-in-from-bottom-4 duration-300">
+            </div> :
+
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-300">
               <div className="mb-6 p-4 bg-teal-50 border border-teal-200 rounded-lg text-sm text-teal-800 flex items-center gap-3">
                 <Globe className="w-5 h-5 flex-shrink-0" />
                 <span><strong>This is the public profile</strong> — what travelers and visitors see when they search for accessible venues on the TrekIQ platform.</span>
               </div>
               <PublicProfileView />
             </div>
-          )}
+          }
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
