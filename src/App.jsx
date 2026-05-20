@@ -12,6 +12,7 @@ import Markets from './pages/Markets';
 import Partners from './pages/Partners';
 import FAQ from './pages/FAQ';
 import BookDemo from './pages/BookDemo';
+import SampleAudit from './pages/SampleAudit';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -46,6 +47,7 @@ const AuthenticatedApp = () => {
       <Route path="/partners" element={<Partners />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/book-demo" element={<BookDemo />} />
+      <Route path="/sample-audit" element={<SampleAudit />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

@@ -30,6 +30,9 @@ export default function Navigation() {
             <Link to="/faq" className="text-sm text-foreground hover:text-primary transition">
               FAQ
             </Link>
+            <Link to="/sample-audit" className="text-sm text-foreground hover:text-primary transition">
+              See It In Action
+            </Link>
           </div>
 
           {/* CTA Button */}
@@ -67,6 +70,9 @@ export default function Navigation() {
             </Link>
             <Link to="/faq" className="block px-4 py-2 text-foreground hover:bg-secondary rounded">
               FAQ
+            </Link>
+            <Link to="/sample-audit" className="block px-4 py-2 text-foreground hover:bg-secondary rounded">
+              See It In Action
             </Link>
             <Link
               to="/book-demo"
