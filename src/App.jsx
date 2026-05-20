@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
+import ScrollToTop from '@/components/ScrollToTop';
 // Add page imports here
 import Home from './pages/Home';
 import WhyVerify from './pages/WhyVerify';
@@ -39,17 +40,20 @@ const AuthenticatedApp = () => {
 
   // Render the main app
   return (
-    <Routes>
-      {/* Add your page Route elements here */}
-      <Route path="/" element={<Home />} />
-      <Route path="/why-verify" element={<WhyVerify />} />
-      <Route path="/markets" element={<Markets />} />
-      <Route path="/partners" element={<Partners />} />
-      <Route path="/faq" element={<FAQ />} />
-      <Route path="/book-demo" element={<BookDemo />} />
-      <Route path="/sample-audit" element={<SampleAudit />} />
-      <Route path="*" element={<PageNotFound />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        {/* Add your page Route elements here */}
+        <Route path="/" element={<Home />} />
+        <Route path="/why-verify" element={<WhyVerify />} />
+        <Route path="/markets" element={<Markets />} />
+        <Route path="/partners" element={<Partners />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/book-demo" element={<BookDemo />} />
+        <Route path="/sample-audit" element={<SampleAudit />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </>
   );
 };
 
