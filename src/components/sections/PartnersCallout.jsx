@@ -10,20 +10,20 @@ export default function PartnersCallout() {
         <h2 className="text-4xl font-bold mb-6">
           Join Our Ecosystem
         </h2>
-        <p className="text-xl opacity-90 mb-10 max-w-2xl mx-auto">
-          Whether you're a venue operator, technology partner, or accessibility advocate, TrekIQ is built to serve the entire visitor economy.
+        <p className="text-xl opacity-90 mb-10 max-w-2xl mx-auto">Whether you're a venue operator, technology partner, or accessibility advocate, Trek IQ is built to serve the entire visitor economy.
+
         </p>
         <Link to="/book-demo">
           <Button
             size="lg"
             className="h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2 mx-auto"
-            style={{ backgroundColor: 'hsl(37 92% 65%)' }}
-          >
+            style={{ backgroundColor: 'hsl(37 92% 65%)' }}>
+            
             Start a Conversation
             <ArrowRight className="w-4 h-4" />
           </Button>
         </Link>
       </div>
-    </section>
-  );
+    </section>);
+
 }
