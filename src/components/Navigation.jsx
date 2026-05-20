@@ -9,8 +9,8 @@ export default function Navigation() {
     <nav className="sticky top-0 z-50 bg-background border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="font-bold text-xl text-primary">
-            TrekIQ
+          <Link to="/" className="font-bold text-xl text-primary">Trek IQ
+
           </Link>
 
           {/* Desktop Menu */}
@@ -39,23 +39,23 @@ export default function Navigation() {
           <Link
             to="/book-demo"
             className="hidden md:inline-block px-6 py-2 bg-amber-500 text-white rounded-lg font-semibold hover:bg-amber-600 transition"
-            style={{ backgroundColor: 'hsl(37 92% 65%)' }}
-          >
+            style={{ backgroundColor: 'hsl(37 92% 65%)' }}>
+            
             Book a Demo
           </Link>
 
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-primary"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
+            onClick={() => setMobileOpen(!mobileOpen)}>
+            
             {mobileOpen ? <X /> : <Menu />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        {mobileOpen && (
-          <div className="md:hidden pb-4 space-y-2">
+        {mobileOpen &&
+        <div className="md:hidden pb-4 space-y-2">
             <Link to="/" className="block px-4 py-2 text-foreground hover:bg-secondary rounded">
               Home
             </Link>
@@ -75,15 +75,15 @@ export default function Navigation() {
               See It In Action
             </Link>
             <Link
-              to="/book-demo"
-              className="block px-4 py-2 bg-amber-500 text-white rounded font-semibold text-center"
-              style={{ backgroundColor: 'hsl(37 92% 65%)' }}
-            >
+            to="/book-demo"
+            className="block px-4 py-2 bg-amber-500 text-white rounded font-semibold text-center"
+            style={{ backgroundColor: 'hsl(37 92% 65%)' }}>
+            
               Book a Demo
             </Link>
           </div>
-        )}
+        }
       </div>
-    </nav>
-  );
+    </nav>);
+
 }
