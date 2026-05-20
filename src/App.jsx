@@ -6,6 +6,12 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 // Add page imports here
+import Home from './pages/Home';
+import WhyVerify from './pages/WhyVerify';
+import Markets from './pages/Markets';
+import Partners from './pages/Partners';
+import FAQ from './pages/FAQ';
+import BookDemo from './pages/BookDemo';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -34,6 +40,12 @@ const AuthenticatedApp = () => {
   return (
     <Routes>
       {/* Add your page Route elements here */}
+      <Route path="/" element={<Home />} />
+      <Route path="/why-verify" element={<WhyVerify />} />
+      <Route path="/markets" element={<Markets />} />
+      <Route path="/partners" element={<Partners />} />
+      <Route path="/faq" element={<FAQ />} />
+      <Route path="/book-demo" element={<BookDemo />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

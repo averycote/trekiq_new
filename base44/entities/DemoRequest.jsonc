@@ -1,0 +1,39 @@
+{
+  "name": "DemoRequest",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full name of the person requesting a demo"
+    },
+    "organization": {
+      "type": "string",
+      "description": "Name of the venue or organization"
+    },
+    "venue_type": {
+      "type": "string",
+      "enum": [
+        "hotel",
+        "mice",
+        "attraction",
+        "other"
+      ],
+      "description": "Type of venue"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Email address"
+    },
+    "message": {
+      "type": "string",
+      "description": "Additional message or questions"
+    }
+  },
+  "required": [
+    "name",
+    "organization",
+    "venue_type",
+    "email"
+  ]
+}
