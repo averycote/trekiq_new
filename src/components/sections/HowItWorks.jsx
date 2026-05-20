@@ -4,22 +4,22 @@ import { ArrowRight } from 'lucide-react';
 
 export default function HowItWorks() {
   const steps = [
-    {
-      number: '01',
-      title: 'Submit Venue Details',
-      description: 'Provide basic information about your venue—location, type, current accessibility features.'
-    },
-    {
-      number: '02',
-      title: 'Automated Audit & Verification',
-      description: 'TrekIQ verifies your accessibility data with photo documentation and compliance reporting.'
-    },
-    {
-      number: '03',
-      title: 'Live Public Profile',
-      description: 'Your verified accessibility profile goes live on TrekIQ, discoverable by 86% of disability travelers.'
-    }
-  ];
+  {
+    number: '01',
+    title: 'Submit Venue Details',
+    description: 'Provide basic information about your venue—location, type, current accessibility features.'
+  },
+  {
+    number: '02',
+    title: 'Automated Audit & Verification',
+    description: 'TrekIQ verifies your accessibility data with photo documentation and compliance reporting.'
+  },
+  {
+    number: '03',
+    title: 'Live Public Profile',
+    description: 'Your verified accessibility profile goes live on TrekIQ, discoverable by 86% of disability travelers.'
+  }];
+
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
@@ -38,15 +38,15 @@ export default function HowItWorks() {
           <div className="hidden md:block absolute top-32 left-1/3 right-1/3 h-1 bg-gradient-to-r from-amber-400 to-amber-400/0"></div>
           <div className="hidden md:block absolute top-32 right-1/3 left-2/3 h-1 bg-gradient-to-l from-amber-400 to-amber-400/0"></div>
 
-          {steps.map((step, idx) => (
-            <Card key={idx} className="p-8 bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur-sm relative z-10">
+          {steps.map((step, idx) =>
+          <Card key={idx} className="p-8 bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur-sm relative z-10">
               <div className="text-5xl font-bold text-amber-400 mb-4">{step.number}</div>
-              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-              <p className="opacity-90 leading-relaxed">{step.description}</p>
+              <h3 className="text-xl font-bold mb-3 text-[#ffffff]">{step.title}</h3>
+              <p className="opacity-90 leading-relaxed text-[#ffffff]">{step.description}</p>
             </Card>
-          ))}
+          )}
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
