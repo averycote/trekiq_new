@@ -33,8 +33,8 @@ export default function HeroSection() {
                 <Button
                   size="lg"
                   className="w-full sm:w-auto h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2"
-                  style={{ backgroundColor: 'hsl(37 92% 65%)' }}
-                >
+                  style={{ backgroundColor: 'hsl(37 92% 65%)' }}>
+                  
                   Book a Demo
                   <ArrowRight className="w-4 h-4" />
                 </Button>
@@ -43,8 +43,8 @@ export default function HeroSection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full sm:w-auto h-12 px-8 font-semibold rounded-lg"
-                >
+                  className="w-full sm:w-auto h-12 px-8 font-semibold rounded-lg">
+                  
                   Learn More
                 </Button>
               </Link>
@@ -55,9 +55,9 @@ export default function HeroSection() {
           <div className="relative h-96 lg:h-auto flex items-center justify-center">
             <div
               className="absolute inset-0 rounded-2xl blur-3xl opacity-20"
-              style={{ backgroundColor: 'hsl(171 55% 45%)' }}
-            ></div>
-            <div className="relative bg-white rounded-xl shadow-2xl p-6 border border-border max-w-sm">
+              style={{ backgroundColor: 'hsl(171 55% 45%)' }}>
+            </div>
+            <div className="relative bg-white rounded-xl shadow-2xl p-6 border border-border max-w-sm hidden">
               <div className="bg-gradient-to-b from-teal-500 to-teal-400 rounded-lg h-48 flex items-center justify-center text-white font-bold text-lg">
                 TrekIQ Verified Profile
               </div>
@@ -79,6 +79,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
