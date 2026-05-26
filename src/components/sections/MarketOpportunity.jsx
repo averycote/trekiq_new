@@ -5,7 +5,7 @@ export default function MarketOpportunity() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">The Accessible Travel Market is Massive
+        <h2 className="text-4xl font-bold mb-12 text-center">The Accessible Market is Massive
 
         </h2>
 
