@@ -26,7 +26,7 @@ export default function WhyVerifyHero() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-teal-500 font-bold">✓</span>
-                <span className="text-foreground">Stay ahead of 2030 mandate</span>
+                <span className="text-foreground">Stay ahead of 2030 mandate/be a leader</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-teal-500 font-bold">✓</span>
@@ -40,7 +40,7 @@ export default function WhyVerifyHero() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <span className="text-teal-500 font-bold">✓</span>
-                <span className="text-foreground">Reach 86% of disability travelers</span>
+                <span className="text-foreground">Reach travellers with disabilities</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-teal-500 font-bold">✓</span>
