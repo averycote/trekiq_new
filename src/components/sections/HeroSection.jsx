@@ -14,8 +14,8 @@ export default function HeroSection() {
               <h1 className="text-5xl lg:text-6xl font-bold text-primary leading-tight mb-4">
                 Automate your accessibility audits.
               </h1>
-              <h2 className="text-3xl lg:text-4xl font-bold text-teal-500 mb-6">
-                Unlock a $21B market.
+              <h2 className="text-3xl lg:text-4xl font-bold text-teal-500 mb-6">Unlock a $55B market.
+
               </h2>
             </div>
 
