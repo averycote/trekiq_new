@@ -12,7 +12,7 @@ export default function MarketOpportunity() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <Card className="p-8 bg-primary-foreground/10 border border-primary-foreground/20 text-center">
             <div className="text-5xl font-bold text-amber-400 mb-4">$21B</div>
-            <p className="text-lg font-semibold text-[#ffffff]">Combined spending power of people with disabilities</p>
+            <p className="text-lg font-semibold text-[#ffffff]">Combined spending power of people with disabilities in Canada</p>
           </Card>
           <Card className="p-8 bg-primary-foreground/10 border border-primary-foreground/20 text-center">
             <div className="text-5xl font-bold text-amber-400 mb-4">86%</div>
