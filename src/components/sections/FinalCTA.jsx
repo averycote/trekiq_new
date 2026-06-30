@@ -9,7 +9,7 @@ const ease = [0.22, 1, 0.36, 1];
 
 export default function FinalCTA() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 text-primary-foreground opacity-100 bg-[hsl(var(--foreground))]">
       <div className="max-w-4xl mx-auto text-center">
         <Reveal>
           <h2 className="text-4xl font-bold mb-6">
@@ -21,8 +21,8 @@ export default function FinalCTA() {
           <motion.div
             whileHover={{ scale: 1.04 }}
             transition={{ duration: 0.2, ease }}
-            className="inline-block"
-          >
+            className="inline-block">
+            
             <Link to="/book-demo">
               <Button
                 size="lg"
@@ -35,6 +35,6 @@ export default function FinalCTA() {
           </motion.div>
         </Reveal>
       </div>
-    </section>
-  );
+    </section>);
+
 }
