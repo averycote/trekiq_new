@@ -9,13 +9,15 @@ const ease = [0.22, 1, 0.36, 1];
 
 export default function FinalCTA() {
   return (
-    <section className="relative overflow-hidden py-24 px-4 sm:px-6 lg:px-8 bg-[hsl(210_100%_12%)] text-white">
-      {/* Glow accents */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-[hsl(206_64%_49%)] opacity-15 blur-[120px]" />
+    <section className="relative overflow-hidden py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[hsl(210_100%_8%)] via-[hsl(210_100%_12%)] to-[hsl(210_80%_18%)] text-white">
+      {/* Gradient mesh glow accents */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-[hsl(206_64%_49%)] opacity-20 blur-[120px]" />
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full bg-[hsl(206_80%_55%)] opacity-10 blur-[100px]" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[400px] rounded-full bg-[hsl(200_70%_45%)] opacity-10 blur-[100px]" />
 
       {/* Grid overlay */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)',
           backgroundSize: '48px 48px'

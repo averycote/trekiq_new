@@ -9,7 +9,6 @@ import ComparisonSection from '../components/sections/ComparisonSection';
 import HowItWorks from '../components/sections/HowItWorks';
 import MarketSegments from '../components/sections/MarketSegments';
 import RiskCallout from '../components/sections/RiskCallout';
-import PartnerEcosystem from '../components/sections/PartnerEcosystem';
 import FinalCTA from '../components/sections/FinalCTA';
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
         <HowItWorks />
         <MarketSegments />
         <RiskCallout />
-        <PartnerEcosystem />
         <FinalCTA />
       </main>
       <Footer />
