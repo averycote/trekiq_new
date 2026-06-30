@@ -28,10 +28,10 @@ export default function PartnerGrid() {
       description: 'Building workforce development and skills training around accessibility compliance and automation.'
     },
     {
-      name: 'Bentley Systems',
-      category: 'Technology Partner',
-      logo: '🏗️',
-      description: 'Providing advanced venue mapping and infrastructure data for photo-backed accessibility documentation.'
+      name: 'Volta',
+      category: 'Innovation Hub',
+      logo: 'https://media.base44.com/images/public/6a0dcb1e5b88cf409631f1ab/dca207546_image.png',
+      description: 'Trek IQ is a proud Volta resident, part of Atlantic Canada\'s premier innovation and startup community.'
     }
   ];
 
