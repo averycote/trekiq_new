@@ -16,12 +16,6 @@ export default function Mice() {
       'Make accessibility a competitive advantage for attracting events',
       'Reduce onboarding friction for event planners'
     ],
-    metrics: [
-      { value: '85%', label: 'Planner Confidence', description: 'Event planners feel more confident booking venues with documented accessibility.' },
-      { value: '50%', label: 'Faster Responses', description: 'Respond to accessibility RFP questions in a fraction of the time.' },
-      { value: '1 in 4', label: 'Attendees Need Access', description: 'A quarter of event attendees benefit from clear accessibility information.' },
-      { value: '40%', label: 'More Bookings', description: 'Venues with transparent accessibility win more event bookings.' }
-    ],
     stakeholders: [
       {
         role: 'Venue Operations Manager',

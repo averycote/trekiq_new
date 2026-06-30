@@ -16,12 +16,6 @@ export default function IndependentHotels() {
       'Build trust and attract more guests through transparency',
       'Reduce booking abandonment due to accessibility uncertainty'
     ],
-    metrics: [
-      { value: '88%', label: 'Booking Confidence', description: 'Guests feel more confident booking when accessibility is clearly documented.' },
-      { value: '1 in 4', label: 'Guests with Disabilities', description: 'A quarter of potential guests benefit from transparent accessibility information.' },
-      { value: '45%', label: 'Fewer Abandoned Bookings', description: 'Clear accessibility info reduces booking abandonment from accessibility uncertainty.' },
-      { value: '3x', label: 'More Likely to Book', description: 'Guests are significantly more likely to book properties with documented accessibility.' }
-    ],
     stakeholders: [
       {
         role: 'General Manager',
