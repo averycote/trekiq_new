@@ -83,7 +83,7 @@ export default function Navigation() {
           <button
             className="md:hidden text-white"
             onClick={() => setMobileOpen(!mobileOpen)}>
-            {mobileOpen ? <X /> : <Menu />}
+            {mobileOpen ? <X /> : <Menu className="text-[hsl(var(--muted-foreground))]" />}
           </button>
         </div>
 
