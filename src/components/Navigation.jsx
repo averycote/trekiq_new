@@ -40,9 +40,9 @@ export default function Navigation() {
                 <ChevronDown className="w-4 h-4" />
               </button>
               {marketsOpen &&
-              <div className="absolute top-full left-0 pt-2 w-64">
-                  <div className="bg-[hsl(210_100%_12%)]/95 backdrop-blur-lg border border-white/10 rounded-xl shadow-2xl py-2">
-                    <Link to="/markets" className="block px-4 py-2 text-sm text-white/70 hover:bg-white/5 hover:text-white transition">
+              <div className="absolute top-full left-0 pt-2 w-64 z-50">
+                  <div className="bg-[hsl(210_100%_12%)] backdrop-blur-xl border border-white/15 rounded-xl shadow-2xl py-2">
+                    <Link to="/markets" className="block px-4 py-2 text-sm text-white hover:bg-[hsl(206_64%_49%)]/20 transition">
                       All Markets
                     </Link>
                     <div className="border-t border-white/10 my-1"></div>
@@ -50,7 +50,7 @@ export default function Navigation() {
                   <Link
                     key={market.path}
                     to={market.path}
-                    className="block px-4 py-2 text-sm text-white/70 hover:bg-white/5 hover:text-white transition">
+                    className="block px-4 py-2 text-sm text-white hover:bg-[hsl(206_64%_49%)]/20 transition">
                     
                         {market.label}
                       </Link>
