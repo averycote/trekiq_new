@@ -7,7 +7,7 @@ export default function PartnersHero() {
         <h1 className="text-5xl font-bold text-primary mb-6">
           Strategic Partnerships
         </h1>
-        <p className="text-xl text-muted-foreground leading-relaxed">Trek IQ is built on a foundation of trusted partnerships across tourism, accessibility, and technology. Our ecosystem partners validate our mission and ensure accessibility compliance serves the entire visitor economy.
+        <p className="text-xl text-muted-foreground leading-relaxed">Trek IQ is built on a foundation of trusted partnerships across tourism, accessibility, and technology. Our ecosystem partners share our mission to help every visitor understand what to expect before they arrive.
 
         </p>
       </div>

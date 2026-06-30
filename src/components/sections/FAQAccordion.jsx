@@ -4,36 +4,36 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 export default function FAQAccordion() {
   const faqs = [
     {
-      question: 'How does the TrekIQ audit process work?',
-      answer: 'You submit your venue details through our platform. Our team conducts an automated accessibility audit using photo documentation and verified data collection. Within 3-5 business days, your venue receives a verified accessibility profile that goes live on the TrekIQ network and is discoverable by disability travelers.'
+      question: 'We already hired an accessibility consultant. Why do we need TrekIQ?',
+      answer: 'Consultants assess. TrekIQ helps organizations manage, communicate, and maintain accessibility over time. We transform that assessment into a living accessibility profile that can be updated, shared publicly, and used for future planning—extending the value of your consultant\'s work to be public-facing and long-lasting.'
     },
     {
-      question: 'What does a TrekIQ verified profile include?',
-      answer: 'A verified profile includes detailed accessibility information for all areas of your venue: entrance accessibility, parking, restrooms, elevators, seating areas, staff training certifications, service animal policies, emergency procedures, and more—all backed by photo documentation and real-time verification.'
+      question: 'We\'re already accessible. What does TrekIQ add?',
+      answer: 'Many organizations have invested heavily in accessibility but still struggle to communicate those investments to visitors, patients, guests, or event planners. TrekIQ helps ensure the work you\'ve already done becomes visible and valuable—turning your accessibility features into a public profile that builds confidence.'
     },
     {
-      question: 'How much does TrekIQ cost?',
-      answer: 'Pricing depends on your venue type and size. Hotels typically range from $3,500–$8,000/year, MICE venues from $5,000–$12,000/year, and major attractions from $6,000–$15,000/year. All pricing includes the initial audit, public profile, real-time updates, and compliance documentation. Contact our team for a custom quote.'
+      question: 'Accessibility isn\'t a priority right now. Should we wait?',
+      answer: 'TrekIQ doesn\'t require organizations to fix everything immediately—it helps identify priorities so improvements can happen over time. Many organizations begin by simply documenting accessibility. TrekIQ can also help with capital planning by matching you with grants so you can find funding for upgrades.'
     },
     {
-      question: 'How does this help with 2030 compliance?',
-      answer: 'The 2030 provincial accessibility mandate requires documented, verifiable compliance. TrekIQ automates compliance documentation and keeps your records audit-ready at all times. You\'ll have continuous proof of accessibility compliance—no scrambling to gather documentation when audits occur.'
+      question: 'We don\'t have budget for this. How can it work?',
+      answer: 'Rather than creating a new project, TrekIQ often strengthens projects already planned. Accessibility documentation supports broader initiatives such as grant applications, capital planning, visitor experience improvements, and organizational transparency—making it a multiplier for existing investments.'
     },
     {
-      question: 'Can I update my accessibility profile over time?',
-      answer: 'Yes. Venue accessibility changes seasonally or after renovations. TrekIQ allows real-time updates to your profile. If you make changes (like adding an elevator or improving parking), our team can verify and publish updates within days.'
+      question: 'We\'re too small. Does accessibility documentation make sense for us?',
+      answer: 'Accessibility matters regardless of organizational size. For smaller organizations, having clear accessibility information can significantly improve visitor confidence while reducing staff time spent answering accessibility questions. This brings in more traffic with less admin time spent.'
     },
     {
-      question: 'Who can see my TrekIQ verified profile?',
-      answer: 'Your profile is discoverable by anyone on the TrekIQ platform and searchable by people with disabilities planning trips. It\'s also shareable directly to travel agents, convention planners, and tourism boards. You own and control your profile visibility.'
+      question: 'We\'re waiting for accessibility legislation. Why act now?',
+      answer: 'Accessibility legislation establishes minimum expectations. Organizations that communicate accessibility proactively build trust long before regulations require additional reporting. Leading organizations rarely wait for legislation to define the customer experience.'
     },
     {
-      question: 'What if we don\'t pass the initial audit?',
-      answer: 'If accessibility gaps are identified, we provide a detailed remediation roadmap. You can address gaps and schedule a re-audit. Our goal is to help you improve accessibility and succeed—not to penalize you. We\'re here to support compliance and growth together.'
+      question: 'How is this different from Google Maps?',
+      answer: 'Google Maps may indicate whether a location has wheelchair access, but it doesn\'t explain what visitors should actually expect. TrekIQ provides photo-backed accessibility documentation that helps people make informed decisions before arriving—covering entrances, restrooms, pathways, sensory considerations, and more.'
     },
     {
-      question: 'Do you offer multi-location discounts?',
-      answer: 'Yes. Hotels and attractions with multiple locations qualify for bulk pricing. Contact our team to discuss enterprise solutions tailored to your portfolio.'
+      question: 'We don\'t receive many accessibility requests. Is there really demand?',
+      answer: 'The absence of questions does not necessarily indicate the absence of demand. Many people simply don\'t visit places when accessibility information isn\'t available. Clear accessibility information gives people the confidence to engage with your organization—turning silent non-visitors into active visitors.'
     }
   ];
 

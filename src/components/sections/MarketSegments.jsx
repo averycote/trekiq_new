@@ -7,22 +7,39 @@ import { ArrowRight } from 'lucide-react';
 export default function MarketSegments() {
   const segments = [
     {
-      title: 'Hotels & Accommodations',
-      icon: '🏨',
-      stat: '$8.2B annual market',
-      description: 'Compete for disability travelers and corporate groups requiring verified accessibility.'
+      title: 'Tourism Attractions',
+      icon: '🎡',
+      outcome: 'Increase visitor confidence',
+      description: 'Help every visitor know what to expect before they arrive.',
+      path: '/markets/tourism'
     },
     {
       title: 'MICE Venues',
       icon: '🏢',
-      stat: '$6.5B annual market',
-      description: 'Stand out in convention planning with documented, verified accessibility features.'
+      outcome: 'Win more events',
+      description: 'Give event planners photo-backed accessibility information before they book.',
+      path: '/markets/mice'
     },
     {
-      title: 'Major Attractions',
-      icon: '🎡',
-      stat: '$6.3B annual market',
-      description: 'Attract 86% of visitors with disabilities who currently avoid venues due to lack of information.'
+      title: 'Churches',
+      icon: '⛪',
+      outcome: 'Increase participation',
+      description: 'Create a welcoming experience for every member of your community.',
+      path: '/markets/churches'
+    },
+    {
+      title: 'Independent Hotels',
+      icon: '🏨',
+      outcome: 'Increase booking confidence',
+      description: 'Help guests book with confidence by providing photo-backed accessibility information.',
+      path: '/markets/independent-hotels'
+    },
+    {
+      title: 'Health Adjacent',
+      icon: '⚕️',
+      outcome: 'Improve patient experience',
+      description: 'Help every patient understand whether your clinic meets their accessibility needs before they arrive.',
+      path: '/markets/health-adjacent'
     }
   ];
 
@@ -34,18 +51,18 @@ export default function MarketSegments() {
             Built for Your Market
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            TrekIQ serves the $21B visitor economy. Find your venue type.
+            TrekIQ serves organizations across the visitor economy. Find your sector and see how accessibility documentation drives your outcomes.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {segments.map((segment, idx) => (
-            <Card key={idx} className="p-8 bg-white hover:shadow-lg transition-shadow">
+            <Card key={idx} className="p-8 bg-white hover:shadow-lg transition-shadow flex flex-col">
               <div className="text-6xl mb-4">{segment.icon}</div>
               <h3 className="text-2xl font-bold text-primary mb-2">{segment.title}</h3>
-              <p className="text-lg font-semibold text-teal-500 mb-4">{segment.stat}</p>
-              <p className="text-foreground mb-6 leading-relaxed">{segment.description}</p>
-              <Link to="/markets">
+              <p className="text-lg font-semibold text-teal-500 mb-4">{segment.outcome}</p>
+              <p className="text-foreground mb-6 leading-relaxed flex-grow">{segment.description}</p>
+              <Link to={segment.path}>
                 <Button
                   variant="outline"
                   className="w-full flex items-center justify-center gap-2"

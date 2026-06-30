@@ -14,6 +14,11 @@ import Partners from './pages/Partners';
 import FAQ from './pages/FAQ';
 import BookDemo from './pages/BookDemo';
 import SampleAudit from './pages/SampleAudit';
+import Tourism from './pages/markets/Tourism';
+import Mice from './pages/markets/Mice';
+import Churches from './pages/markets/Churches';
+import IndependentHotels from './pages/markets/IndependentHotels';
+import HealthAdjacent from './pages/markets/HealthAdjacent';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -51,6 +56,11 @@ const AuthenticatedApp = () => {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/book-demo" element={<BookDemo />} />
         <Route path="/sample-audit" element={<SampleAudit />} />
+        <Route path="/markets/tourism" element={<Tourism />} />
+        <Route path="/markets/mice" element={<Mice />} />
+        <Route path="/markets/churches" element={<Churches />} />
+        <Route path="/markets/independent-hotels" element={<IndependentHotels />} />
+        <Route path="/markets/health-adjacent" element={<HealthAdjacent />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>

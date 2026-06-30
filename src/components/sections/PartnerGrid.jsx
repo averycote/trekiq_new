@@ -31,7 +31,7 @@ export default function PartnerGrid() {
       name: 'Bentley Systems',
       category: 'Technology Partner',
       logo: '🏗️',
-      description: 'Providing advanced venue mapping and infrastructure data for verified accessibility profiling.'
+      description: 'Providing advanced venue mapping and infrastructure data for photo-backed accessibility documentation.'
     }
   ];
 

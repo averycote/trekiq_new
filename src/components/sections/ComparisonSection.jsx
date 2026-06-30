@@ -8,21 +8,21 @@ export default function ComparisonSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary mb-4">
-            Compliance Reimagined
+            Accessibility Documentation Reimagined
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            The old approach to accessibility compliance is manual, expensive, and leaves money on the table.
+            Organizations struggle to document and communicate accessibility information. Poor information creates uncertainty, increases staff workload, and limits participation. There's a better way.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Standard Compliance */}
+          {/* Old Way */}
           <Card className="p-8 bg-white">
-            <h3 className="text-2xl font-bold text-primary mb-6">Standard Compliance</h3>
+            <h3 className="text-2xl font-bold text-primary mb-6">The Old Way: Manual &amp; Static</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <X className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
-                <span className="text-foreground">Manual site audits (months, not weeks)</span>
+                <span className="text-foreground">Manual site audits take months, not weeks</span>
               </li>
               <li className="flex items-start gap-3">
                 <X className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
@@ -34,35 +34,35 @@ export default function ComparisonSection() {
               </li>
               <li className="flex items-start gap-3">
                 <X className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
-                <span className="text-foreground">Static documentation (obsolete within months)</span>
+                <span className="text-foreground">Fragmented, outdated information</span>
               </li>
             </ul>
           </Card>
 
-          {/* TrekIQ Verified */}
+          {/* TrekIQ Way */}
           <Card className="p-8 bg-white border-2 border-teal-500">
-            <h3 className="text-2xl font-bold text-teal-500 mb-6">Trek IQ Verified</h3>
+            <h3 className="text-2xl font-bold text-teal-500 mb-6">The Trek IQ Way: Accessibility Profiles</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" />
-                <span className="text-foreground">Automated audits (days, not months)</span>
+                <span className="text-foreground">Comprehensive accessibility documentation in days, not months</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" />
-                <span className="text-foreground">Fraction of traditional consultant costs</span>
+                <span className="text-foreground">A fraction of traditional consultant costs</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" />
-                <span className="text-foreground">Public verified profile = market growth</span>
+                <span className="text-foreground">Public accessibility profiles = visitor confidence</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" />
-                <span className="text-foreground">Real-time updates as venue evolves</span>
+                <span className="text-foreground">Dynamic profiles that grow with your venue</span>
               </li>
             </ul>
           </Card>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 }

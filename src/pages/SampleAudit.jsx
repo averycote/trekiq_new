@@ -18,10 +18,8 @@ export default function SampleAudit() {
           <span className="inline-block px-3 py-1 text-xs font-semibold bg-teal-100 text-teal-700 rounded-full mb-4 uppercase tracking-wider">
             Live Demo
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">See Trek IQ in Action
-
-          </h1>
-          <p className="text-lg text-muted-foreground mb-10">From professional audit to public accessibility profile - see the full journey in one place.
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">See an Accessibility Profile</h1>
+          <p className="text-lg text-muted-foreground mb-10">From documentation to public accessibility profile—see how TrekIQ helps organizations communicate accessibility clearly.
 
           </p>
 
@@ -55,12 +53,12 @@ export default function SampleAudit() {
           <div className="flex items-center justify-center gap-3 mt-6 text-sm text-muted-foreground">
             <span className={`flex items-center gap-1.5 transition-all ${activeView === 'audit' ? 'text-primary font-semibold' : ''}`}>
               <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${activeView === 'audit' ? 'bg-primary text-primary-foreground' : 'bg-muted'}`}>1</span>
-              Auditor conducts assessment
+              Accessibility documentation captured
             </span>
             <ArrowRight className="w-4 h-4 text-muted" />
             <span className={`flex items-center gap-1.5 transition-all ${activeView === 'profile' ? 'text-accent font-semibold' : ''}`}>
               <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${activeView === 'profile' ? 'bg-accent text-accent-foreground' : 'bg-muted'}`}>2</span>
-              Public profile goes live
+              Public profile published
             </span>
           </div>
         </div>
@@ -73,7 +71,7 @@ export default function SampleAudit() {
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-300">
               <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-800 flex items-center gap-3">
                 <ClipboardList className="w-5 h-5 flex-shrink-0" />
-                <span><strong>This is the auditor's view</strong> — what TrekIQ staff see when conducting and managing an accessibility audit for a venue.</span>
+                <span><strong>This is the internal view</strong> — what your team sees when managing accessibility documentation for your venue.</span>
               </div>
               <AuditReportView />
             </div> :
@@ -81,7 +79,7 @@ export default function SampleAudit() {
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-300">
               <div className="mb-6 p-4 bg-teal-50 border border-teal-200 rounded-lg text-sm text-teal-800 flex items-center gap-3">
                 <Globe className="w-5 h-5 flex-shrink-0" />
-                <span><strong>This is the public profile</strong> — what travelers and visitors see when they search for accessible venues on the TrekIQ platform.</span>
+                <span><strong>This is the public profile</strong> — what visitors see when they want to understand what to expect before they arrive.</span>
               </div>
               <PublicProfileView />
             </div>

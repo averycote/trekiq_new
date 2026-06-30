@@ -38,7 +38,7 @@ export default function DemoForm({ onSubmit }) {
     <Card className="w-full max-w-md p-8">
       <h2 className="text-3xl font-bold text-primary mb-2">Book a Demo</h2>
       <p className="text-muted-foreground mb-6">
-        Let's show you how TrekIQ automates accessibility audits and unlocks market growth.
+        See how TrekIQ helps your organization document accessibility, improve planning, and build visitor confidence.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-5">
@@ -66,7 +66,7 @@ export default function DemoForm({ onSubmit }) {
             name="organization"
             value={formData.organization}
             onChange={handleChange}
-            placeholder="Venue or organization name"
+            placeholder="Organization name"
             required
             className="text-lg"
           />
@@ -74,16 +74,18 @@ export default function DemoForm({ onSubmit }) {
 
         <div>
           <label className="block text-sm font-medium text-foreground mb-2">
-            Venue Type *
+            Organization Type *
           </label>
           <Select value={formData.venue_type} onValueChange={handleVenueTypeChange}>
             <SelectTrigger className="text-lg">
-              <SelectValue placeholder="Select venue type" />
+              <SelectValue placeholder="Select your sector" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="hotel">Hotel</SelectItem>
+              <SelectItem value="hotel">Independent Hotel</SelectItem>
               <SelectItem value="mice">MICE Venue</SelectItem>
-              <SelectItem value="attraction">Major Attraction</SelectItem>
+              <SelectItem value="attraction">Tourism Attraction</SelectItem>
+              <SelectItem value="church">Church / Faith Organization</SelectItem>
+              <SelectItem value="health">Health / Clinic</SelectItem>
               <SelectItem value="other">Other</SelectItem>
             </SelectContent>
           </Select>
@@ -98,7 +100,7 @@ export default function DemoForm({ onSubmit }) {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="your.email@venue.com"
+            placeholder="your.email@organization.com"
             required
             className="text-lg"
           />
@@ -112,7 +114,7 @@ export default function DemoForm({ onSubmit }) {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Any questions or context about your venue?"
+            placeholder="Any questions or context about your organization?"
             className="text-base"
           />
         </div>

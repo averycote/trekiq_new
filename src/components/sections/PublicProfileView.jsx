@@ -164,7 +164,7 @@ export default function PublicProfileView() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="flex items-center gap-1.5 px-3 py-1 bg-white border border-teal-200 text-teal-700 text-xs font-semibold rounded-full">
-                <ShieldCheck className="w-3.5 h-3.5" /> Verified by Trek.iQ
+                <ShieldCheck className="w-3.5 h-3.5" /> Documented by Trek IQ
               </span>
               <span className="text-gray-400 text-sm">Since January 2025</span>
             </div>

@@ -9,13 +9,13 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Trek IQ</h3>
             <p className="text-sm opacity-90">
-              Automate accessibility audits. Unlock untapped markets.
+              An Accessibility Documentation Platform. Help every visitor understand what to expect before they arrive.
             </p>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">Product</h4>
+            <h4 className="font-semibold mb-4">Platform</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/why-verify" className="hover:opacity-80">Why Verify</Link></li>
+              <li><Link to="/why-verify" className="hover:opacity-80">Our Approach</Link></li>
               <li><Link to="/markets" className="hover:opacity-80">Markets</Link></li>
               <li><Link to="/book-demo" className="hover:opacity-80">Book a Demo</Link></li>
             </ul>
@@ -37,9 +37,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-75">
-          <p>© 2026 Trek  IQ. All rights reserved. | WCAG 2.1 AA Compliant</p>
+          <p>© 2026 Trek IQ. All rights reserved.</p>
         </div>
       </div>
-    </footer>);
-
+    </footer>
+  );
 }

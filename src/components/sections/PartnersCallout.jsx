@@ -10,7 +10,7 @@ export default function PartnersCallout() {
         <h2 className="text-4xl font-bold mb-6">
           Join Our Ecosystem
         </h2>
-        <p className="text-xl opacity-90 mb-10 max-w-2xl mx-auto">Whether you're a venue operator, technology partner, or accessibility advocate, Trek IQ is built to serve the entire visitor economy.
+        <p className="text-xl opacity-90 mb-10 max-w-2xl mx-auto">Whether you're a venue operator, technology partner, or accessibility advocate, Trek IQ is built to help every visitor understand what to expect before they arrive.
 
         </p>
         <Link to="/book-demo">

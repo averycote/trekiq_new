@@ -1,25 +1,24 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
-import { ArrowRight } from 'lucide-react';
 
 export default function HowItWorks() {
   const steps = [
-  {
-    number: '01',
-    title: 'Submit Venue Details',
-    description: 'Provide basic information about your venue—location, type, current accessibility features.'
-  },
-  {
-    number: '02',
-    title: 'Automated Audit & Verification',
-    description: "Trek IQ verifies your accessibility data with photo documentation and compliance reporting."
-  },
-  {
-    number: '03',
-    title: 'Live Public Profile',
-    description: "Your verified accessibility profile goes live on Trek IQ, discoverable by 86% of travellers with disabilities."
-  }];
-
+    {
+      number: '01',
+      title: 'Document Your Space',
+      description: 'TrekIQ captures photo-backed accessibility documentation across every area of your venue—entrances, restrooms, pathways, parking, and more.'
+    },
+    {
+      number: '02',
+      title: 'Identify &amp; Prioritize',
+      description: 'TrekIQ identifies barriers and recommends improvements, helping you plan accessibility upgrades with confidence and clarity.'
+    },
+    {
+      number: '03',
+      title: 'Communicate with Confidence',
+      description: 'Your public accessibility profile goes live, giving visitors the information they need to plan their visit with confidence.'
+    }
+  ];
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
@@ -29,24 +28,23 @@ export default function HowItWorks() {
             How It Works
           </h2>
           <p className="text-lg opacity-90 max-w-2xl mx-auto">
-            Three simple steps to automated accessibility compliance and market growth.
+            Three simple steps to better visitor confidence and accessibility transparency.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {/* Connector Lines (desktop only) */}
           <div className="hidden md:block absolute top-32 left-1/3 right-1/3 h-1 bg-gradient-to-r from-amber-400 to-amber-400/0"></div>
           <div className="hidden md:block absolute top-32 right-1/3 left-2/3 h-1 bg-gradient-to-l from-amber-400 to-amber-400/0"></div>
 
-          {steps.map((step, idx) =>
-          <Card key={idx} className="p-8 bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur-sm relative z-10">
+          {steps.map((step, idx) => (
+            <Card key={idx} className="p-8 bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur-sm relative z-10">
               <div className="text-5xl font-bold text-amber-400 mb-4">{step.number}</div>
-              <h3 className="text-xl font-bold mb-3 text-[#ffffff]">{step.title}</h3>
-              <p className="opacity-90 leading-relaxed text-[#ffffff]">{step.description}</p>
+              <h3 className="text-xl font-bold mb-3 text-white" dangerouslySetInnerHTML={{ __html: step.title }} />
+              <p className="opacity-90 leading-relaxed text-white" dangerouslySetInnerHTML={{ __html: step.description }} />
             </Card>
-          )}
+          ))}
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 }

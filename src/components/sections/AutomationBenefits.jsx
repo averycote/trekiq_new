@@ -1,28 +1,28 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
-import { BarChart3, Clock, TrendingUp, Shield } from 'lucide-react';
+import { Clock, TrendingUp, Users, ShieldCheck } from 'lucide-react';
 
 export default function AutomationBenefits() {
   const benefits = [
     {
       icon: Clock,
-      title: 'Save Months of Work',
-      description: 'What used to take 3–6 months of manual audits now takes days with TrekIQ automated verification.'
+      title: 'Reduce Manual Documentation',
+      description: 'Replace months of expensive, manual accessibility documentation with photo-backed accessibility profiles built in days.'
     },
     {
-      icon: BarChart3,
-      title: 'Reduce Costs by 80%+',
-      description: 'No need for expensive external accessibility consultants. TrekIQ automates the heavy lifting.'
+      icon: Users,
+      title: 'Improve Visitor Confidence',
+      description: 'Give visitors the information they need to plan their visit with confidence, reducing uncertainty and increasing participation.'
     },
     {
       icon: TrendingUp,
-      title: 'Unlock Revenue Growth',
-      description: 'Attract the $21B disability travel market by showing a verified, photo-backed accessibility profile.'
+      title: 'Prioritize Improvements',
+      description: 'Identify barriers and plan accessibility upgrades with clarity. TrekIQ helps you match improvements to grant funding opportunities.'
     },
     {
-      icon: Shield,
-      title: 'Compliance Peace of Mind',
-      description: 'Real-time documentation and automated reporting keep you audit-ready at all times.'
+      icon: ShieldCheck,
+      title: 'Strengthen Accessibility Transparency',
+      description: 'Build trust with visitors, patients, guests, and event planners through clear, photo-backed accessibility communication.'
     }
   ];
 
@@ -30,7 +30,7 @@ export default function AutomationBenefits() {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-primary text-center mb-16">
-          The Power of Automation
+          What Changes Afterwards
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
