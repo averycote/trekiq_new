@@ -89,21 +89,21 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {mobileOpen &&
-        <div className="md:hidden pb-4 space-y-2">
-            <Link to="/" className="block px-4 py-2 text-white/70 hover:bg-white/5 rounded">Home</Link>
-            <Link to="/why-verify" className="block px-4 py-2 text-white/70 hover:bg-white/5 rounded">Our Approach</Link>
+        <div className="md:hidden pb-4 space-y-1 bg-[hsl(210_100%_12%)]">
+            <Link to="/" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">Home</Link>
+            <Link to="/why-verify" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">Our Approach</Link>
             <div className="px-4 py-2">
-              <p className="text-sm font-semibold text-white/50 mb-1">Markets</p>
-              <Link to="/markets" className="block px-2 py-1.5 text-sm text-white/70 hover:bg-white/5 rounded">All Markets</Link>
+              <p className="text-sm font-semibold text-[hsl(206_80%_65%)] mb-1">Markets</p>
+              <Link to="/markets" className="block px-2 py-2 text-sm text-white hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">All Markets</Link>
               {marketLinks.map((market) =>
-            <Link key={market.path} to={market.path} className="block px-2 py-1.5 text-sm text-white/70 hover:bg-white/5 rounded">
+            <Link key={market.path} to={market.path} className="block px-2 py-2 text-sm text-white hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">
                   {market.label}
                 </Link>
             )}
             </div>
-            <Link to="/partners" className="block px-4 py-2 text-white/70 hover:bg-white/5 rounded">Partners</Link>
-            <Link to="/faq" className="block px-4 py-2 text-white/70 hover:bg-white/5 rounded">FAQ</Link>
-            <Link to="/sample-audit" className="block px-4 py-2 text-white/70 hover:bg-white/5 rounded">See It In Action</Link>
+            <Link to="/partners" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">Partners</Link>
+            <Link to="/faq" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">FAQ</Link>
+            <Link to="/sample-audit" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">See It In Action</Link>
             <Link
             to="/book-demo"
             className="block px-4 py-2 text-white rounded font-semibold text-center"
