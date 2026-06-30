@@ -18,7 +18,7 @@ export default function PartnerGrid() {
     {
       name: 'Propel ICT',
       category: 'Innovation Partner',
-      logo: '🚀',
+      logo: 'https://media.base44.com/images/public/6a0dcb1e5b88cf409631f1ab/40de3fb98_image.png',
       description: 'Accelerating TrekIQ\'s growth and market reach across Atlantic Canada and beyond.'
     },
     {
@@ -41,7 +41,13 @@ export default function PartnerGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {partners.map((partner, idx) => (
             <Card key={idx} className="p-8 bg-background hover:shadow-lg transition-shadow">
-              <div className="text-5xl mb-4">{partner.logo}</div>
+              <div className="mb-4 h-16 flex items-center">
+                {partner.logo.startsWith('http') ? (
+                  <img src={partner.logo} alt={`${partner.name} logo`} className="max-h-16 w-auto" />
+                ) : (
+                  <span className="text-5xl">{partner.logo}</span>
+                )}
+              </div>
               <h3 className="text-xl font-bold text-primary mb-1">{partner.name}</h3>
               <p className="text-sm font-semibold text-teal-500 mb-4">{partner.category}</p>
               <p className="text-foreground leading-relaxed">{partner.description}</p>
