@@ -18,7 +18,13 @@ export default function Navigation() {
     <nav className="sticky top-0 z-50 bg-background border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="font-bold text-xl text-primary">Trek IQ</Link>
+          <Link to="/">
+            <img
+              src="https://media.base44.com/images/public/6a0dcb1e5b88cf409631f1ab/356555ea7_TrekIQLogo-WhiteBR-1.png"
+              alt="Trek.iq — The Smart Way Forward"
+              className="h-10 w-auto"
+            />
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
