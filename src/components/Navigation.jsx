@@ -21,12 +21,12 @@ export default function Navigation() {
           <Link to="/" className="font-bold text-xl text-[hsl(var(--secondary))]">Trek IQ</Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8 text-[hsl(var(--accent))]">
-            <Link to="/" className="text-sm text-white/70 hover:text-white transition">
-              Home
+          <div className="hidden md:flex items-center gap-8 text-[hsl(var(--ring))]">
+            <Link to="/" className="text-sm hover:text-white transition text-[hsl(var(--secondary))]">Home
+
             </Link>
-            <Link to="/why-verify" className="text-sm text-white/70 hover:text-white transition">
-              Our Approach
+            <Link to="/why-verify" className="text-sm hover:text-white transition text-[hsl(var(--secondary))]">Our Approach
+
             </Link>
 
             {/* Markets Dropdown */}
@@ -35,7 +35,7 @@ export default function Navigation() {
               onMouseEnter={() => setMarketsOpen(true)}
               onMouseLeave={() => setMarketsOpen(false)}>
               
-              <button className="flex items-center gap-1 text-sm text-white/70 hover:text-white transition">
+              <button className="flex items-center gap-1 text-sm hover:text-white transition text-[hsl(var(--secondary))]">
                 Markets
                 <ChevronDown className="w-4 h-4" />
               </button>
@@ -60,8 +60,8 @@ export default function Navigation() {
               }
             </div>
 
-            <Link to="/partners" className="text-sm text-white/70 hover:text-white transition">
-              Partners
+            <Link to="/partners" className="text-sm hover:text-white transition text-[hsl(var(--secondary))]">Partners
+
             </Link>
             <Link to="/faq" className="text-sm text-white/70 hover:text-white transition">
               FAQ
