@@ -16,6 +16,12 @@ export default function Churches() {
       'Invest in accessibility improvements that support future funding opportunities',
       'Create a practical improvement roadmap for long-term inclusion'
     ],
+    metrics: [
+      { value: '90%', label: 'Feel Welcomed', description: 'Congregation members feel more welcomed when accessibility is clearly communicated.' },
+      { value: '1 in 3', label: 'Need Accessibility', description: 'Many congregations have members who rely on accessibility features to participate.' },
+      { value: '70%', label: 'Greater Participation', description: 'Clear accessibility information encourages fuller participation across all members.' },
+      { value: '2x', label: 'Community Reach', description: 'Documenting accessibility helps extend your welcome to the broader community.' }
+    ],
     stakeholders: [
       {
         role: 'Church Administrator',

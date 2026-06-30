@@ -5,6 +5,7 @@ import { Card } from '@/components/ui/card';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import Navigation from './Navigation';
 import Footer from './Footer';
+import MarketMetrics from './sections/MarketMetrics';
 
 export default function MarketPageTemplate({ market }) {
   return (
@@ -74,6 +75,9 @@ export default function MarketPageTemplate({ market }) {
             </div>
           </div>
         </section>
+
+        {/* Outcome Metrics */}
+        <MarketMetrics metrics={market.metrics} />
 
         {/* Core Value Proposition */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">

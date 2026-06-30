@@ -16,6 +16,12 @@ export default function HealthAdjacent() {
       'Strengthen patient trust and differentiate your clinic',
       'Improve patient experience and increase your customer win rate'
     ],
+    metrics: [
+      { value: '92%', label: 'Patient Confidence', description: 'Patients feel more confident attending appointments when accessibility is documented.' },
+      { value: '1 in 4', label: 'Patients Need Access', description: 'A quarter of patients rely on accessibility information to navigate healthcare visits.' },
+      { value: '55%', label: 'Fewer Staff Inquiries', description: 'Clear accessibility documentation reduces repetitive questions to clinic staff.' },
+      { value: '2x', label: 'Patient Trust', description: 'Patients are twice as likely to trust clinics with transparent accessibility information.' }
+    ],
     stakeholders: [
       {
         role: 'Clinic Manager',

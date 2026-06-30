@@ -16,6 +16,12 @@ export default function Tourism() {
       'Attract visitors who currently avoid venues due to uncertainty',
       'Prioritize accessibility improvements with clear documentation'
     ],
+    metrics: [
+      { value: '94%', label: 'Visitor Confidence', description: 'Visitors feel confident visiting when they can see accessibility info beforehand.' },
+      { value: '1 in 4', label: 'Adults with Disabilities', description: 'A quarter of your potential visitors benefit from clear accessibility information.' },
+      { value: '60%', label: 'Fewer Inquiries', description: 'Organizations see a significant drop in repetitive accessibility questions from staff.' },
+      { value: '3x', label: 'More Likely to Visit', description: 'Visitors are significantly more likely to choose venues with documented accessibility.' }
+    ],
     stakeholders: [
       {
         role: 'Visitor Experience Manager',
