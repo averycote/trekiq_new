@@ -41,11 +41,11 @@ export default function MarketPageTemplate({ market }) {
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="p-8 bg-background">
-                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">The Challenge</h3>
+                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">Today</h3>
                 <p className="text-2xl font-bold text-primary leading-snug">{market.primaryPain}</p>
               </Card>
               <Card className="p-8 bg-background border-2 border-secondary">
-                <h3 className="text-sm font-semibold text-secondary uppercase tracking-wider mb-3">The Outcome</h3>
+                <h3 className="text-sm font-semibold text-secondary uppercase tracking-wider mb-3">With Trek IQ</h3>
                 <p className="text-2xl font-bold text-secondary leading-snug">{market.primaryOutcome}</p>
               </Card>
             </div>
@@ -79,7 +79,7 @@ export default function MarketPageTemplate({ market }) {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">
-              Core Value Proposition
+              Why It Matters
             </h2>
             <p className="text-xl opacity-90 leading-relaxed mb-8">
               {market.valueProposition}
