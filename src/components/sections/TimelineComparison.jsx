@@ -38,27 +38,27 @@ export default function TimelineComparison() {
           </Card>
 
           {/* TrekIQ Way */}
-          <Card className="p-8 bg-white border-2 border-teal-500">
-            <h3 className="text-2xl font-bold text-teal-500 mb-6">The Trek IQ Way</h3>
+          <Card className="p-8 bg-white border-2 border-secondary">
+            <h3 className="text-2xl font-bold text-secondary mb-6">The Trek IQ Way</h3>
             <div className="space-y-6">
               <div>
-                <div className="text-sm font-semibold text-teal-500 mb-2">Day 1</div>
+                <div className="text-sm font-semibold text-secondary mb-2">Day 1</div>
                 <p className="text-foreground">Submit venue details to Trek IQ</p>
               </div>
               <div>
-                <div className="text-sm font-semibold text-teal-500 mb-2">Days 2-3</div>
+                <div className="text-sm font-semibold text-secondary mb-2">Days 2-3</div>
                 <p className="text-foreground">Photo-backed accessibility documentation captured</p>
               </div>
               <div>
-                <div className="text-sm font-semibold text-teal-500 mb-2">Day 4</div>
+                <div className="text-sm font-semibold text-secondary mb-2">Day 4</div>
                 <p className="text-foreground">Live public accessibility profile published</p>
               </div>
               <div>
-                <div className="text-sm font-semibold text-teal-500 mb-2">Ongoing</div>
+                <div className="text-sm font-semibold text-secondary mb-2">Ongoing</div>
                 <p className="text-foreground">Dynamic profile, updated as your venue evolves</p>
               </div>
               <div className="pt-4 border-t border-border">
-                <div className="text-2xl font-bold text-teal-500">$3K–$8K</div>
+                <div className="text-2xl font-bold text-secondary">$3K–$8K</div>
                 <p className="text-sm text-muted-foreground">Total cost (80% savings)</p>
               </div>
             </div>

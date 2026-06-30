@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 export default function DemoConfirmation() {
   return (
     <Card className="w-full max-w-md p-8 text-center">
-      <CheckCircle2 className="w-16 h-16 text-teal-500 mx-auto mb-6" />
+      <CheckCircle2 className="w-16 h-16 text-secondary mx-auto mb-6" />
       <h2 className="text-3xl font-bold text-primary mb-3">
         Thank You!
       </h2>
@@ -18,7 +18,7 @@ export default function DemoConfirmation() {
         In the meantime, check out our FAQ or explore more about TrekIQ.
       </p>
       <Link to="/">
-        <Button className="w-full h-12 text-base font-semibold rounded-lg" style={{ backgroundColor: 'hsl(171 55% 45%)' }}>
+        <Button className="w-full h-12 text-base font-semibold rounded-lg" style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
           Back to Home
         </Button>
       </Link>

@@ -17,7 +17,7 @@ export default function FinalCTA() {
           <Button
             size="lg"
             className="h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2 mx-auto"
-            style={{ backgroundColor: 'hsl(37 92% 65%)' }}>
+            style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
             Book a Demo Now
             <ArrowRight className="w-4 h-4" />
           </Button>

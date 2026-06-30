@@ -56,11 +56,11 @@ export default function SegmentDetails() {
             <Card key={idx} className="p-8 bg-white hover:shadow-lg transition-shadow flex flex-col">
               <div className="text-6xl mb-4">{segment.icon}</div>
               <h2 className="text-2xl font-bold text-primary mb-2">{segment.title}</h2>
-              <p className="text-lg font-semibold text-teal-500 mb-4">{segment.outcome}</p>
+              <p className="text-lg font-semibold text-secondary mb-4">{segment.outcome}</p>
               <p className="text-sm text-muted-foreground mb-2"><strong>The Challenge:</strong> {segment.pain}</p>
               <p className="text-foreground mb-6 leading-relaxed flex-grow">{segment.description}</p>
               <Link to={segment.path}>
-                <Button className="w-full flex items-center justify-center gap-2" style={{ backgroundColor: 'hsl(37 92% 65%)' }}>
+                <Button className="w-full flex items-center justify-center gap-2" style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
                   Explore This Market
                   <ArrowRight className="w-4 h-4" />
                 </Button>

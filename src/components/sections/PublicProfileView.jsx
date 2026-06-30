@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { ShieldCheck, Clock, Accessibility, Volume2, Eye, Ear, Brain, MapPin, Bus, Car, Phone, Wifi, AlertCircle, CheckCircle2 } from 'lucide-react';
 
 const categories = [
-{ id: 'mobility', icon: Accessibility, label: 'Mobility', score: 91, color: 'bg-teal-500', description: 'Excellent wheelchair access throughout. Elevator serves all 4 floors. Extra-wide passageways on Floor 1.' },
-{ id: 'sensory', icon: Volume2, label: 'Sensory', score: 84, color: 'bg-teal-500', description: 'Quiet zones available. Reduced background music in main gallery. Sensory kits available at reception.' },
-{ id: 'vision', icon: Eye, label: 'Vision', score: 82, color: 'bg-teal-500', description: 'High-contrast signage throughout. Audio guides available. Large-print materials on request at front desk.' },
+{ id: 'mobility', icon: Accessibility, label: 'Mobility', score: 91, color: 'bg-secondary', description: 'Excellent wheelchair access throughout. Elevator serves all 4 floors. Extra-wide passageways on Floor 1.' },
+{ id: 'sensory', icon: Volume2, label: 'Sensory', score: 84, color: 'bg-secondary', description: 'Quiet zones available. Reduced background music in main gallery. Sensory kits available at reception.' },
+{ id: 'vision', icon: Eye, label: 'Vision', score: 82, color: 'bg-secondary', description: 'High-contrast signage throughout. Audio guides available. Large-print materials on request at front desk.' },
 { id: 'hearing', icon: Ear, label: 'Hearing', score: 79, color: 'bg-amber-500', description: 'Hearing loops installed in auditorium and main lobby. Visual fire alarm system. ASL interpretation available with advance notice.' },
-{ id: 'cognitive', icon: Brain, label: 'Cognitive', score: 88, color: 'bg-teal-500', description: 'Clear wayfinding throughout. Social stories available online. Staff trained in cognitive accessibility support.' }];
+{ id: 'cognitive', icon: Brain, label: 'Cognitive', score: 88, color: 'bg-secondary', description: 'Clear wayfinding throughout. Social stories available online. Staff trained in cognitive accessibility support.' }];
 
 
 const tabs = ['Overview', 'Live Status', 'Floors', 'Getting Here', 'Policies'];
@@ -19,7 +19,7 @@ function ScoreDial({ score }) {
     <div className="relative w-36 h-36">
       <svg width="144" height="144" className="-rotate-90" aria-hidden="true">
         <circle cx="72" cy="72" r={radius} fill="none" stroke="#e5e7eb" strokeWidth="11" />
-        <circle cx="72" cy="72" r={radius} fill="none" stroke="#14b8a6" strokeWidth="11"
+        <circle cx="72" cy="72" r={radius} fill="none" stroke="#2D8CCF" strokeWidth="11"
         strokeLinecap="round" strokeDasharray={circumference} strokeDashoffset={offset}
         style={{ transition: 'stroke-dashoffset 0.8s' }} />
       </svg>
@@ -51,8 +51,8 @@ function OverviewTab() {
             return (
               <div key={cat.id} className="space-y-1">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-4 h-4 text-teal-600" />
+                  <div className="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-4 h-4 text-secondary" />
                   </div>
                   <div className="flex-1 flex items-center justify-between">
                     <span className="text-sm font-semibold text-gray-900">{cat.label}</span>
@@ -89,12 +89,12 @@ function LiveStatusTab() {
       <p className="text-gray-500 mb-6">Real-time accessibility feature availability — updated by venue staff</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {features.map((f) =>
-        <div key={f.label} className={`flex items-center gap-3 p-4 rounded-xl border ${f.status ? 'bg-teal-50 border-teal-200' : 'bg-gray-50 border-gray-200'}`}>
+        <div key={f.label} className={`flex items-center gap-3 p-4 rounded-xl border ${f.status ? 'bg-secondary/10 border-secondary/30' : 'bg-gray-50 border-gray-200'}`}>
             {f.status ?
-          <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0" /> :
+          <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0" /> :
           <AlertCircle className="w-5 h-5 text-gray-400 flex-shrink-0" />}
-            <span className={`text-sm font-medium ${f.status ? 'text-teal-900' : 'text-gray-500'}`}>{f.label}</span>
-            <span className={`ml-auto text-xs font-semibold ${f.status ? 'text-teal-600' : 'text-gray-400'}`}>
+            <span className={`text-sm font-medium ${f.status ? 'text-primary' : 'text-gray-500'}`}>{f.label}</span>
+            <span className={`ml-auto text-xs font-semibold ${f.status ? 'text-secondary' : 'text-gray-400'}`}>
               {f.status ? 'Available' : 'Unavailable'}
             </span>
           </div>
@@ -118,8 +118,8 @@ function GettingHereTab() {
           const Icon = item.icon;
           return (
             <div key={item.title} className="bg-white border border-gray-200 rounded-xl p-5">
-              <div className="w-10 h-10 bg-teal-50 rounded-lg flex items-center justify-center mb-3">
-                <Icon className="w-5 h-5 text-teal-600" />
+              <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center mb-3">
+                <Icon className="w-5 h-5 text-secondary" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
               <p className="text-sm text-gray-500">{item.desc}</p>
@@ -159,11 +159,11 @@ export default function PublicProfileView() {
   return (
     <div className="bg-white rounded-2xl border border-border shadow-sm overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-br from-teal-50 to-white px-6 pt-8 pb-6 border-b border-gray-100">
+      <div className="bg-gradient-to-br from-secondary/10 to-white px-6 pt-8 pb-6 border-b border-gray-100">
         <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-6">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="flex items-center gap-1.5 px-3 py-1 bg-white border border-teal-200 text-teal-700 text-xs font-semibold rounded-full">
+              <span className="flex items-center gap-1.5 px-3 py-1 bg-white border border-secondary/30 text-secondary text-xs font-semibold rounded-full">
                 <ShieldCheck className="w-3.5 h-3.5" /> Documented by Trek IQ
               </span>
               <span className="text-gray-400 text-sm">Since January 2025</span>
@@ -190,7 +190,7 @@ export default function PublicProfileView() {
             const Icon = cat.icon;
             return (
               <span key={cat.id} className="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700">
-                <Icon className="w-3.5 h-3.5 text-teal-600" />
+                <Icon className="w-3.5 h-3.5 text-secondary" />
                 {cat.label} <strong className="text-gray-900">{cat.score}</strong>
               </span>);
 
@@ -207,7 +207,7 @@ export default function PublicProfileView() {
             onClick={() => setActiveTab(tab)}
             className={`px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
             activeTab === tab ?
-            'border-teal-600 text-teal-700' :
+            'border-secondary text-secondary' :
             'border-transparent text-gray-500 hover:text-gray-700'}`
             }>
             

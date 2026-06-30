@@ -43,7 +43,7 @@ export default function FAQAccordion() {
         <Accordion type="single" collapsible defaultValue="item-0">
           {faqs.map((faq, idx) => (
             <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-border">
-              <AccordionTrigger className="py-6 text-lg font-semibold text-primary hover:text-teal-500 transition">
+              <AccordionTrigger className="py-6 text-lg font-semibold text-primary hover:text-secondary transition">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="pb-6 text-foreground leading-relaxed">

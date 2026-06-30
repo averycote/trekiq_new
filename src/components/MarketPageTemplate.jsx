@@ -15,7 +15,7 @@ export default function MarketPageTemplate({ market }) {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
           <div className="max-w-4xl mx-auto text-center">
             <div className="text-6xl mb-6">{market.icon}</div>
-            <span className="inline-block px-3 py-1 text-xs font-semibold bg-teal-100 text-teal-700 rounded-full mb-4 uppercase tracking-wider">
+            <span className="inline-block px-3 py-1 text-xs font-semibold bg-secondary/10 text-secondary rounded-full mb-4 uppercase tracking-wider">
               {market.sector}
             </span>
             <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
@@ -28,7 +28,7 @@ export default function MarketPageTemplate({ market }) {
               <Button
                 size="lg"
                 className="h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2 mx-auto"
-                style={{ backgroundColor: 'hsl(37 92% 65%)' }}>
+                style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
                 Book a Demo
                 <ArrowRight className="w-4 h-4" />
               </Button>
@@ -44,9 +44,9 @@ export default function MarketPageTemplate({ market }) {
                 <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">The Challenge</h3>
                 <p className="text-2xl font-bold text-primary leading-snug">{market.primaryPain}</p>
               </Card>
-              <Card className="p-8 bg-background border-2 border-teal-500">
-                <h3 className="text-sm font-semibold text-teal-500 uppercase tracking-wider mb-3">The Outcome</h3>
-                <p className="text-2xl font-bold text-teal-500 leading-snug">{market.primaryOutcome}</p>
+              <Card className="p-8 bg-background border-2 border-secondary">
+                <h3 className="text-sm font-semibold text-secondary uppercase tracking-wider mb-3">The Outcome</h3>
+                <p className="text-2xl font-bold text-secondary leading-snug">{market.primaryOutcome}</p>
               </Card>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function MarketPageTemplate({ market }) {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
               {market.benefits.map((benefit, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-amber-400 flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
                   <span className="opacity-90">{benefit}</span>
                 </div>
               ))}
@@ -108,7 +108,7 @@ export default function MarketPageTemplate({ market }) {
               <Button
                 size="lg"
                 className="h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2 mx-auto"
-                style={{ backgroundColor: 'hsl(37 92% 65%)' }}>
+                style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
                 Book a Demo
                 <ArrowRight className="w-4 h-4" />
               </Button>

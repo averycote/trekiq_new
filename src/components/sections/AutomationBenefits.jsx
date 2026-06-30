@@ -38,7 +38,7 @@ export default function AutomationBenefits() {
             const Icon = benefit.icon;
             return (
               <Card key={idx} className="p-8 bg-background">
-                <Icon className="w-12 h-12 text-teal-500 mb-4" />
+                <Icon className="w-12 h-12 text-secondary mb-4" />
                 <h3 className="text-xl font-bold text-primary mb-3">{benefit.title}</h3>
                 <p className="text-foreground leading-relaxed">{benefit.description}</p>
               </Card>

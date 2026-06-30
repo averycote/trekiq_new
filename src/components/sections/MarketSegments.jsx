@@ -60,7 +60,7 @@ export default function MarketSegments() {
             <Card key={idx} className="p-8 bg-white hover:shadow-lg transition-shadow flex flex-col">
               <div className="text-6xl mb-4">{segment.icon}</div>
               <h3 className="text-2xl font-bold text-primary mb-2">{segment.title}</h3>
-              <p className="text-lg font-semibold text-teal-500 mb-4">{segment.outcome}</p>
+              <p className="text-lg font-semibold text-secondary mb-4">{segment.outcome}</p>
               <p className="text-foreground mb-6 leading-relaxed flex-grow">{segment.description}</p>
               <Link to={segment.path}>
                 <Button

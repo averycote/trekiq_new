@@ -95,7 +95,7 @@ function ScoreDial({ score }) {
     <div className="relative w-36 h-36">
       <svg width="144" height="144" className="-rotate-90" aria-hidden="true">
         <circle cx="72" cy="72" r={radius} fill="none" stroke="#e5e7eb" strokeWidth="11" />
-        <circle cx="72" cy="72" r={radius} fill="none" stroke="#f59e0b" strokeWidth="11"
+        <circle cx="72" cy="72" r={radius} fill="none" stroke="#2D8CCF" strokeWidth="11"
         strokeLinecap="round" strokeDasharray={circumference} strokeDashoffset={offset}
         style={{ transition: 'stroke-dashoffset 0.8s' }} />
       </svg>
@@ -187,10 +187,10 @@ export default function AuditReportView() {
         <div className="hidden md:flex flex-col w-48 bg-gray-900 text-white p-4 min-h-[600px]">
           <div className="flex items-center gap-2 mb-8">
             <span className="font-bold text-lg">Trek IQ</span>
-            <span className="text-teal-400 text-xs">▶</span>
+            <span className="text-secondary text-xs">▶</span>
           </div>
           {['Dashboard', 'Venues', 'Audits', 'Staff', 'Incidents'].map((item, i) =>
-          <div key={item} className={`flex items-center gap-2 px-3 py-2 rounded-lg mb-1 text-sm cursor-pointer ${i === 2 ? 'bg-teal-600 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800'}`}>
+          <div key={item} className={`flex items-center gap-2 px-3 py-2 rounded-lg mb-1 text-sm cursor-pointer ${i === 2 ? 'bg-secondary text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800'}`}>
               <div className="w-1.5 h-1.5 rounded-full bg-current opacity-60" />
               {item}
             </div>

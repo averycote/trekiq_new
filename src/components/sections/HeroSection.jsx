@@ -18,7 +18,7 @@ export default function HeroSection() {
           </div>
 
           {/* Key Stat */}
-          <div className="border-l-4 border-teal-500 pl-6 py-4">
+          <div className="border-l-4 border-secondary pl-6 py-4">
             <div className="text-5xl font-bold text-primary mb-2">86%</div>
             <p className="text-lg text-foreground">
               of people with disabilities avoided a new venue last year due to lack of accessible information.
@@ -31,7 +31,7 @@ export default function HeroSection() {
               <Button
                 size="lg"
                 className="w-full sm:w-auto h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2"
-                style={{ backgroundColor: 'hsl(37 92% 65%)' }}>
+                style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
                 Book a Demo
                 <ArrowRight className="w-4 h-4" />
               </Button>

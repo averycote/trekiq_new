@@ -40,23 +40,23 @@ export default function ComparisonSection() {
           </Card>
 
           {/* TrekIQ Way */}
-          <Card className="p-8 bg-white border-2 border-teal-500">
-            <h3 className="text-2xl font-bold text-teal-500 mb-6">The Trek IQ Way: Accessibility Profiles</h3>
+          <Card className="p-8 bg-white border-2 border-secondary">
+            <h3 className="text-2xl font-bold text-secondary mb-6">The Trek IQ Way: Accessibility Profiles</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" />
+                <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
                 <span className="text-foreground">Comprehensive accessibility documentation in days, not months</span>
               </li>
               <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" />
+                <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
                 <span className="text-foreground">A fraction of traditional consultant costs</span>
               </li>
               <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" />
+                <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
                 <span className="text-foreground">Public accessibility profiles = visitor confidence</span>
               </li>
               <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" />
+                <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
                 <span className="text-foreground">Dynamic profiles that grow with your venue</span>
               </li>
             </ul>

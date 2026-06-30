@@ -75,7 +75,7 @@ export default function Navigation() {
           <Link
             to="/book-demo"
             className="hidden md:inline-block px-6 py-2 text-white rounded-lg font-semibold hover:opacity-90 transition"
-            style={{ backgroundColor: 'hsl(37 92% 65%)' }}>
+            style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
             Book a Demo
           </Link>
 
@@ -107,7 +107,7 @@ export default function Navigation() {
             <Link
               to="/book-demo"
               className="block px-4 py-2 text-white rounded font-semibold text-center"
-              style={{ backgroundColor: 'hsl(37 92% 65%)' }}>
+              style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
               Book a Demo
             </Link>
           </div>

@@ -33,12 +33,12 @@ export default function HowItWorks() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          <div className="hidden md:block absolute top-32 left-1/3 right-1/3 h-1 bg-gradient-to-r from-amber-400 to-amber-400/0"></div>
-          <div className="hidden md:block absolute top-32 right-1/3 left-2/3 h-1 bg-gradient-to-l from-amber-400 to-amber-400/0"></div>
+          <div className="hidden md:block absolute top-32 left-1/3 right-1/3 h-1 bg-gradient-to-r from-secondary to-secondary/0"></div>
+          <div className="hidden md:block absolute top-32 right-1/3 left-2/3 h-1 bg-gradient-to-l from-secondary to-secondary/0"></div>
 
           {steps.map((step, idx) => (
             <Card key={idx} className="p-8 bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur-sm relative z-10">
-              <div className="text-5xl font-bold text-amber-400 mb-4">{step.number}</div>
+              <div className="text-5xl font-bold text-secondary mb-4">{step.number}</div>
               <h3 className="text-xl font-bold mb-3 text-white" dangerouslySetInnerHTML={{ __html: step.title }} />
               <p className="opacity-90 leading-relaxed text-white" dangerouslySetInnerHTML={{ __html: step.description }} />
             </Card>
