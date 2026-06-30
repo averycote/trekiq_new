@@ -12,7 +12,7 @@ export default function PartnerGrid() {
     {
       name: 'reachAbility',
       category: 'Accessibility Advocacy',
-      logo: '🤝',
+      logo: 'https://media.base44.com/images/public/6a0dcb1e5b88cf409631f1ab/8ac153fd7_image.png',
       description: 'Championing accessibility rights and ensuring our solutions serve the disability community authentically.'
     },
     {
