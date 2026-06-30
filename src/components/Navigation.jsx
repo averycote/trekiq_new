@@ -63,11 +63,11 @@ export default function Navigation() {
             <Link to="/partners" className="text-sm hover:text-white transition text-[hsl(var(--secondary))]">Partners
 
             </Link>
-            <Link to="/faq" className="text-sm text-white/70 hover:text-white transition">
-              FAQ
+            <Link to="/faq" className="text-sm hover:text-white transition text-[hsl(var(--secondary))]">FAQ
+
             </Link>
-            <Link to="/sample-audit" className="text-sm text-white/70 hover:text-white transition">
-              See It In Action
+            <Link to="/sample-audit" className="text-sm hover:text-white transition text-[hsl(var(--secondary))]">See It In Action
+
             </Link>
           </div>
 
