@@ -8,8 +8,8 @@ const ease = [0.22, 1, 0.36, 1];
 export default function RiskCallout() {
   return (
     <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-[hsl(210_100%_12%)] text-white">
-      {/* Glow accents */}
-      <div className="absolute top-0 right-1/4 w-[500px] h-[400px] rounded-full bg-[hsl(206_64%_49%)] opacity-12 blur-[120px]" />
+      {/* Glow accent — hidden on mobile for performance */}
+      <div className="hidden lg:block absolute top-0 right-1/4 w-[500px] h-[400px] rounded-full bg-[hsl(206_64%_49%)] opacity-12 blur-[120px]" />
 
       <div className="relative max-w-4xl mx-auto">
         <motion.div
