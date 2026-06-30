@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -51,6 +50,9 @@ export default function MarketSegments() {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <Reveal className="text-center mb-16">
+          <span className="inline-block px-3 py-1 text-xs font-semibold bg-secondary/10 text-secondary rounded-full mb-4 uppercase tracking-wider">
+            Markets
+          </span>
           <h2 className="text-4xl font-bold text-primary mb-4">
             Built for Your Market
           </h2>
@@ -59,7 +61,7 @@ export default function MarketSegments() {
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {segments.map((segment, idx) => (
             <motion.div
               key={idx}
@@ -68,20 +70,20 @@ export default function MarketSegments() {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.45, delay: idx * 0.08, ease }}
             >
-              <Card className="p-8 bg-white hover:shadow-xl transition-all duration-300 flex flex-col h-full hover:-translate-y-1">
-                <div className="text-6xl mb-4">{segment.icon}</div>
-                <h3 className="text-2xl font-bold text-primary mb-2">{segment.title}</h3>
-                <p className="text-lg font-semibold text-secondary mb-4">{segment.outcome}</p>
-                <p className="text-foreground mb-6 leading-relaxed flex-grow">{segment.description}</p>
-                <Link to={segment.path}>
-                  <Button
-                    variant="outline"
-                    className="w-full flex items-center justify-center gap-2 group">
+              <Link to={segment.path} className="block group h-full">
+                <div className="rounded-2xl bg-white border border-border p-8 hover:shadow-xl hover:border-[hsl(206_64%_49%)]/30 transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
+                  <div className="w-14 h-14 rounded-xl bg-[hsl(206_64%_49%)]/10 flex items-center justify-center text-3xl mb-5">
+                    {segment.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-primary mb-1">{segment.title}</h3>
+                  <p className="text-sm font-semibold text-[hsl(206_64%_49%)] mb-3">{segment.outcome}</p>
+                  <p className="text-muted-foreground leading-relaxed flex-grow mb-6">{segment.description}</p>
+                  <div className="flex items-center gap-2 text-sm font-semibold text-primary group-hover:text-[hsl(206_64%_49%)] transition-colors">
                     Learn More
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                </Link>
-              </Card>
+                  </div>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>
