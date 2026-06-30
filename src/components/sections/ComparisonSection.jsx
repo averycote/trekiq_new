@@ -29,7 +29,7 @@ export default function ComparisonSection() {
             <Card className="p-8 bg-white h-full">
               <h3 className="text-2xl font-bold text-primary mb-6">The Old Way: Manual &amp; Static</h3>
               <ul className="space-y-4">
-                {['Manual site audits take months, not months', 'Expensive external consultants', 'No public profile = no market differentiation', 'Fragmented, outdated information'].map((item, i) => (
+                {['Manual site audits take months', 'Expensive external consultants', 'No public profile = no market differentiation', 'Fragmented, outdated information'].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <X className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
                     <span className="text-foreground">{item}</span>
