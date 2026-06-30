@@ -41,9 +41,9 @@ export default function PartnerGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {partners.map((partner, idx) => (
             <Card key={idx} className="p-8 bg-background hover:shadow-lg transition-shadow">
-              <div className="mb-4 h-20 flex items-center justify-center">
+              <div className="mb-4 h-32 flex items-center justify-center">
                 {partner.logo.startsWith('http') ? (
-                  <img src={partner.logo} alt={`${partner.name} logo`} className="h-16 w-16 object-contain" />
+                  <img src={partner.logo} alt={`${partner.name} logo`} className="h-28 w-28 object-contain" />
                 ) : (
                   <span className="text-5xl">{partner.logo}</span>
                 )}
