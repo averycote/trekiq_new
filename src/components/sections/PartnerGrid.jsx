@@ -4,10 +4,10 @@ import { Card } from '@/components/ui/card';
 export default function PartnerGrid() {
   const partners = [
     {
-      name: 'Tourism Nova Scotia',
-      category: 'Strategic Partner',
-      logo: '🏛️',
-      description: 'Amplifying accessibility across Nova Scotia\'s visitor economy and tourism infrastructure.'
+      name: 'League of Innovators',
+      category: 'Accelerator Partner',
+      logo: 'https://media.base44.com/images/public/6a0dcb1e5b88cf409631f1ab/619c3a3cd_image.png',
+      description: 'Canada\'s largest accelerator for founders under 30, supporting Trek IQ\'s growth and innovation journey.'
     },
     {
       name: 'reachAbility',
