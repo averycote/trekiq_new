@@ -7,11 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <img
-              src="https://media.base44.com/images/public/6a0dcb1e5b88cf409631f1ab/356555ea7_TrekIQLogo-WhiteBR-1.png"
-              alt="Trek.iq — The Smart Way Forward"
-              className="h-12 w-auto mb-4 brightness-0 invert"
-            />
+            <h3 className="font-bold text-lg mb-4">Trek IQ</h3>
             <p className="text-sm opacity-90">
               An Accessibility Documentation Platform. Help every visitor understand what to expect before they arrive.
             </p>
