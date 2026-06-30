@@ -22,9 +22,9 @@ export default function PartnerGrid() {
       description: 'Accelerating TrekIQ\'s growth and market reach across Atlantic Canada and beyond.'
     },
     {
-      name: 'NSCC SPRINT',
+      name: 'NSCC Applied Research',
       category: 'Education & Training',
-      logo: '📚',
+      logo: 'https://media.base44.com/images/public/6a0dcb1e5b88cf409631f1ab/d49140cad_image.png',
       description: 'Building workforce development and skills training around accessibility compliance and automation.'
     },
     {
