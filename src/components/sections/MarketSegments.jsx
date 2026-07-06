@@ -50,9 +50,9 @@ export default function MarketSegments() {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <Reveal className="text-center mb-16">
-          <span className="inline-block px-3 py-1 text-xs font-semibold bg-secondary/10 text-secondary rounded-full mb-4 uppercase tracking-wider hidden">
-            Markets
-          </span>
+          
+
+          
           <h2 className="text-4xl font-bold text-primary mb-4">
             Built for Your Market
           </h2>

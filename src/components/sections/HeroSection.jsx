@@ -35,10 +35,10 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease }}>
               
-              <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold bg-white/10 text-[hsl(206_64%_49%)] rounded-full mb-6 backdrop-blur-sm border border-white/10 hidden">
-                <Accessibility className="w-3.5 h-3.5" />
-                Accessibility Documentation Platform
-              </span>
+              
+
+
+              
               <h1 className="text-4xl lg:text-6xl font-bold leading-[1.1] mb-6 tracking-tight">
                 Help every visitor understand what to expect{' '}
                 <span className="bg-gradient-to-r from-[hsl(206_64%_49%)] to-[hsl(206_80%_65%)] bg-clip-text text-transparent">

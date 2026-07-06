@@ -27,9 +27,9 @@ export default function HowItWorks() {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <Reveal className="text-center mb-16">
-          <span className="inline-block px-3 py-1 text-xs font-semibold bg-secondary/10 text-secondary rounded-full mb-4 uppercase tracking-wider hidden">
-            Process
-          </span>
+          
+
+          
           <h2 className="text-4xl font-bold text-primary mb-4">
             How It Works
           </h2>

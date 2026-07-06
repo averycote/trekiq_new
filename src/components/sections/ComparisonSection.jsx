@@ -14,9 +14,9 @@ export default function ComparisonSection() {
 
       <div className="relative max-w-7xl mx-auto">
         <Reveal className="text-center mb-16">
-          <span className="inline-block px-3 py-1 text-xs font-semibold bg-white/10 text-[hsl(206_80%_65%)] rounded-full mb-4 uppercase tracking-wider border border-white/10 hidden">
-            The Difference
-          </span>
+          
+
+          
           <h2 className="text-4xl font-bold mb-4">
             Accessibility Documentation Reimagined
           </h2>
