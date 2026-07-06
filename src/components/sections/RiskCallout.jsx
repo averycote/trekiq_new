@@ -36,7 +36,7 @@ export default function RiskCallout() {
               Organizations that communicate accessibility proactively build trust long before regulations require it. Leading organizations don't wait for legislation to define the visitor experience.
             </p>
             <p className="text-base text-white/50">
-              TrekIQ helps you turn accessibility transparency into a competitive advantage, improving visitor confidence, supporting funding applications, and strengthening your reputation.
+              Trek iQ helps you turn accessibility transparency into a competitive advantage, improving visitor confidence, supporting funding applications, and strengthening your reputation.
             </p>
           </div>
         </motion.div>

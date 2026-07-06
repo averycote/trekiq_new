@@ -7,7 +7,7 @@ export default function PartnerGrid() {
       name: 'League of Innovators',
       category: 'Accelerator Partner',
       logo: 'https://media.base44.com/images/public/6a0dcb1e5b88cf409631f1ab/619c3a3cd_image.png',
-      description: 'Canada\'s largest accelerator for founders under 30, supporting Trek IQ\'s growth and innovation journey.'
+      description: 'Canada\'s largest accelerator for founders under 30, supporting Trek iQ\'s growth and innovation journey.'
     },
     {
       name: 'reachAbility',
@@ -19,7 +19,7 @@ export default function PartnerGrid() {
       name: 'Propel ICT',
       category: 'Innovation Partner',
       logo: 'https://media.base44.com/images/public/6a0dcb1e5b88cf409631f1ab/40de3fb98_image.png',
-      description: 'Accelerating TrekIQ\'s growth and market reach across Atlantic Canada and beyond.'
+      description: 'Accelerating Trek iQ\'s growth and market reach across Atlantic Canada and beyond.'
     },
     {
       name: 'NSCC Applied Research',
@@ -31,7 +31,7 @@ export default function PartnerGrid() {
       name: 'Volta',
       category: 'Innovation Hub',
       logo: 'https://media.base44.com/images/public/6a0dcb1e5b88cf409631f1ab/dca207546_image.png',
-      description: 'Trek IQ is a proud Volta resident, part of Atlantic Canada\'s premier innovation and startup community.'
+      description: 'Trek iQ is a proud Volta resident, part of Atlantic Canada\'s premier innovation and startup community.'
     }
   ];
 

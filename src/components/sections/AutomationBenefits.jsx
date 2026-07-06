@@ -21,7 +21,7 @@ export default function AutomationBenefits() {
     {
       icon: TrendingUp,
       title: 'Prioritize Improvements',
-      description: 'Identify barriers and plan accessibility upgrades with clarity. TrekIQ helps you match improvements to grant funding opportunities.'
+      description: 'Identify barriers and plan accessibility upgrades with clarity. Trek iQ helps you match improvements to grant funding opportunities.'
     },
     {
       icon: ShieldCheck,

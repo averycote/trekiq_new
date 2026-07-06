@@ -57,7 +57,7 @@ export default function MarketSegments() {
             Built for Your Market
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            TrekIQ serves organizations across the visitor economy. Find your sector and see how accessibility documentation drives your outcomes.
+            Trek iQ serves organizations across the visitor economy. Find your sector and see how accessibility documentation drives your outcomes.
           </p>
         </Reveal>
 

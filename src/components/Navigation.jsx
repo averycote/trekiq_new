@@ -18,7 +18,7 @@ export default function Navigation() {
     <nav className="sticky top-0 z-50 bg-[hsl(210_100%_12%)]/80 backdrop-blur-lg border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="font-bold text-xl text-[hsl(var(--secondary))]">Trek IQ</Link>
+          <Link to="/" className="font-bold text-xl text-[hsl(var(--secondary))]">Trek iQ</Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8 text-[hsl(var(--ring))]">

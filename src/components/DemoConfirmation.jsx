@@ -15,7 +15,7 @@ export default function DemoConfirmation() {
         Your demo request has been received. Our team will contact you within 24 hours to schedule your personalized walkthrough.
       </p>
       <p className="text-sm text-muted-foreground mb-8">
-        In the meantime, check out our FAQ or explore more about TrekIQ.
+        In the meantime, check out our FAQ or explore more about Trek iQ.
       </p>
       <Link to="/">
         <Button className="w-full h-12 text-base font-semibold rounded-lg" style={{ backgroundColor: 'hsl(206 64% 49%)' }}>

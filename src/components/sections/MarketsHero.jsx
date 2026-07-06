@@ -8,7 +8,7 @@ export default function MarketsHero() {
           Built for Your Sector
         </h1>
         <p className="text-xl text-muted-foreground leading-relaxed">
-          TrekIQ helps organizations across the visitor economy document and communicate accessibility. Explore your sector to see the unique outcomes and value TrekIQ delivers for your team, your visitors, and your organization.
+          Trek iQ helps organizations across the visitor economy document and communicate accessibility. Explore your sector to see the unique outcomes and value Trek iQ delivers for your team, your visitors, and your organization.
         </p>
       </div>
     </section>

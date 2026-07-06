@@ -9,12 +9,12 @@ export default function HowItWorks() {
   {
     number: '01',
     title: 'Document Your Space',
-    description: 'TrekIQ captures photo-backed accessibility documentation across every area of your venue: entrances, restrooms, pathways, parking, and more.'
+    description: 'Trek iQ captures photo-backed accessibility documentation across every area of your venue: entrances, restrooms, pathways, parking, and more.'
   },
   {
     number: '02',
     title: 'Identify & Prioritize',
-    description: 'TrekIQ identifies barriers and recommends improvements, helping you plan accessibility upgrades with confidence and clarity.'
+    description: 'Trek iQ identifies barriers and recommends improvements, helping you plan accessibility upgrades with confidence and clarity.'
   },
   {
     number: '03',

@@ -19,7 +19,7 @@ export default function SampleAudit() {
             Live Demo
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">See an Accessibility Profile</h1>
-          <p className="text-lg text-muted-foreground mb-10">From documentation to public accessibility profile. See how TrekIQ helps organizations communicate accessibility clearly.
+          <p className="text-lg text-muted-foreground mb-10">From documentation to public accessibility profile. See how Trek iQ helps organizations communicate accessibility clearly.
 
           </p>
 

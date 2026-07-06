@@ -45,7 +45,7 @@ export default function MarketPageTemplate({ market }) {
                 <p className="text-2xl font-bold text-primary leading-snug">{market.primaryPain}</p>
               </Card>
               <Card className="p-8 bg-background border-2 border-secondary">
-                <h3 className="text-sm font-semibold text-secondary uppercase tracking-wider mb-3">With Trek IQ</h3>
+                <h3 className="text-sm font-semibold text-secondary uppercase tracking-wider mb-3">With Trek iQ</h3>
                 <p className="text-2xl font-bold text-secondary leading-snug">{market.primaryOutcome}</p>
               </Card>
             </div>
@@ -57,10 +57,10 @@ export default function MarketPageTemplate({ market }) {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-primary mb-4">
-                What Trek IQ Means for Your Team
+                What Trek iQ Means for Your Team
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Different roles, different priorities. TrekIQ delivers value across your organization.
+                Different roles, different priorities. Trek iQ delivers value across your organization.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -102,7 +102,7 @@ export default function MarketPageTemplate({ market }) {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Book a demo and see how TrekIQ helps your organization communicate accessibility with confidence.
+              Book a demo and see how Trek iQ helps your organization communicate accessibility with confidence.
             </p>
             <Link to="/book-demo">
               <Button

@@ -9,7 +9,7 @@ export default function WhyVerifyHero() {
           Our Approach
         </h1>
         <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-          TrekIQ is an Accessibility Documentation Platform. We help organizations confidently understand, document, improve, and communicate the accessibility of their physical spaces, leading to increased visitor confidence and better organizational decisions.
+          Trek iQ is an Accessibility Documentation Platform. We help organizations confidently understand, document, improve, and communicate the accessibility of their physical spaces, leading to increased visitor confidence and better organizational decisions.
         </p>
 
         <div className="space-y-8">
@@ -30,7 +30,7 @@ export default function WhyVerifyHero() {
           <Card className="p-8 bg-white">
             <h3 className="text-2xl font-bold text-primary mb-4">How Trek IQ Helps</h3>
             <p className="text-foreground leading-relaxed">
-              TrekIQ creates photo-backed accessibility documentation that identifies barriers, recommends improvements, and helps organizations communicate accessibility clearly to the people who need it.
+              Trek iQ creates photo-backed accessibility documentation that identifies barriers, recommends improvements, and helps organizations communicate accessibility clearly to the people who need it.
             </p>
           </Card>
 

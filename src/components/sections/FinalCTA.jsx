@@ -33,7 +33,7 @@ export default function FinalCTA() {
             </span>
           </h2>
           <p className="text-xl text-white/60 mb-10 max-w-2xl mx-auto">
-            Book a demo and see how Trek IQ helps your organization document accessibility, improve planning, and give every visitor the confidence to choose you.
+            Book a demo and see how Trek iQ helps your organization document accessibility, improve planning, and give every visitor the confidence to choose you.
           </p>
           <motion.div
             whileHover={{ scale: 1.04 }}

@@ -11,7 +11,7 @@ export default function TimelineComparison() {
       <div className="max-w-6xl mx-auto">
         <Reveal className="mb-16">
           <h2 className="text-4xl font-bold text-primary text-center mb-4">
-            The Old Way vs. The Trek IQ Way
+            The Old Way vs. The Trek iQ Way
           </h2>
         </Reveal>
 
@@ -56,11 +56,11 @@ export default function TimelineComparison() {
             transition={{ duration: 0.5, delay: 0.1, ease }}
           >
             <Card className="p-8 bg-white border-2 border-secondary h-full">
-              <h3 className="text-2xl font-bold text-secondary mb-6">The Trek IQ Way</h3>
+              <h3 className="text-2xl font-bold text-secondary mb-6">The Trek iQ Way</h3>
               <div className="space-y-6">
                 <div>
                   <div className="text-sm font-semibold text-secondary mb-2">Day 1</div>
-                  <p className="text-foreground">Submit venue details to Trek IQ</p>
+                  <p className="text-foreground">Submit venue details to Trek iQ</p>
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-secondary mb-2">Days 2-3</div>

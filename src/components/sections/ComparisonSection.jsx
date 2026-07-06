@@ -52,7 +52,7 @@ export default function ComparisonSection() {
             transition={{ duration: 0.5, delay: 0.1, ease }}>
             
             <div className="rounded-2xl bg-[hsl(206_64%_49%)]/10 backdrop-blur-sm border border-[hsl(206_64%_49%)]/30 p-8 h-full shadow-xl shadow-[hsl(206_64%_49%)]/10">
-              <h3 className="text-2xl font-bold mb-6 text-[hsl(206_80%_65%)]">The Trek IQ Way</h3>
+              <h3 className="text-2xl font-bold mb-6 text-[hsl(206_80%_65%)]">The Trek iQ Way</h3>
               <ul className="space-y-4">
                 {[
                 'Comprehensive accessibility documentation in days, not months',

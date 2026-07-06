@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="font-bold text-lg mb-4">Trek IQ</h3>
+            <h3 className="font-bold text-lg mb-4">Trek iQ</h3>
             <p className="text-sm opacity-90">
               An Accessibility Documentation Platform. Help every visitor understand what to expect before they arrive.
             </p>
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-75">
-          <p>© 2026 Trek IQ. All rights reserved.</p>
+          <p>© 2026 Trek iQ. All rights reserved.</p>
         </div>
       </div>
     </footer>

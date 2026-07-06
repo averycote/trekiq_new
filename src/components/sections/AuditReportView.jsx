@@ -186,7 +186,7 @@ export default function AuditReportView() {
         {/* Fake sidebar */}
         <div className="hidden md:flex flex-col w-48 bg-gray-900 text-white p-4 min-h-[600px]">
           <div className="flex items-center gap-2 mb-8">
-            <span className="font-bold text-lg">Trek IQ</span>
+            <span className="font-bold text-lg">Trek iQ</span>
             <span className="text-secondary text-xs">▶</span>
           </div>
           {['Dashboard', 'Venues', 'Audits', 'Staff', 'Incidents'].map((item, i) =>

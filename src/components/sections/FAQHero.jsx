@@ -8,7 +8,7 @@ export default function FAQHero() {
           Frequently Asked Questions
         </h1>
         <p className="text-xl text-muted-foreground leading-relaxed">
-          Common questions and concerns about TrekIQ: how it works, what it costs, and how it fits alongside your existing accessibility efforts.
+          Common questions and concerns about Trek iQ: how it works, what it costs, and how it fits alongside your existing accessibility efforts.
         </p>
       </div>
     </section>

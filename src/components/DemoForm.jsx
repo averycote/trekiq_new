@@ -38,7 +38,7 @@ export default function DemoForm({ onSubmit }) {
     <Card className="w-full max-w-md p-8">
       <h2 className="text-3xl font-bold text-primary mb-2">Book a Demo</h2>
       <p className="text-muted-foreground mb-6">
-        See how TrekIQ helps your organization document accessibility, improve planning, and build visitor confidence.
+        See how Trek iQ helps your organization document accessibility, improve planning, and build visitor confidence.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-5">

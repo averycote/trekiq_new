@@ -46,7 +46,7 @@ export default function HeroSection() {
                 </span>
               </h1>
               <p className="text-lg lg:text-xl text-white/70 leading-relaxed max-w-xl">
-                TrekIQ helps organizations confidently document, improve, and communicate the accessibility of their physical spaces, replacing fragmented reporting with photo-backed profiles that build trust and drive participation.
+                Trek iQ helps organizations confidently document, improve, and communicate the accessibility of their physical spaces, replacing fragmented reporting with photo-backed profiles that build trust and drive participation.
               </p>
             </motion.div>
 

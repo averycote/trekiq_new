@@ -11,7 +11,7 @@ export default function FAQCta() {
           Still have questions?
         </h2>
         <p className="text-xl opacity-90 mb-10">
-          Our team is happy to walk you through how TrekIQ can help your organization document accessibility, improve planning, and build visitor confidence.
+          Our team is happy to walk you through how Trek iQ can help your organization document accessibility, improve planning, and build visitor confidence.
         </p>
         <Link to="/book-demo">
           <Button
