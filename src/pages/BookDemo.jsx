@@ -23,18 +23,18 @@ export default function BookDemo() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-primary mb-3">Book a Demo</h1>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              See how TrekIQ helps your organization document accessibility, improve planning, and build visitor confidence. Pick a time that works for you below.
+            <p className="text-muted-foreground max-w-2xl mx-auto">See how Trek IQ helps your organization document accessibility, improve planning, and build visitor confidence. Pick a time that works for you below.
+
             </p>
           </div>
           <div
             className="calendly-inline-widget rounded-xl overflow-hidden border border-border shadow-sm bg-card"
             data-url={CALENDLY_URL}
-            style={{ minWidth: '320px', height: '700px' }}
-          />
+            style={{ minWidth: '320px', height: '700px' }} />
+          
         </div>
       </main>
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
