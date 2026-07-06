@@ -23,8 +23,8 @@ export default function HeroSection() {
         style={{
           backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)',
           backgroundSize: '48px 48px'
-        }}
-      />
+        }} />
+      
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -33,9 +33,9 @@ export default function HeroSection() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease }}
-            >
-              <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold bg-white/10 text-[hsl(206_64%_49%)] rounded-full mb-6 backdrop-blur-sm border border-white/10">
+              transition={{ duration: 0.5, ease }}>
+              
+              <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold bg-white/10 text-[hsl(206_64%_49%)] rounded-full mb-6 backdrop-blur-sm border border-white/10 hidden">
                 <Accessibility className="w-3.5 h-3.5" />
                 Accessibility Documentation Platform
               </span>
@@ -55,8 +55,8 @@ export default function HeroSection() {
               className="flex flex-col sm:flex-row gap-4"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2, ease }}
-            >
+              transition={{ duration: 0.5, delay: 0.2, ease }}>
+              
               <Link to="/book-demo">
                 <Button
                   size="lg"
@@ -80,8 +80,8 @@ export default function HeroSection() {
               className="flex items-center gap-5 pt-6 border-t border-white/10"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.35, ease }}
-            >
+              transition={{ duration: 0.5, delay: 0.35, ease }}>
+              
               <div className="text-5xl font-bold bg-gradient-to-br from-[hsl(206_64%_49%)] to-[hsl(206_80%_65%)] bg-clip-text text-transparent">
                 86%
               </div>
@@ -96,14 +96,14 @@ export default function HeroSection() {
             className="relative hidden lg:block"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.15, ease }}
-          >
+            transition={{ duration: 0.7, delay: 0.15, ease }}>
+            
             <MapVisual />
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
 
 function MapVisual() {
@@ -130,8 +130,8 @@ function MapVisual() {
           <path
             d="M 0 280 Q 100 260 200 290 T 400 270 L 400 400 L 0 400 Z"
             fill="hsl(206 64% 49%)"
-            fillOpacity="0.08"
-          />
+            fillOpacity="0.08" />
+          
 
           {/* Roads */}
           <path d="M 50 0 L 80 400" stroke="url(#road)" strokeWidth="3" fill="none" />
@@ -142,44 +142,44 @@ function MapVisual() {
 
           {/* Blocks */}
           {[
-            [100, 30, 40, 35], [100, 80, 40, 30], [100, 140, 40, 30],
-            [200, 30, 60, 40], [200, 90, 60, 40], [200, 145, 60, 30],
-            [330, 30, 50, 35], [330, 85, 50, 35], [330, 145, 50, 30],
-            [100, 225, 50, 40], [100, 280, 50, 40],
-            [200, 230, 60, 35], [200, 285, 60, 35],
-            [330, 225, 50, 35], [330, 285, 50, 35],
-          ].map((b, i) => (
-            <rect
-              key={i}
-              x={b[0]} y={b[1]} width={b[2]} height={b[3]}
-              fill="white" fillOpacity="0.04"
-              rx="3"
-            />
-          ))}
+          [100, 30, 40, 35], [100, 80, 40, 30], [100, 140, 40, 30],
+          [200, 30, 60, 40], [200, 90, 60, 40], [200, 145, 60, 30],
+          [330, 30, 50, 35], [330, 85, 50, 35], [330, 145, 50, 30],
+          [100, 225, 50, 40], [100, 280, 50, 40],
+          [200, 230, 60, 35], [200, 285, 60, 35],
+          [330, 225, 50, 35], [330, 285, 50, 35]].
+          map((b, i) =>
+          <rect
+            key={i}
+            x={b[0]} y={b[1]} width={b[2]} height={b[3]}
+            fill="white" fillOpacity="0.04"
+            rx="3" />
+
+          )}
 
           {/* Accessibility markers */}
           {[
-            { x: 120, y: 100, delay: 0 },
-            { x: 230, y: 70, delay: 0.3 },
-            { x: 350, y: 110, delay: 0.6 },
-            { x: 120, y: 260, delay: 0.9 },
-            { x: 230, y: 300, delay: 1.2 },
-            { x: 350, y: 260, delay: 1.5 },
-          ].map((pin, i) => (
-            <motion.g
-              key={i}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: 0.5 + pin.delay * 0.15, ease }}
-            >
+          { x: 120, y: 100, delay: 0 },
+          { x: 230, y: 70, delay: 0.3 },
+          { x: 350, y: 110, delay: 0.6 },
+          { x: 120, y: 260, delay: 0.9 },
+          { x: 230, y: 300, delay: 1.2 },
+          { x: 350, y: 260, delay: 1.5 }].
+          map((pin, i) =>
+          <motion.g
+            key={i}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, delay: 0.5 + pin.delay * 0.15, ease }}>
+            
               <circle
-                cx={pin.x} cy={pin.y} r="14"
-                fill="hsl(206 64% 49%)" fillOpacity="0.2"
-              />
+              cx={pin.x} cy={pin.y} r="14"
+              fill="hsl(206 64% 49%)" fillOpacity="0.2" />
+            
               <circle cx={pin.x} cy={pin.y} r="8" fill="hsl(206 64% 49%)" />
               <circle cx={pin.x} cy={pin.y} r="3" fill="white" />
             </motion.g>
-          ))}
+          )}
         </svg>
       </div>
 
@@ -188,8 +188,8 @@ function MapVisual() {
         className="absolute -top-6 -left-6 w-56 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-4 shadow-xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1.2, ease }}
-      >
+        transition={{ duration: 0.5, delay: 1.2, ease }}>
+        
         <div className="flex items-center gap-2 mb-2">
           <div className="w-8 h-8 rounded-lg bg-[hsl(206_64%_49%)] flex items-center justify-center">
             <MapPin className="w-4 h-4 text-white" />
@@ -197,9 +197,9 @@ function MapVisual() {
           <span className="text-sm font-semibold text-white">Harbour Hotel</span>
         </div>
         <div className="flex items-center gap-1 mb-2">
-          {[1, 2, 3, 4, 5].map((s) => (
-            <Star key={s} className="w-3 h-3 text-[hsl(206_64%_49%)]" fill="currentColor" />
-          ))}
+          {[1, 2, 3, 4, 5].map((s) =>
+          <Star key={s} className="w-3 h-3 text-[hsl(206_64%_49%)]" fill="currentColor" />
+          )}
           <span className="text-xs text-white/60 ml-1">Accessible</span>
         </div>
         <p className="text-xs text-white/60">Step-free entry · Accessible parking · Audio loops</p>
@@ -210,8 +210,8 @@ function MapVisual() {
         className="absolute -bottom-6 -right-6 w-52 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-4 shadow-xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1.5, ease }}
-      >
+        transition={{ duration: 0.5, delay: 1.5, ease }}>
+        
         <div className="flex items-center gap-2 mb-2">
           <div className="w-8 h-8 rounded-lg bg-[hsl(206_64%_49%)] flex items-center justify-center">
             <Accessibility className="w-4 h-4 text-white" />
@@ -229,6 +229,6 @@ function MapVisual() {
           </div>
         </div>
       </motion.div>
-    </div>
-  );
+    </div>);
+
 }
