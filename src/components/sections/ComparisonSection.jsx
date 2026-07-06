@@ -8,7 +8,7 @@ const ease = [0.22, 1, 0.36, 1];
 export default function ComparisonSection() {
   return (
     <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-[hsl(210_100%_12%)] text-white">
-      {/* Glow accents — hidden on mobile for performance */}
+      {/* Glow accents - hidden on mobile for performance */}
       <div className="hidden lg:block absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-[hsl(206_64%_49%)] opacity-10 blur-[120px]" />
       <div className="hidden lg:block absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-[hsl(206_80%_60%)] opacity-08 blur-[100px]" />
 

@@ -86,7 +86,7 @@ function LiveStatusTab() {
   return (
     <div>
       <h2 className="text-2xl font-bold text-gray-900 mb-2">Live Status</h2>
-      <p className="text-gray-500 mb-6">Real-time accessibility feature availability — updated by venue staff</p>
+      <p className="text-gray-500 mb-6">Real-time accessibility feature availability, updated by venue staff</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {features.map((f) =>
         <div key={f.label} className={`flex items-center gap-3 p-4 rounded-xl border ${f.status ? 'bg-secondary/10 border-secondary/30' : 'bg-gray-50 border-gray-200'}`}>

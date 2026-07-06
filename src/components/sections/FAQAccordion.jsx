@@ -5,19 +5,19 @@ export default function FAQAccordion() {
   const faqs = [
     {
       question: 'We already hired an accessibility consultant. Why do we need TrekIQ?',
-      answer: 'Consultants assess. TrekIQ helps organizations manage, communicate, and maintain accessibility over time. We transform that assessment into a living accessibility profile that can be updated, shared publicly, and used for future planning—extending the value of your consultant\'s work to be public-facing and long-lasting.'
+      answer: 'Consultants assess. TrekIQ helps organizations manage, communicate, and maintain accessibility over time. We transform that assessment into a living accessibility profile that can be updated, shared publicly, and used for future planning, extending the value of your consultant\'s work to be public-facing and long-lasting.'
     },
     {
       question: 'We\'re already accessible. What does TrekIQ add?',
-      answer: 'Many organizations have invested heavily in accessibility but still struggle to communicate those investments to visitors, patients, guests, or event planners. TrekIQ helps ensure the work you\'ve already done becomes visible and valuable—turning your accessibility features into a public profile that builds confidence.'
+      answer: 'Many organizations have invested heavily in accessibility but still struggle to communicate those investments to visitors, patients, guests, or event planners. TrekIQ helps ensure the work you\'ve already done becomes visible and valuable, turning your accessibility features into a public profile that builds confidence.'
     },
     {
       question: 'Accessibility isn\'t a priority right now. Should we wait?',
-      answer: 'TrekIQ doesn\'t require organizations to fix everything immediately—it helps identify priorities so improvements can happen over time. Many organizations begin by simply documenting accessibility. TrekIQ can also help with capital planning by matching you with grants so you can find funding for upgrades.'
+      answer: 'TrekIQ doesn\'t require organizations to fix everything immediately. It helps identify priorities so improvements can happen over time. Many organizations begin by simply documenting accessibility. TrekIQ can also help with capital planning by matching you with grants so you can find funding for upgrades.'
     },
     {
       question: 'We don\'t have budget for this. How can it work?',
-      answer: 'Rather than creating a new project, TrekIQ often strengthens projects already planned. Accessibility documentation supports broader initiatives such as grant applications, capital planning, visitor experience improvements, and organizational transparency—making it a multiplier for existing investments.'
+      answer: 'Rather than creating a new project, TrekIQ often strengthens projects already planned. Accessibility documentation supports broader initiatives such as grant applications, capital planning, visitor experience improvements, and organizational transparency, making it a multiplier for existing investments.'
     },
     {
       question: 'We\'re too small. Does accessibility documentation make sense for us?',
@@ -29,11 +29,11 @@ export default function FAQAccordion() {
     },
     {
       question: 'How is this different from Google Maps?',
-      answer: 'Google Maps may indicate whether a location has wheelchair access, but it doesn\'t explain what visitors should actually expect. TrekIQ provides photo-backed accessibility documentation that helps people make informed decisions before arriving—covering entrances, restrooms, pathways, sensory considerations, and more.'
+      answer: 'Google Maps may indicate whether a location has wheelchair access, but it doesn\'t explain what visitors should actually expect. TrekIQ provides photo-backed accessibility documentation that helps people make informed decisions before arriving, covering entrances, restrooms, pathways, sensory considerations, and more.'
     },
     {
       question: 'We don\'t receive many accessibility requests. Is there really demand?',
-      answer: 'The absence of questions does not necessarily indicate the absence of demand. Many people simply don\'t visit places when accessibility information isn\'t available. Clear accessibility information gives people the confidence to engage with your organization—turning silent non-visitors into active visitors.'
+      answer: 'The absence of questions does not necessarily indicate the absence of demand. Many people simply don\'t visit places when accessibility information isn\'t available. Clear accessibility information gives people the confidence to engage with your organization, turning silent non-visitors into active visitors.'
     }
   ];
 

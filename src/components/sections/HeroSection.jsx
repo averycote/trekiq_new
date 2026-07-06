@@ -9,7 +9,7 @@ const ease = [0.22, 1, 0.36, 1];
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-[hsl(210_100%_12%)] text-white">
-      {/* Gradient mesh background — heavy blurs hidden on mobile for performance */}
+      {/* Gradient mesh background - heavy blurs hidden on mobile for performance */}
       <div className="absolute inset-0">
         <div className="hidden lg:block absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full bg-[hsl(206_64%_49%)] opacity-20 blur-[120px]" />
         <div className="hidden lg:block absolute bottom-[-20%] right-[-5%] w-[500px] h-[500px] rounded-full bg-[hsl(206_80%_60%)] opacity-15 blur-[100px]" />
@@ -46,7 +46,7 @@ export default function HeroSection() {
                 </span>
               </h1>
               <p className="text-lg lg:text-xl text-white/70 leading-relaxed max-w-xl">
-                TrekIQ helps organizations confidently document, improve, and communicate the accessibility of their physical spaces—replacing fragmented reporting with photo-backed profiles that build trust and drive participation.
+                TrekIQ helps organizations confidently document, improve, and communicate the accessibility of their physical spaces, replacing fragmented reporting with photo-backed profiles that build trust and drive participation.
               </p>
             </motion.div>
 

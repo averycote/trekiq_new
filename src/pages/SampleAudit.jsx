@@ -19,7 +19,7 @@ export default function SampleAudit() {
             Live Demo
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">See an Accessibility Profile</h1>
-          <p className="text-lg text-muted-foreground mb-10">From documentation to public accessibility profile—see how TrekIQ helps organizations communicate accessibility clearly.
+          <p className="text-lg text-muted-foreground mb-10">From documentation to public accessibility profile. See how TrekIQ helps organizations communicate accessibility clearly.
 
           </p>
 
@@ -71,7 +71,7 @@ export default function SampleAudit() {
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-300">
               <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-800 flex items-center gap-3">
                 <ClipboardList className="w-5 h-5 flex-shrink-0" />
-                <span><strong>This is the internal view</strong> — what your team sees when managing accessibility documentation for your venue.</span>
+                <span><strong>This is the internal view</strong>. What your team sees when managing accessibility documentation for your venue.</span>
               </div>
               <AuditReportView />
             </div> :
@@ -79,7 +79,7 @@ export default function SampleAudit() {
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-300">
               <div className="mb-6 p-4 bg-teal-50 border border-teal-200 rounded-lg text-sm text-teal-800 flex items-center gap-3">
                 <Globe className="w-5 h-5 flex-shrink-0" />
-                <span><strong>This is the public profile</strong> — what visitors see when they want to understand what to expect before they arrive.</span>
+                <span><strong>This is the public profile</strong>. What visitors see when they want to understand what to expect before they arrive.</span>
               </div>
               <PublicProfileView />
             </div>

@@ -60,7 +60,7 @@ export default function MarketPageTemplate({ market }) {
                 What Trek IQ Means for Your Team
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Different roles, different priorities—TrekIQ delivers value across your organization.
+                Different roles, different priorities. TrekIQ delivers value across your organization.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

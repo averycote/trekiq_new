@@ -9,14 +9,14 @@ export default function WhyVerifyHero() {
           Our Approach
         </h1>
         <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-          TrekIQ is an Accessibility Documentation Platform. We help organizations confidently understand, document, improve, and communicate the accessibility of their physical spaces—leading to increased visitor confidence and better organizational decisions.
+          TrekIQ is an Accessibility Documentation Platform. We help organizations confidently understand, document, improve, and communicate the accessibility of their physical spaces, leading to increased visitor confidence and better organizational decisions.
         </p>
 
         <div className="space-y-8">
           <Card className="p-8 bg-white">
             <h3 className="text-2xl font-bold text-primary mb-4">The Problem</h3>
             <p className="text-foreground leading-relaxed">
-              Organizations struggle to accurately document and communicate accessibility information. Information is fragmented, inconsistent, or outdated—creating uncertainty for visitors and unnecessary workload for staff.
+              Organizations struggle to accurately document and communicate accessibility information. Information is fragmented, inconsistent, or outdated, creating uncertainty for visitors and unnecessary workload for staff.
             </p>
           </Card>
 

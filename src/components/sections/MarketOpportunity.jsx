@@ -42,7 +42,7 @@ export default function MarketOpportunity() {
           <Card className="p-8 bg-primary-foreground/10 border border-primary-foreground/20">
             <h3 className="text-2xl font-bold mb-4 text-white">Our Findings</h3>
             <p className="text-lg leading-relaxed opacity-90 text-white">
-              Our market research in Halifax revealed that 86% of people with disabilities have actively avoided venues or attractions in the past year simply because they had no way to confirm accessibility features beforehand. This isn't just an information gap—it's lost participation, lost revenue, and missed connections. TrekIQ helps close that gap.
+              Our market research in Halifax revealed that 86% of people with disabilities have actively avoided venues or attractions in the past year simply because they had no way to confirm accessibility features beforehand. This isn't just an information gap. It's lost participation, lost revenue, and missed connections. TrekIQ helps close that gap.
             </p>
           </Card>
         </Reveal>
