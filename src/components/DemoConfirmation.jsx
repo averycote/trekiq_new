@@ -17,11 +17,11 @@ export default function DemoConfirmation() {
       <p className="text-sm text-muted-foreground mb-8">
         In the meantime, check out our FAQ or explore more about Trek iQ.
       </p>
-      <Link to="/">
-        <Button className="w-full h-12 text-base font-semibold rounded-lg" style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
+      <Button asChild className="w-full h-12 text-base font-semibold rounded-lg" style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
+        <Link to="/">
           Back to Home
-        </Button>
-      </Link>
+        </Link>
+      </Button>
     </Card>
   );
 }

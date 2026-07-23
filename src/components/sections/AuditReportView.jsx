@@ -115,11 +115,14 @@ function IssueCard({ issue }) {
   return (
     <div className="bg-white border border-border rounded-xl overflow-hidden">
       <button
+        type="button"
         onClick={() => setExpanded(!expanded)}
+        aria-expanded={expanded}
+        aria-controls={`issue-details-${issue.id}`}
         className="w-full text-left p-5 flex items-start gap-4 hover:bg-gray-50 transition-colors">
         
         <div className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 ${cfg.iconColor}`}>
-          <Icon className="w-4 h-4" />
+          <Icon className="w-4 h-4" aria-hidden="true" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
@@ -131,15 +134,13 @@ function IssueCard({ issue }) {
         </div>
         <div className="flex items-center gap-3 flex-shrink-0">
           <span className={`px-2.5 py-0.5 text-xs font-bold rounded-md ${cfg.color}`}>{issue.priority}</span>
-          <button className="p-1.5 rounded-md hover:bg-gray-100 text-gray-400 transition-colors">
-            <Edit className="w-3.5 h-3.5" />
-          </button>
-          {expanded ? <ChevronUp className="w-4 h-4 text-gray-400" /> : <ChevronDown className="w-4 h-4 text-gray-400" />}
+          <Edit className="w-3.5 h-3.5 text-gray-400" aria-hidden="true" />
+          {expanded ? <ChevronUp className="w-4 h-4 text-gray-400" aria-hidden="true" /> : <ChevronDown className="w-4 h-4 text-gray-400" aria-hidden="true" />}
         </div>
       </button>
 
       {expanded &&
-      <div className="border-t border-border px-5 pb-5 pt-4 space-y-4 bg-gray-50">
+      <div id={`issue-details-${issue.id}`} className="border-t border-border px-5 pb-5 pt-4 space-y-4 bg-gray-50">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <p className="text-xs text-gray-400 uppercase font-semibold mb-1">Current State</p>
@@ -209,7 +210,7 @@ export default function AuditReportView() {
         <div className="flex-1 p-6 bg-gray-50">
           <div className="flex items-center gap-2 mb-1">
             <span className="text-gray-400 text-sm">←</span>
-            <h1 className="text-2xl font-bold text-gray-900">Audit Report</h1>
+            <h2 className="text-2xl font-bold text-gray-900">Audit Report</h2>
           </div>
           <p className="text-sm text-gray-500 mb-6 flex items-center gap-1.5">
             <span className="text-gray-400">🏢</span> Main Street Restaurant
@@ -219,7 +220,7 @@ export default function AuditReportView() {
           <div className="bg-white rounded-xl border border-border p-6 mb-6 flex flex-col sm:flex-row items-center gap-6">
             <ScoreDial score={72} />
             <div>
-              <h2 className="text-xl font-bold text-gray-900 mb-1">Accessibility Compliance Score</h2>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Accessibility Compliance Score</h3>
               <p className="text-gray-500 text-sm mb-3">Fair compliance. Multiple improvements required to meet Nova Scotia accessibility standards.</p>
               <div className="flex flex-wrap gap-4 text-sm">
                 <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-red-500 inline-block" />{high} High Priority</span>
@@ -230,7 +231,7 @@ export default function AuditReportView() {
           </div>
 
           {/* Issues */}
-          <h2 className="text-lg font-bold text-gray-900 mb-4">Compliance Issues Found ({issues.length})</h2>
+          <h3 className="text-lg font-bold text-gray-900 mb-4">Compliance Issues Found ({issues.length})</h3>
           <div className="space-y-3">
             {issues.map((issue) =>
             <IssueCard key={issue.id} issue={issue} />

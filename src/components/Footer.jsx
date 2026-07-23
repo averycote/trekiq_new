@@ -7,13 +7,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="font-bold text-lg mb-4">Trek iQ</h3>
+            <p className="font-bold text-lg mb-4">Trek iQ</p>
             <p className="text-sm opacity-90">
               An Accessibility Documentation Platform. Help every visitor understand what to expect before they arrive.
             </p>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">Platform</h4>
+            <h2 className="font-semibold mb-4">Platform</h2>
             <ul className="space-y-2 text-sm">
               <li><Link to="/why-verify" className="hover:opacity-80">Our Approach</Link></li>
               <li><Link to="/markets" className="hover:opacity-80">Markets</Link></li>
@@ -21,7 +21,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">Company</h4>
+            <h2 className="font-semibold mb-4">Company</h2>
             <ul className="space-y-2 text-sm">
               <li><Link to="/partners" className="hover:opacity-80">Partners</Link></li>
               <li><Link to="/faq" className="hover:opacity-80">FAQ</Link></li>
@@ -29,10 +29,10 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
+            <h2 className="font-semibold mb-4">Legal</h2>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:opacity-80">Privacy Policy</a></li>
-              <li><a href="#" className="hover:opacity-80">Terms of Service</a></li>
+              <li>Privacy Policy</li>
+              <li>Terms of Service</li>
             </ul>
           </div>
         </div>

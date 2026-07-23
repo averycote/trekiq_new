@@ -14,21 +14,21 @@ export default function WhyVerifyHero() {
 
         <div className="space-y-8">
           <Card className="p-8 bg-white">
-            <h3 className="text-2xl font-bold text-primary mb-4">The Problem</h3>
+            <h2 className="text-2xl font-bold text-primary mb-4">The Problem</h2>
             <p className="text-foreground leading-relaxed">
               Organizations struggle to accurately document and communicate accessibility information. Information is fragmented, inconsistent, or outdated, creating uncertainty for visitors and unnecessary workload for staff.
             </p>
           </Card>
 
           <Card className="p-8 bg-white">
-            <h3 className="text-2xl font-bold text-primary mb-4">Why It Matters</h3>
+            <h2 className="text-2xl font-bold text-primary mb-4">Why It Matters</h2>
             <p className="text-foreground leading-relaxed">
               Poor accessibility information creates uncertainty, increases staff workload, reduces visitor confidence, and limits participation. When people can't find the information they need, they simply don't visit.
             </p>
           </Card>
 
           <Card className="p-8 bg-white">
-            <h3 className="text-2xl font-bold text-primary mb-4">How Trek IQ Helps</h3>
+            <h2 className="text-2xl font-bold text-primary mb-4">How Trek IQ Helps</h2>
             <p className="text-foreground leading-relaxed">
               Trek iQ creates photo-backed accessibility documentation that identifies barriers, recommends improvements, and helps organizations communicate accessibility clearly to the people who need it.
             </p>

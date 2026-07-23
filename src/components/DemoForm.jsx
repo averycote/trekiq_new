@@ -43,12 +43,14 @@ export default function DemoForm({ onSubmit }) {
 
       <form onSubmit={handleSubmit} className="space-y-5">
         <div>
-          <label className="block text-sm font-medium text-foreground mb-2">
+          <label htmlFor="demo-name" className="block text-sm font-medium text-foreground mb-2">
             Full Name *
           </label>
           <Input
             type="text"
+            id="demo-name"
             name="name"
+            autoComplete="name"
             value={formData.name}
             onChange={handleChange}
             placeholder="Your name"
@@ -58,12 +60,14 @@ export default function DemoForm({ onSubmit }) {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-foreground mb-2">
+          <label htmlFor="demo-organization" className="block text-sm font-medium text-foreground mb-2">
             Organization *
           </label>
           <Input
             type="text"
+            id="demo-organization"
             name="organization"
+            autoComplete="organization"
             value={formData.organization}
             onChange={handleChange}
             placeholder="Organization name"
@@ -73,11 +77,11 @@ export default function DemoForm({ onSubmit }) {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-foreground mb-2">
+          <label htmlFor="demo-venue-type" className="block text-sm font-medium text-foreground mb-2">
             Organization Type *
           </label>
           <Select value={formData.venue_type} onValueChange={handleVenueTypeChange}>
-            <SelectTrigger className="text-lg">
+            <SelectTrigger id="demo-venue-type" className="text-lg" aria-required="true">
               <SelectValue placeholder="Select your sector" />
             </SelectTrigger>
             <SelectContent>
@@ -92,12 +96,14 @@ export default function DemoForm({ onSubmit }) {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-foreground mb-2">
+          <label htmlFor="demo-email" className="block text-sm font-medium text-foreground mb-2">
             Email *
           </label>
           <Input
             type="email"
+            id="demo-email"
             name="email"
+            autoComplete="email"
             value={formData.email}
             onChange={handleChange}
             placeholder="your.email@organization.com"
@@ -107,10 +113,11 @@ export default function DemoForm({ onSubmit }) {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-foreground mb-2">
+          <label htmlFor="demo-message" className="block text-sm font-medium text-foreground mb-2">
             Message
           </label>
           <Textarea
+            id="demo-message"
             name="message"
             value={formData.message}
             onChange={handleChange}

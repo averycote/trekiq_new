@@ -57,22 +57,24 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2, ease }}>
               
-              <Link to="/book-demo">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto h-12 px-8 font-semibold rounded-xl text-white flex items-center justify-center gap-2 transition-transform hover:scale-[1.03] shadow-lg shadow-[hsl(206_64%_49%)]/30"
-                  style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
+              <Button
+                asChild
+                size="lg"
+                className="w-full sm:w-auto h-12 px-8 font-semibold rounded-xl text-white flex items-center justify-center gap-2 transition-transform hover:scale-[1.03] shadow-lg shadow-[hsl(206_64%_49%)]/30"
+                style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
+                <Link to="/book-demo">
                   Book a Demo
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
-              </Link>
-              <Link to="/sample-audit">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto h-12 px-8 font-semibold rounded-xl bg-white/5 text-white border border-white/15 hover:bg-white/10 backdrop-blur-sm transition-transform hover:scale-[1.03]">
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                className="w-full sm:w-auto h-12 px-8 font-semibold rounded-xl bg-white/5 text-white border border-white/15 hover:bg-white/10 backdrop-blur-sm transition-transform hover:scale-[1.03]">
+                <Link to="/sample-audit">
                   See an Accessibility Profile
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </motion.div>
 
             {/* Key Stat */}

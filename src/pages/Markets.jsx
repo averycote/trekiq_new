@@ -8,7 +8,7 @@ export default function Markets() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <MarketsHero />
         <SegmentDetails />
       </main>
