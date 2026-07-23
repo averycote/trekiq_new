@@ -34,7 +34,7 @@ export default function WhyVerifyHero() {
             </p>
           </Card>
 
-          <Card className="p-8 bg-white border-2 border-secondary">
+          <Card className="p-8 bg-white border-2 border-secondary hidden">
             <h3 className="text-2xl font-bold text-secondary mb-4">What Changes Afterwards</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
@@ -61,6 +61,6 @@ export default function WhyVerifyHero() {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
