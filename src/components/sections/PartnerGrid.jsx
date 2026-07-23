@@ -48,7 +48,7 @@ export default function PartnerGrid() {
                   <span className="text-5xl">{partner.logo}</span>
                 )}
               </div>
-              <h3 className="text-xl font-bold text-primary mb-1">{partner.name}</h3>
+              <h2 className="text-xl font-bold text-primary mb-1">{partner.name}</h2>
               <p className="text-sm font-semibold text-teal-500 mb-4">{partner.category}</p>
               <p className="text-foreground leading-relaxed">{partner.description}</p>
             </Card>

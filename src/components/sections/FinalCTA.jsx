@@ -40,15 +40,16 @@ export default function FinalCTA() {
             transition={{ duration: 0.2, ease }}
             className="inline-block"
           >
-            <Link to="/book-demo">
-              <Button
-                size="lg"
-                className="h-12 px-8 font-semibold rounded-xl text-white flex items-center justify-center gap-2 mx-auto shadow-lg shadow-[hsl(206_64%_49%)]/30"
-                style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
+            <Button
+              asChild
+              size="lg"
+              className="h-12 px-8 font-semibold rounded-xl text-white flex items-center justify-center gap-2 mx-auto shadow-lg shadow-[hsl(206_64%_49%)]/30"
+              style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
+              <Link to="/book-demo">
                 Book a Demo Now
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
+            </Button>
           </motion.div>
         </Reveal>
       </div>

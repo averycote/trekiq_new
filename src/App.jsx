@@ -25,8 +25,9 @@ const AuthenticatedApp = () => {
   // Show loading spinner while checking app public settings
   if (isLoadingPublicSettings) {
     return (
-      <div className="fixed inset-0 flex items-center justify-center">
-        <div className="w-8 h-8 border-4 border-slate-200 border-t-slate-800 rounded-full animate-spin"></div>
+      <div className="fixed inset-0 flex items-center justify-center" role="status" aria-live="polite">
+        <div className="w-8 h-8 border-4 border-slate-200 border-t-slate-800 rounded-full animate-spin" aria-hidden="true"></div>
+        <span className="sr-only">Loading Trek iQ</span>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShieldCheck, Clock, Accessibility, Volume2, Eye, Ear, Brain, MapPin, Bus, Car, Phone, Wifi, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, Clock, Accessibility, Volume2, Eye, Ear, Brain, MapPin, Bus, Car, AlertCircle, CheckCircle2 } from 'lucide-react';
 
 const categories = [
 { id: 'mobility', icon: Accessibility, label: 'Mobility', score: 91, color: 'bg-secondary', description: 'Excellent wheelchair access throughout. Elevator serves all 4 floors. Extra-wide passageways on Floor 1.' },
@@ -35,7 +35,7 @@ function OverviewTab() {
   return (
     <div>
       <div className="mb-6">
-        <h2 className="text-2xl font-bold text-gray-900">Accessibility Scorecard</h2>
+        <h3 className="text-2xl font-bold text-gray-900">Accessibility Scorecard</h3>
         <p className="text-gray-500 mt-1">Comprehensive accessibility assessment across all categories</p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -85,7 +85,7 @@ function LiveStatusTab() {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-gray-900 mb-2">Live Status</h2>
+      <h3 className="text-2xl font-bold text-gray-900 mb-2">Live Status</h3>
       <p className="text-gray-500 mb-6">Real-time accessibility feature availability, updated by venue staff</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {features.map((f) =>
@@ -107,7 +107,7 @@ function LiveStatusTab() {
 function GettingHereTab() {
   return (
     <div>
-      <h2 className="text-2xl font-bold text-gray-900 mb-2">Getting Here</h2>
+      <h3 className="text-2xl font-bold text-gray-900 mb-2">Getting Here</h3>
       <p className="text-gray-500 mb-6">Accessible routes and transportation options</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {[
@@ -121,7 +121,7 @@ function GettingHereTab() {
               <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center mb-3">
                 <Icon className="w-5 h-5 text-secondary" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
+              <h4 className="font-semibold text-gray-900 mb-2">{item.title}</h4>
               <p className="text-sm text-gray-500">{item.desc}</p>
             </div>);
 
@@ -134,7 +134,7 @@ function GettingHereTab() {
 function PoliciesTab() {
   return (
     <div>
-      <h2 className="text-2xl font-bold text-gray-900 mb-2">Accessibility Policies</h2>
+      <h3 className="text-2xl font-bold text-gray-900 mb-2">Accessibility Policies</h3>
       <p className="text-gray-500 mb-6">How this venue supports visitors with disabilities</p>
       <div className="space-y-4">
         {[
@@ -144,7 +144,7 @@ function PoliciesTab() {
         { title: 'Communication', body: 'Staff are trained in accessible communication. Large-print materials, audio guides, and ASL interpretation available with 24-hour advance notice.' }].
         map((p) =>
         <div key={p.title} className="bg-white border border-gray-200 rounded-xl p-5">
-            <h3 className="font-semibold text-gray-900 mb-1.5">{p.title}</h3>
+            <h4 className="font-semibold text-gray-900 mb-1.5">{p.title}</h4>
             <p className="text-sm text-gray-600">{p.body}</p>
           </div>
         )}
@@ -155,6 +155,23 @@ function PoliciesTab() {
 
 export default function PublicProfileView() {
   const [activeTab, setActiveTab] = useState('Overview');
+
+  const handleTabKeyDown = (event, currentTab) => {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+
+    event.preventDefault();
+    const currentIndex = tabs.indexOf(currentTab);
+    let nextIndex = currentIndex;
+
+    if (event.key === 'ArrowRight') nextIndex = (currentIndex + 1) % tabs.length;
+    if (event.key === 'ArrowLeft') nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+    if (event.key === 'Home') nextIndex = 0;
+    if (event.key === 'End') nextIndex = tabs.length - 1;
+
+    const nextTab = tabs[nextIndex];
+    setActiveTab(nextTab);
+    document.getElementById(`profile-tab-${nextIndex}`)?.focus();
+  };
 
   return (
     <div className="bg-white rounded-2xl border border-border shadow-sm overflow-hidden">
@@ -168,7 +185,7 @@ export default function PublicProfileView() {
               </span>
               <span className="text-gray-400 text-sm">Since January 2025</span>
             </div>
-            <h1 className="text-4xl font-extrabold text-gray-900 mb-1">Main Street Restaurant</h1>
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-1">Main Street Restaurant</h2>
             <p className="text-gray-500 text-sm">123 Halifax St.</p>
             <p className="text-gray-500 text-sm mb-3">Halifax, Nova Scotia</p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
@@ -200,11 +217,18 @@ export default function PublicProfileView() {
 
       {/* Tabs */}
       <div className="border-b border-gray-200 px-6">
-        <div className="flex gap-1 overflow-x-auto">
-          {tabs.map((tab) =>
+        <div className="flex gap-1 overflow-x-auto" role="tablist" aria-label="Public accessibility profile sections">
+          {tabs.map((tab, index) =>
           <button
             key={tab}
+            id={`profile-tab-${index}`}
+            type="button"
+            role="tab"
+            aria-selected={activeTab === tab}
+            aria-controls="profile-tab-panel"
+            tabIndex={activeTab === tab ? 0 : -1}
             onClick={() => setActiveTab(tab)}
+            onKeyDown={(event) => handleTabKeyDown(event, tab)}
             className={`px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
             activeTab === tab ?
             'border-secondary text-secondary' :
@@ -218,7 +242,7 @@ export default function PublicProfileView() {
       </div>
 
       {/* Tab content */}
-      <div className="p-6 bg-gray-50">
+      <div id="profile-tab-panel" role="tabpanel" aria-labelledby={`profile-tab-${tabs.indexOf(activeTab)}`} tabIndex={0} className="p-6 bg-gray-50">
         {activeTab === 'Overview' && <OverviewTab />}
         {activeTab === 'Live Status' && <LiveStatusTab />}
         {activeTab === 'Getting Here' && <GettingHereTab />}

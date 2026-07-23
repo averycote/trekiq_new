@@ -40,6 +40,7 @@ export default function FAQAccordion() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-4xl mx-auto">
+        <h2 className="sr-only">Frequently asked questions</h2>
         <Accordion type="single" collapsible defaultValue="item-0">
           {faqs.map((faq, idx) => (
             <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-border">

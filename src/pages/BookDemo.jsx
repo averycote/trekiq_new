@@ -19,7 +19,7 @@ export default function BookDemo() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navigation />
-      <main className="flex-1 py-12 px-4">
+      <main id="main-content" tabIndex={-1} className="flex-1 py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-primary mb-3">Book a Demo</h1>
@@ -29,6 +29,7 @@ export default function BookDemo() {
           </div>
           <div
             className="calendly-inline-widget rounded-xl overflow-hidden border border-border shadow-sm bg-card"
+            aria-label="Schedule a Trek iQ demo"
             data-url={CALENDLY_URL}
             style={{ minWidth: '320px', height: '700px' }} />
           

@@ -13,16 +13,16 @@ export default function PartnersCallout() {
         <p className="text-xl opacity-90 mb-10 max-w-2xl mx-auto">Whether you're a venue operator, technology partner, or accessibility advocate, Trek iQ is built to help every visitor understand what to expect before they arrive.
 
         </p>
-        <Link to="/book-demo">
-          <Button
-            size="lg"
-            className="h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2 mx-auto"
-            style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
-            
+        <Button
+          asChild
+          size="lg"
+          className="h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2 mx-auto"
+          style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
+          <Link to="/book-demo">
             Start a Conversation
-            <ArrowRight className="w-4 h-4" />
-          </Button>
-        </Link>
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
+        </Button>
       </div>
     </section>);
 

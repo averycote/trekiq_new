@@ -1,7 +1,6 @@
 import React from 'react';
 import { TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Reveal from '@/components/Reveal';
 
 const ease = [0.22, 1, 0.36, 1];
 
@@ -29,9 +28,9 @@ export default function RiskCallout() {
             <TrendingUp className="w-8 h-8 text-[hsl(206_80%_65%)]" />
           </motion.div>
           <div>
-            <h3 className="text-3xl font-bold mb-3">
+            <h2 className="text-3xl font-bold mb-3">
               Accessibility is a Business Opportunity
-            </h3>
+            </h2>
             <p className="text-lg text-white/70 mb-4">
               Organizations that communicate accessibility proactively build trust long before regulations require it. Leading organizations don't wait for legislation to define the visitor experience.
             </p>

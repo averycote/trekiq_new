@@ -59,12 +59,12 @@ export default function SegmentDetails() {
               <p className="text-lg font-semibold text-secondary mb-4">{segment.outcome}</p>
               <p className="text-sm text-muted-foreground mb-2"><strong>The Challenge:</strong> {segment.pain}</p>
               <p className="text-foreground mb-6 leading-relaxed flex-grow">{segment.description}</p>
-              <Link to={segment.path}>
-                <Button className="w-full flex items-center justify-center gap-2" style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
+              <Button asChild className="w-full flex items-center justify-center gap-2" style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
+                <Link to={segment.path}>
                   Explore This Market
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
-              </Link>
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
+              </Button>
             </Card>
           ))}
         </div>

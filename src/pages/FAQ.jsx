@@ -9,7 +9,7 @@ export default function FAQ() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <FAQHero />
         <FAQAccordion />
         <FAQCta />

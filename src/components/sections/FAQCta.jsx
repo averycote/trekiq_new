@@ -13,16 +13,17 @@ export default function FAQCta() {
         <p className="text-xl opacity-90 mb-10">
           Our team is happy to walk you through how Trek iQ can help your organization document accessibility, improve planning, and build visitor confidence.
         </p>
-        <Link to="/book-demo">
-          <Button
-            size="lg"
-            className="h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2 mx-auto"
-            style={{ backgroundColor: 'hsl(206 64% 49%)' }}
-          >
+        <Button
+          asChild
+          size="lg"
+          className="h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2 mx-auto"
+          style={{ backgroundColor: 'hsl(206 64% 49%)' }}
+        >
+          <Link to="/book-demo">
             Book a Demo
-            <ArrowRight className="w-4 h-4" />
-          </Button>
-        </Link>
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
+        </Button>
       </div>
     </section>
   );

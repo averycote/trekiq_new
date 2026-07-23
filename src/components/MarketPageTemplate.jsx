@@ -10,7 +10,7 @@ export default function MarketPageTemplate({ market }) {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         {/* Hero */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
           <div className="max-w-4xl mx-auto text-center">
@@ -24,15 +24,16 @@ export default function MarketPageTemplate({ market }) {
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               {market.heroSubtext}
             </p>
-            <Link to="/book-demo">
-              <Button
-                size="lg"
-                className="h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2 mx-auto"
-                style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
+            <Button
+              asChild
+              size="lg"
+              className="h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2 mx-auto"
+              style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
+              <Link to="/book-demo">
                 Book a Demo
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
+            </Button>
           </div>
         </section>
 
@@ -41,11 +42,11 @@ export default function MarketPageTemplate({ market }) {
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="p-8 bg-background">
-                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">Today</h3>
+                <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">Today</h2>
                 <p className="text-2xl font-bold text-primary leading-snug">{market.primaryPain}</p>
               </Card>
               <Card className="p-8 bg-background border-2 border-secondary">
-                <h3 className="text-sm font-semibold text-secondary uppercase tracking-wider mb-3">With Trek iQ</h3>
+                <h2 className="text-sm font-semibold text-secondary uppercase tracking-wider mb-3">With Trek iQ</h2>
                 <p className="text-2xl font-bold text-secondary leading-snug">{market.primaryOutcome}</p>
               </Card>
             </div>
@@ -104,15 +105,16 @@ export default function MarketPageTemplate({ market }) {
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Book a demo and see how Trek iQ helps your organization communicate accessibility with confidence.
             </p>
-            <Link to="/book-demo">
-              <Button
-                size="lg"
-                className="h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2 mx-auto"
-                style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
+            <Button
+              asChild
+              size="lg"
+              className="h-12 px-8 font-semibold rounded-lg text-white flex items-center justify-center gap-2 mx-auto"
+              style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
+              <Link to="/book-demo">
                 Book a Demo
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
+            </Button>
           </div>
         </section>
       </main>
