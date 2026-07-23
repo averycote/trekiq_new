@@ -33,9 +33,9 @@ export default function ComparisonSection() {
             transition={{ duration: 0.5, ease }}>
             
             <div className="rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 h-full">
-              <h3 className="text-2xl font-bold mb-6 text-white/80">The Old Way</h3>
+              <h3 className="text-2xl font-bold mb-6 text-white/80">Today</h3>
               <ul className="space-y-4">
-                {['Manual site audits take months', 'Expensive external consultants', 'No public profile = no market differentiation', 'Fragmented, outdated information'].map((item, i) =>
+                {['Accessibility documentation often takes months', 'Updates require external consultants each time', 'No public-facing accessibility profile', 'Fragmented, outdated information'].map((item, i) =>
                 <li key={i} className="flex items-start gap-3">
                     <X className="w-5 h-5 text-red-400 flex-shrink-0 mt-1" />
                     <span className="text-white/70">{item}</span>
@@ -52,12 +52,12 @@ export default function ComparisonSection() {
             transition={{ duration: 0.5, delay: 0.1, ease }}>
             
             <div className="rounded-2xl bg-[hsl(206_64%_49%)]/10 backdrop-blur-sm border border-[hsl(206_64%_49%)]/30 p-8 h-full shadow-xl shadow-[hsl(206_64%_49%)]/10">
-              <h3 className="text-2xl font-bold mb-6 text-[hsl(206_80%_65%)]">The Trek iQ Way</h3>
+              <h3 className="text-2xl font-bold mb-6 text-[hsl(206_80%_65%)]">With Trek iQ</h3>
               <ul className="space-y-4">
                 {[
-                'Comprehensive accessibility documentation in days, not months',
-                'A fraction of traditional consultant costs',
-                'Public accessibility profiles = visitor confidence',
+                'Comprehensive accessibility documentation in days',
+                'Documentation your team can maintain and update',
+                'Public accessibility profiles build visitor confidence',
                 'Dynamic profiles that grow with your venue'].
                 map((item, i) =>
                 <li key={i} className="flex items-start gap-3">
