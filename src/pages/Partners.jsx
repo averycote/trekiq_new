@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import PartnersHero from '../components/sections/PartnersHero';
 import PartnerGrid from '../components/sections/PartnerGrid';
 import PartnersCallout from '../components/sections/PartnersCallout';
+import CommunityEngagement from '../components/sections/CommunityEngagement';
 
 export default function Partners() {
   return (
@@ -12,6 +13,7 @@ export default function Partners() {
       <main>
         <PartnersHero />
         <PartnerGrid />
+        <CommunityEngagement />
         <PartnersCallout />
       </main>
       <Footer />
