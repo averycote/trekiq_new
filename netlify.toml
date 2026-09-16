@@ -1,0 +1,7 @@
+# Client-side routing fallback so deep links such as /news/<slug> and
+# /admin/news resolve to the SPA. Serverless functions are matched earlier in
+# the request chain, so the /api/* routes are unaffected.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

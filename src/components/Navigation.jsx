@@ -69,6 +69,9 @@ export default function Navigation() {
             <Link to="/sample-audit" className="text-sm hover:text-white transition text-[hsl(var(--secondary))]">See It In Action
 
             </Link>
+            <Link to="/news" className="text-sm hover:text-white transition text-[hsl(var(--secondary))]">News
+
+            </Link>
           </div>
 
           {/* CTA Button */}
@@ -104,6 +107,7 @@ export default function Navigation() {
             <Link to="/partners" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">Partners</Link>
             <Link to="/faq" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">FAQ</Link>
             <Link to="/sample-audit" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">See It In Action</Link>
+            <Link to="/news" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">News</Link>
             <Link
             to="/book-demo"
             className="block px-4 py-2 text-white rounded font-semibold text-center"

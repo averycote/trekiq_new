@@ -88,3 +88,78 @@
     @apply bg-background text-foreground;
   }
 }
+/* Typography for newsroom post bodies written in the admin editor. */
+.news-prose {
+  @apply text-lg leading-relaxed text-foreground;
+}
+
+.news-prose > * + * {
+  @apply mt-5;
+}
+
+.news-prose h1 {
+  @apply mt-10 text-3xl font-bold text-primary;
+}
+
+.news-prose h2 {
+  @apply mt-10 text-2xl font-bold text-primary;
+}
+
+.news-prose h3 {
+  @apply mt-8 text-xl font-semibold text-primary;
+}
+
+.news-prose a {
+  @apply font-medium text-[hsl(206_64%_49%)] underline underline-offset-2;
+}
+
+.news-prose strong {
+  @apply font-semibold text-primary;
+}
+
+.news-prose ul {
+  @apply list-disc space-y-2 pl-6;
+}
+
+.news-prose ol {
+  @apply list-decimal space-y-2 pl-6;
+}
+
+.news-prose blockquote {
+  @apply border-l-4 border-[hsl(206_64%_49%)] pl-5 italic text-muted-foreground;
+}
+
+.news-prose img {
+  @apply rounded-xl border border-border;
+}
+
+.news-prose hr {
+  @apply border-border;
+}
+
+.news-prose iframe,
+.news-prose .ql-video {
+  @apply aspect-video w-full rounded-xl border border-border;
+}
+
+/* Rich text editor shell, themed to match the rest of the admin UI. */
+.news-editor .ql-toolbar.ql-snow,
+.news-editor .ql-container.ql-snow {
+  @apply border-input;
+}
+
+.news-editor .ql-toolbar.ql-snow {
+  @apply rounded-t-lg bg-muted;
+}
+
+.news-editor .ql-container.ql-snow {
+  @apply rounded-b-lg bg-card;
+}
+
+.news-editor .ql-editor {
+  @apply min-h-[320px] text-base leading-relaxed text-foreground;
+}
+
+.news-editor .ql-editor.ql-blank::before {
+  @apply not-italic text-muted-foreground;
+}

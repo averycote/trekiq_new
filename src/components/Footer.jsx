@@ -23,6 +23,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm">
+              <li><Link to="/news" className="hover:opacity-80">News &amp; Press</Link></li>
               <li><Link to="/partners" className="hover:opacity-80">Partners</Link></li>
               <li><Link to="/faq" className="hover:opacity-80">FAQ</Link></li>
               <li><a href="mailto:hello@trekiq.ca" className="hover:opacity-80">Contact</a></li>
