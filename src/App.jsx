@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import ScrollToTop from '@/components/ScrollToTop';
+import IdentityCallbackHandler from '@/components/IdentityCallbackHandler';
 // Add page imports here
 import Home from './pages/Home';
 import WhyVerify from './pages/WhyVerify';
@@ -18,6 +19,9 @@ import Mice from './pages/markets/Mice';
 import Churches from './pages/markets/Churches';
 import IndependentHotels from './pages/markets/IndependentHotels';
 import HealthAdjacent from './pages/markets/HealthAdjacent';
+import News from './pages/News';
+import NewsPost from './pages/NewsPost';
+import AdminNews from './pages/AdminNews';
 
 const AuthenticatedApp = () => {
   const { isLoadingPublicSettings } = useAuth();
@@ -34,6 +38,7 @@ const AuthenticatedApp = () => {
   return (
     <>
       <ScrollToTop />
+      <IdentityCallbackHandler />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/why-verify" element={<WhyVerify />} />
@@ -47,6 +52,9 @@ const AuthenticatedApp = () => {
         <Route path="/markets/churches" element={<Churches />} />
         <Route path="/markets/independent-hotels" element={<IndependentHotels />} />
         <Route path="/markets/health-adjacent" element={<HealthAdjacent />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/news/:slug" element={<NewsPost />} />
+        <Route path="/admin/news" element={<AdminNews />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
