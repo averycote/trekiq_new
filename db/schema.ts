@@ -11,7 +11,7 @@ export const newsPosts = pgTable(
     title: text().notNull(),
     // URL segment used by /news/:slug. Unique so links stay stable.
     slug: text().notNull().unique(),
-    // "press-release" | "company-update" | "product" | "announcement"
+    // "press-release" | "company-update" | "product" | "announcement" | "blog-post"
     category: text().notNull().default("company-update"),
     excerpt: text().notNull().default(""),
     // Rich text (HTML) produced by the editor.

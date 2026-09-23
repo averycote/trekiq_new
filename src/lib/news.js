@@ -2,7 +2,8 @@ export const NEWS_CATEGORIES = [
   { value: 'press-release', label: 'Press Release' },
   { value: 'company-update', label: 'Company Update' },
   { value: 'product', label: 'Product News' },
-  { value: 'announcement', label: 'Announcement' }];
+  { value: 'announcement', label: 'Announcement' },
+  { value: 'blog-post', label: 'Blog Post' }];
 
 
 export function categoryLabel(value) {
