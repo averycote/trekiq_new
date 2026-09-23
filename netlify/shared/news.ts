@@ -5,6 +5,7 @@ export const CATEGORIES = [
   "company-update",
   "product",
   "announcement",
+  "blog-post",
 ] as const;
 
 export const STATUSES = ["draft", "published"] as const;
