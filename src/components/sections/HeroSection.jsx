@@ -1,234 +1,68 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, MapPin, Accessibility, Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import DemoCTA from '@/components/DemoCTA';
+import PromoVideo from '@/components/PromoVideo';
 
 const ease = [0.22, 1, 0.36, 1];
 
+const reassurances = ['30 minutes or less', 'Just a phone', 'Guided, no expertise needed'];
+
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-[hsl(210_100%_12%)] text-white">
-      {/* Gradient mesh background - heavy blurs hidden on mobile for performance */}
-      <div className="absolute inset-0">
-        <div className="hidden lg:block absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full bg-[hsl(206_64%_49%)] opacity-20 blur-[120px]" />
-        <div className="hidden lg:block absolute bottom-[-20%] right-[-5%] w-[500px] h-[500px] rounded-full bg-[hsl(206_80%_60%)] opacity-15 blur-[100px]" />
-        <div className="hidden lg:block absolute top-[30%] left-[40%] w-[400px] h-[400px] rounded-full bg-[hsl(210_100%_20%)] opacity-30 blur-[80px]" />
-        <div className="lg:hidden absolute inset-0 bg-gradient-to-br from-[hsl(206_64%_49%)]/15 to-transparent" />
-      </div>
-
-      {/* Grid overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)',
-          backgroundSize: '48px 48px'
-        }} />
-      
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Content */}
-          <div className="space-y-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease }}>
-              
-              
-
-
-              
-              <h1 className="text-4xl lg:text-6xl font-bold leading-[1.1] mb-6 tracking-tight">
-                Help every visitor understand what to expect{' '}
-                <span className="bg-gradient-to-r from-[hsl(206_64%_49%)] to-[hsl(206_80%_65%)] bg-clip-text text-transparent">
-                  before they arrive.
-                </span>
-              </h1>
-              <p className="text-lg lg:text-xl text-white/70 leading-relaxed max-w-xl">
-                Trek iQ helps organizations confidently document, improve, and communicate the accessibility of their physical spaces, replacing fragmented reporting with photo-backed profiles that build trust and drive participation.
-              </p>
-            </motion.div>
-
-            {/* CTAs */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2, ease }}>
-              
-              <Link to="/book-demo">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto h-12 px-8 font-semibold rounded-xl text-white flex items-center justify-center gap-2 transition-transform hover:scale-[1.03] shadow-lg shadow-[hsl(206_64%_49%)]/30"
-                  style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
-                  Book a Demo
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
-              </Link>
-              <Link to="/sample-audit">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto h-12 px-8 font-semibold rounded-xl bg-white/5 text-white border border-white/15 hover:bg-white/10 backdrop-blur-sm transition-transform hover:scale-[1.03]">
-                  See an Accessibility Profile
-                </Button>
-              </Link>
-            </motion.div>
-
-            {/* Key Stat */}
-            <motion.div
-              className="flex items-center gap-5 pt-6 border-t border-white/10"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.35, ease }}>
-              
-              <div className="text-5xl font-bold bg-gradient-to-br from-[hsl(206_64%_49%)] to-[hsl(206_80%_65%)] bg-clip-text text-transparent">
-                86%
-              </div>
-              <p className="text-sm text-white/60 leading-snug max-w-xs">
-                of people with disabilities avoided a new venue last year due to lack of accessible information.
-              </p>
-            </motion.div>
-          </div>
-
-          {/* Right: Map-centric visual */}
+    <section id="hero" className="relative overflow-hidden bg-[hsl(var(--cream))]">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-14 sm:pt-10 lg:pt-16 lg:pb-24">
+        {/* DOM order is headline -> video -> details so phones see the video
+            above the fold; on desktop the video spans both rows on the right. */}
+        <div className="grid lg:grid-cols-12 gap-x-12 gap-y-6 lg:gap-y-0 items-center">
           <motion.div
-            className="relative hidden lg:block"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.15, ease }}>
-            
-            <MapVisual />
+            className="lg:col-span-6 xl:col-span-5 lg:row-start-1 lg:self-end"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease }}>
+            <h1 className="text-[2.1rem] sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.05] tracking-tight text-[hsl(var(--primary))] lg:mb-5">
+              Audit your space in 30 minutes.{' '}
+              <span className="text-[hsl(var(--secondary))]">With just a phone.</span>
+            </h1>
+          </motion.div>
+
+          <motion.div
+            className="lg:col-span-6 xl:col-span-7 lg:col-start-7 xl:col-start-6 lg:row-start-1 lg:row-span-2"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1, ease }}>
+            <PromoVideo />
+          </motion.div>
+
+          <motion.div
+            className="lg:col-span-6 xl:col-span-5 lg:row-start-2 lg:self-start"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15, ease }}>
+            <p className="text-lg text-[hsl(var(--muted-foreground))] leading-relaxed mb-7 max-w-xl">
+              Trek iQ is a copilot for accessibility. A guided walk-through shows how people with disabilities and their families use, move through and access your space, and where they run into friction. Then you get a plan to fix it, the funding to pay for it, and a public profile so visitors know what to expect.
+            </p>
+
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 mb-5">
+              <DemoCTA location="hero" />
+              <Link
+                to="/sample-audit"
+                className="inline-flex h-12 items-center justify-center whitespace-nowrap rounded-xl px-6 font-semibold text-[hsl(var(--primary))] bg-white ring-1 ring-[hsl(var(--border))] transition hover:ring-[hsl(var(--secondary))]/50">
+                See a sample profile
+              </Link>
+            </div>
+
+            <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-[hsl(var(--muted-foreground))]">
+              {reassurances.map((item) =>
+              <li key={item} className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-[hsl(var(--secondary))]" aria-hidden="true" />
+                  {item}
+                </li>
+              )}
+            </ul>
           </motion.div>
         </div>
       </div>
     </section>);
-
-}
-
-function MapVisual() {
-  return (
-    <div className="relative w-full aspect-square max-w-lg mx-auto">
-      {/* Glass map container */}
-      <div className="absolute inset-0 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 shadow-2xl overflow-hidden">
-        {/* Stylized map SVG */}
-        <svg viewBox="0 0 400 400" className="w-full h-full">
-          <defs>
-            <linearGradient id="mapBg" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="hsl(206 64% 49%)" stopOpacity="0.08" />
-              <stop offset="100%" stopColor="hsl(210 100% 12%)" stopOpacity="0.02" />
-            </linearGradient>
-            <linearGradient id="road" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="hsl(206 64% 49%)" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="hsl(206 64% 49%)" stopOpacity="0.1" />
-            </linearGradient>
-          </defs>
-
-          <rect width="400" height="400" fill="url(#mapBg)" />
-
-          {/* Water body */}
-          <path
-            d="M 0 280 Q 100 260 200 290 T 400 270 L 400 400 L 0 400 Z"
-            fill="hsl(206 64% 49%)"
-            fillOpacity="0.08" />
-          
-
-          {/* Roads */}
-          <path d="M 50 0 L 80 400" stroke="url(#road)" strokeWidth="3" fill="none" />
-          <path d="M 0 120 L 400 100" stroke="url(#road)" strokeWidth="3" fill="none" />
-          <path d="M 150 0 L 180 250 L 160 400" stroke="url(#road)" strokeWidth="2" fill="none" />
-          <path d="M 0 200 Q 200 180 400 210" stroke="url(#road)" strokeWidth="2" fill="none" />
-          <path d="M 280 0 L 300 400" stroke="url(#road)" strokeWidth="2.5" fill="none" />
-
-          {/* Blocks */}
-          {[
-          [100, 30, 40, 35], [100, 80, 40, 30], [100, 140, 40, 30],
-          [200, 30, 60, 40], [200, 90, 60, 40], [200, 145, 60, 30],
-          [330, 30, 50, 35], [330, 85, 50, 35], [330, 145, 50, 30],
-          [100, 225, 50, 40], [100, 280, 50, 40],
-          [200, 230, 60, 35], [200, 285, 60, 35],
-          [330, 225, 50, 35], [330, 285, 50, 35]].
-          map((b, i) =>
-          <rect
-            key={i}
-            x={b[0]} y={b[1]} width={b[2]} height={b[3]}
-            fill="white" fillOpacity="0.04"
-            rx="3" />
-
-          )}
-
-          {/* Accessibility markers */}
-          {[
-          { x: 120, y: 100, delay: 0 },
-          { x: 230, y: 70, delay: 0.3 },
-          { x: 350, y: 110, delay: 0.6 },
-          { x: 120, y: 260, delay: 0.9 },
-          { x: 230, y: 300, delay: 1.2 },
-          { x: 350, y: 260, delay: 1.5 }].
-          map((pin, i) =>
-          <motion.g
-            key={i}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: 0.5 + pin.delay * 0.15, ease }}>
-            
-              <circle
-              cx={pin.x} cy={pin.y} r="14"
-              fill="hsl(206 64% 49%)" fillOpacity="0.2" />
-            
-              <circle cx={pin.x} cy={pin.y} r="8" fill="hsl(206 64% 49%)" />
-              <circle cx={pin.x} cy={pin.y} r="3" fill="white" />
-            </motion.g>
-          )}
-        </svg>
-      </div>
-
-      {/* Floating glassmorphism profile card 1 */}
-      <motion.div
-        className="absolute -top-6 -left-6 w-56 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-4 shadow-xl"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1.2, ease }}>
-        
-        <div className="flex items-center gap-2 mb-2">
-          <div className="w-8 h-8 rounded-lg bg-[hsl(206_64%_49%)] flex items-center justify-center">
-            <MapPin className="w-4 h-4 text-white" />
-          </div>
-          <span className="text-sm font-semibold text-white">Harbour Hotel</span>
-        </div>
-        <div className="flex items-center gap-1 mb-2">
-          {[1, 2, 3, 4, 5].map((s) =>
-          <Star key={s} className="w-3 h-3 text-[hsl(206_64%_49%)]" fill="currentColor" />
-          )}
-          <span className="text-xs text-white/60 ml-1">Accessible</span>
-        </div>
-        <p className="text-xs text-white/60">Step-free entry · Accessible parking · Audio loops</p>
-      </motion.div>
-
-      {/* Floating glassmorphism profile card 2 */}
-      <motion.div
-        className="absolute -bottom-6 -right-6 w-52 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-4 shadow-xl"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1.5, ease }}>
-        
-        <div className="flex items-center gap-2 mb-2">
-          <div className="w-8 h-8 rounded-lg bg-[hsl(206_64%_49%)] flex items-center justify-center">
-            <Accessibility className="w-4 h-4 text-white" />
-          </div>
-          <span className="text-sm font-semibold text-white">Waterfront Park</span>
-        </div>
-        <div className="space-y-1">
-          <div className="flex items-center justify-between">
-            <span className="text-xs text-white/60">Mobility</span>
-            <span className="text-xs font-semibold text-[hsl(206_80%_65%)]">98%</span>
-          </div>
-          <div className="flex items-center justify-between">
-            <span className="text-xs text-white/60">Sensory</span>
-            <span className="text-xs font-semibold text-[hsl(206_80%_65%)]">94%</span>
-          </div>
-        </div>
-      </motion.div>
-    </div>);
-
 }

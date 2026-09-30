@@ -1,122 +1,107 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import DemoCTA from '@/components/DemoCTA';
+
+const marketLinks = [
+{ label: 'Tourism attractions', path: '/markets/tourism' },
+{ label: 'Event & conference venues', path: '/markets/mice' },
+{ label: 'Independent hotels', path: '/markets/independent-hotels' },
+{ label: 'Churches & faith spaces', path: '/markets/churches' },
+{ label: 'Clinics & health', path: '/markets/health-adjacent' }];
+
+const mainLinks = [
+{ label: 'Sample profile', path: '/sample-audit' },
+{ label: 'Our approach', path: '/why-verify' },
+{ label: 'Partners', path: '/partners' },
+{ label: 'FAQ', path: '/faq' },
+{ label: 'News', path: '/news' }];
+
+const linkClass = ({ isActive }) =>
+`text-sm font-medium transition hover:text-[hsl(var(--secondary))] ${isActive ? 'text-[hsl(var(--secondary))]' : 'text-[hsl(var(--primary))]'}`;
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [marketsOpen, setMarketsOpen] = useState(false);
 
-  const marketLinks = [
-  { label: 'Tourism Attractions', path: '/markets/tourism' },
-  { label: 'MICE Venues', path: '/markets/mice' },
-  { label: 'Churches', path: '/markets/churches' },
-  { label: 'Independent Hotels', path: '/markets/independent-hotels' },
-  { label: 'Health Adjacent', path: '/markets/health-adjacent' }];
-
-
   return (
-    <nav className="sticky top-0 z-50 bg-[hsl(210_100%_12%)]/80 backdrop-blur-lg border-b border-white/10">
+    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-[hsl(var(--border))]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="font-bold text-xl text-[hsl(var(--secondary))]">Trek iQ</Link>
+          <Link to="/" className="font-extrabold text-xl tracking-tight text-[hsl(var(--primary))]">
+            Trek <span className="text-[hsl(var(--secondary))]">iQ</span>
+          </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8 text-[hsl(var(--ring))]">
-            <Link to="/" className="text-sm hover:text-white transition text-[hsl(var(--secondary))]">Home
-
-            </Link>
-            <Link to="/why-verify" className="text-sm hover:text-white transition text-[hsl(var(--secondary))]">Our Approach
-
-            </Link>
-
-            {/* Markets Dropdown */}
+          <div className="hidden lg:flex items-center gap-7">
             <div
               className="relative"
               onMouseEnter={() => setMarketsOpen(true)}
               onMouseLeave={() => setMarketsOpen(false)}>
-              
-              <button className="flex items-center gap-1 text-sm hover:text-white transition text-[hsl(var(--secondary))]">
-                Markets
-                <ChevronDown className="w-4 h-4" />
+              <button
+                className="flex items-center gap-1 text-sm font-medium text-[hsl(var(--primary))] hover:text-[hsl(var(--secondary))] transition"
+                aria-expanded={marketsOpen}
+                aria-haspopup="true"
+                onClick={() => setMarketsOpen((open) => !open)}>
+                Who it's for
+                <ChevronDown className="w-4 h-4" aria-hidden="true" />
               </button>
               {marketsOpen &&
               <div className="absolute top-full left-0 pt-2 w-64 z-50">
-                  <div className="bg-[hsl(210_100%_12%)] backdrop-blur-xl border border-white/15 rounded-xl shadow-2xl py-2">
-                    <Link to="/markets" className="block px-4 py-2 text-sm text-white hover:bg-[hsl(206_64%_49%)]/20 transition">
-                      All Markets
-                    </Link>
-                    <div className="border-t border-white/10 my-1"></div>
+                  <div className="bg-white border border-[hsl(var(--border))] rounded-xl shadow-xl py-2">
                     {marketLinks.map((market) =>
                   <Link
                     key={market.path}
                     to={market.path}
-                    className="block px-4 py-2 text-sm text-white hover:bg-[hsl(206_64%_49%)]/20 transition">
-                    
+                    onClick={() => setMarketsOpen(false)}
+                    className="block px-4 py-2 text-sm text-[hsl(var(--primary))] hover:bg-[hsl(var(--cream))] transition">
                         {market.label}
                       </Link>
                   )}
+                    <div className="border-t border-[hsl(var(--border))] my-1" />
+                    <Link to="/markets" className="block px-4 py-2 text-sm font-semibold text-[hsl(var(--secondary))] hover:bg-[hsl(var(--cream))] transition">
+                      All sectors
+                    </Link>
                   </div>
                 </div>
               }
             </div>
-
-            <Link to="/partners" className="text-sm hover:text-white transition text-[hsl(var(--secondary))]">Partners
-
-            </Link>
-            <Link to="/faq" className="text-sm hover:text-white transition text-[hsl(var(--secondary))]">FAQ
-
-            </Link>
-            <Link to="/sample-audit" className="text-sm hover:text-white transition text-[hsl(var(--secondary))]">See It In Action
-
-            </Link>
-            <Link to="/news" className="text-sm hover:text-white transition text-[hsl(var(--secondary))]">News
-
-            </Link>
+            {mainLinks.map((link) =>
+            <NavLink key={link.path} to={link.path} className={linkClass}>{link.label}</NavLink>
+            )}
           </div>
 
-          {/* CTA Button */}
-          <Link
-            to="/book-demo"
-            className="hidden md:inline-block px-6 py-2 text-white rounded-xl font-semibold hover:opacity-90 transition shadow-lg shadow-[hsl(206_64%_49%)]/20"
-            style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
-            Book a Demo
-          </Link>
+          <DemoCTA location="nav" label="Book a demo" size="sm" className="hidden lg:inline-flex" />
 
-          {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="lg:hidden p-2 -mr-2 text-[hsl(var(--primary))]"
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileOpen}
             onClick={() => setMobileOpen(!mobileOpen)}>
-            {mobileOpen ? <X /> : <Menu className="text-[hsl(var(--muted-foreground))]" />}
+            {mobileOpen ? <X /> : <Menu />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {mobileOpen &&
-        <div className="md:hidden pb-4 space-y-1 bg-[hsl(210_100%_12%)]">
-            <Link to="/" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">Home</Link>
-            <Link to="/why-verify" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">Our Approach</Link>
-            <div className="px-4 py-2">
-              <p className="text-sm font-semibold text-[hsl(206_80%_65%)] mb-1">Markets</p>
-              <Link to="/markets" className="block px-2 py-2 text-sm text-white hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">All Markets</Link>
-              {marketLinks.map((market) =>
-            <Link key={market.path} to={market.path} className="block px-2 py-2 text-sm text-white hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">
-                  {market.label}
-                </Link>
-            )}
+        <div className="lg:hidden pb-5 space-y-1">
+            <p className="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider text-[hsl(var(--muted-foreground))]">Who it's for</p>
+            {marketLinks.map((market) =>
+          <Link key={market.path} to={market.path} className="block px-3 py-2 text-[hsl(var(--primary))] hover:bg-[hsl(var(--cream))] rounded-lg">
+                {market.label}
+              </Link>
+          )}
+            <div className="border-t border-[hsl(var(--border))] my-2" />
+            {mainLinks.map((link) =>
+          <Link key={link.path} to={link.path} className="block px-3 py-2 text-[hsl(var(--primary))] hover:bg-[hsl(var(--cream))] rounded-lg">
+                {link.label}
+              </Link>
+          )}
+            <div className="pt-3">
+              <DemoCTA location="nav_mobile" className="w-full" />
             </div>
-            <Link to="/partners" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">Partners</Link>
-            <Link to="/faq" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">FAQ</Link>
-            <Link to="/sample-audit" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">See It In Action</Link>
-            <Link to="/news" className="block px-4 py-2.5 text-white text-base hover:bg-[hsl(206_64%_49%)]/20 rounded-lg">News</Link>
-            <Link
-            to="/book-demo"
-            className="block px-4 py-2 text-white rounded font-semibold text-center"
-            style={{ backgroundColor: 'hsl(206 64% 49%)' }}>
-              Book a Demo
-            </Link>
           </div>
         }
       </div>
     </nav>);
-
 }

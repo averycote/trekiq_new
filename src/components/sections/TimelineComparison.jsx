@@ -11,7 +11,7 @@ export default function TimelineComparison() {
       <div className="max-w-6xl mx-auto">
         <Reveal className="mb-16">
           <h2 className="text-4xl font-bold text-primary text-center mb-4">
-            Today vs. With Trek iQ
+            Without a profile vs. with Trek iQ
           </h2>
         </Reveal>
 
@@ -23,23 +23,23 @@ export default function TimelineComparison() {
             transition={{ duration: 0.5, ease }}
           >
             <Card className="p-8 bg-white h-full">
-              <h3 className="text-2xl font-bold text-primary mb-6">Today</h3>
+              <h3 className="text-2xl font-bold text-primary mb-6">Without a profile</h3>
               <div className="space-y-6">
                 <div>
-                  <div className="text-sm font-semibold text-muted-foreground mb-2">Month 1-2</div>
-                  <p className="text-foreground">Engage an accessibility consultant</p>
+                  <div className="text-sm font-semibold text-muted-foreground mb-2">Before the visit</div>
+                  <p className="text-foreground">Visitors and their families can't find clear accessibility information</p>
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-muted-foreground mb-2">Month 2-4</div>
-                  <p className="text-foreground">Schedule and complete a site assessment</p>
+                  <div className="text-sm font-semibold text-muted-foreground mb-2">Your team</div>
+                  <p className="text-foreground">Staff answer the same questions by phone and email</p>
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-muted-foreground mb-2">Month 4-6</div>
-                  <p className="text-foreground">Receive a static compliance report</p>
+                  <div className="text-sm font-semibold text-muted-foreground mb-2">The decision</div>
+                  <p className="text-foreground">Many people choose somewhere else rather than risk it</p>
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-muted-foreground mb-2">Ongoing</div>
-                  <p className="text-foreground">Documentation goes outdated with no public visibility</p>
+                  <p className="text-foreground">Improvements you've already made go unseen</p>
                 </div>
               </div>
             </Card>

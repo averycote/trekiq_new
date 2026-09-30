@@ -25,6 +25,7 @@
     --ring: 206 64% 49%;
     --teal: 206 64% 49%;
     --amber: 37 92% 65%;
+    --cream: 36 45% 94%;
     --chart-1: 206 64% 49%;
     --chart-2: 208 72% 36%;
     --chart-3: 210 100% 12%;
@@ -85,7 +86,11 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
 /* Typography for newsroom post bodies written in the admin editor. */

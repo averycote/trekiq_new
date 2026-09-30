@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Trek iQ</h3>
             <p className="text-sm opacity-90">
-              An Accessibility Documentation Platform. Help every visitor understand what to expect before they arrive.
+              The copilot for accessibility. Audit your space in 30 minutes with just a phone, then get a plan to fix it and the funding to pay for it.
             </p>
           </div>
           <div>
