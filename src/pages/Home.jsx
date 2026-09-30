@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import HeroSection from '../components/sections/HeroSection';
 import SocialProof from '../components/sections/SocialProof';
 import StatBand from '../components/sections/StatBand';
+import StatementBand from '../components/sections/StatementBand';
 import ComparisonSection from '../components/sections/ComparisonSection';
 import HowItWorks from '../components/sections/HowItWorks';
 import MarketSegments from '../components/sections/MarketSegments';
@@ -20,6 +21,7 @@ export default function Home() {
         <SocialProof />
         <StatBand />
         <ComparisonSection />
+        <StatementBand />
         <HowItWorks />
         <MarketSegments />
         <Objections />

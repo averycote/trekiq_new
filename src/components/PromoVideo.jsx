@@ -5,7 +5,7 @@ import { trackEvent } from '@/lib/track';
 // Autoplays muted (the only way browsers allow autoplay), with a clear
 // "tap for sound" prompt. Visitors who prefer reduced motion get a play button
 // instead of autoplay.
-export default function PromoVideo() {
+export default function PromoVideo({ className = 'overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl shadow-[hsl(210_100%_12%_/_0.15)] ring-1 ring-[hsl(210_100%_12%_/_0.1)]' }) {
   const videoRef = useRef(null);
   const [muted, setMuted] = useState(true);
   const [playing, setPlaying] = useState(false);
@@ -44,7 +44,7 @@ export default function PromoVideo() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden rounded-2xl sm:rounded-3xl bg-[hsl(var(--cream))] shadow-2xl shadow-[hsl(210_100%_12%)]/15 ring-1 ring-[hsl(210_100%_12%)]/10">
+    <div className={`relative w-full bg-[#f5efe6] ${className}`}>
       <video
         ref={videoRef}
         className="block w-full aspect-video"
@@ -64,7 +64,7 @@ export default function PromoVideo() {
       {!playing &&
       <button
         onClick={play}
-        className="absolute inset-0 flex items-center justify-center bg-[hsl(210_100%_12%)]/20 transition hover:bg-[hsl(210_100%_12%)]/30"
+        className="absolute inset-0 flex items-center justify-center bg-[hsl(210_100%_12%_/_0.2)] transition hover:bg-[hsl(210_100%_12%_/_0.3)]"
         aria-label={ended ? 'Replay video' : 'Play video'}>
           <span className="flex items-center gap-2 rounded-full bg-white px-5 py-3 font-semibold text-[hsl(var(--primary))] shadow-xl">
             {ended ? <RotateCcw className="w-5 h-5" /> : <Play className="w-5 h-5" fill="currentColor" />}
@@ -76,14 +76,14 @@ export default function PromoVideo() {
       {playing &&
       <button
         onClick={toggleSound}
-        className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-[hsl(210_100%_12%)]/85 px-4 py-2 text-sm font-semibold text-white backdrop-blur transition hover:bg-[hsl(210_100%_12%)]"
+        className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-[hsl(210_100%_12%_/_0.85)] px-4 py-2 text-sm font-semibold text-white backdrop-blur transition hover:bg-[hsl(210_100%_12%)]"
         aria-label={muted ? 'Turn sound on' : 'Mute video'}>
           {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
           {muted ? 'Tap for sound' : 'Sound on'}
         </button>
       }
 
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-[hsl(210_100%_12%)]/10" aria-hidden="true">
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-[hsl(210_100%_12%_/_0.1)]" aria-hidden="true">
         <div className="h-full bg-[hsl(var(--secondary))] transition-[width] duration-200" style={{ width: `${progress * 100}%` }} />
       </div>
     </div>

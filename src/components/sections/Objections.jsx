@@ -31,22 +31,21 @@ const questions = [
 
 export default function Objections() {
   return (
-    <section className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[hsl(var(--cream))]">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10">
-        <Reveal className="lg:col-span-4">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[hsl(var(--secondary))] mb-3">Questions</p>
-          <h2 className="text-3xl lg:text-4xl font-bold text-[hsl(var(--primary))] mb-4">
+    <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="max-w-3xl mx-auto">
+        <Reveal className="text-center mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold tracking-tight text-[hsl(var(--ink))]">
             What people ask us first
           </h2>
         </Reveal>
-        <div className="lg:col-span-8">
-          <Accordion type="single" collapsible className="rounded-2xl bg-white px-6 ring-1 ring-[hsl(var(--border))]">
+        <div>
+          <Accordion type="single" collapsible className="border-t border-[hsl(var(--border))]">
             {questions.map((item, idx) =>
-            <AccordionItem key={item.q} value={`item-${idx}`} className={idx === questions.length - 1 ? 'border-b-0' : ''}>
-                <AccordionTrigger className="text-left text-base lg:text-lg font-semibold text-[hsl(var(--primary))] hover:no-underline">
+            <AccordionItem key={item.q} value={`item-${idx}`}>
+                <AccordionTrigger className="py-6 text-left text-lg lg:text-xl font-bold text-[hsl(var(--ink))] hover:no-underline">
                   {item.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-base text-[hsl(var(--muted-foreground))] leading-relaxed">
+                <AccordionContent className="text-base lg:text-lg text-[hsl(var(--muted-foreground))] leading-relaxed">
                   {item.a}
                 </AccordionContent>
               </AccordionItem>

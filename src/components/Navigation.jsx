@@ -18,17 +18,17 @@ const mainLinks = [
 { label: 'News', path: '/news' }];
 
 const linkClass = ({ isActive }) =>
-`text-sm font-medium transition hover:text-[hsl(var(--secondary))] ${isActive ? 'text-[hsl(var(--secondary))]' : 'text-[hsl(var(--primary))]'}`;
+`text-[15px] font-semibold transition hover:text-[hsl(var(--secondary))] ${isActive ? 'text-[hsl(var(--secondary))]' : 'text-[hsl(var(--ink))]'}`;
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [marketsOpen, setMarketsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-[hsl(var(--border))]">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-lg border-b border-[hsl(var(--border))]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link to="/" className="font-extrabold text-xl tracking-tight text-[hsl(var(--primary))]">
+        <div className="flex justify-between items-center h-20">
+          <Link to="/" className="font-extrabold text-2xl tracking-tight text-[hsl(var(--ink))]">
             Trek <span className="text-[hsl(var(--secondary))]">iQ</span>
           </Link>
 
@@ -39,7 +39,7 @@ export default function Navigation() {
               onMouseEnter={() => setMarketsOpen(true)}
               onMouseLeave={() => setMarketsOpen(false)}>
               <button
-                className="flex items-center gap-1 text-sm font-medium text-[hsl(var(--primary))] hover:text-[hsl(var(--secondary))] transition"
+                className="flex items-center gap-1 text-[15px] font-semibold text-[hsl(var(--ink))] hover:text-[hsl(var(--secondary))] transition"
                 aria-expanded={marketsOpen}
                 aria-haspopup="true"
                 onClick={() => setMarketsOpen((open) => !open)}>
@@ -71,7 +71,7 @@ export default function Navigation() {
             )}
           </div>
 
-          <DemoCTA location="nav" label="Book a demo" size="sm" className="hidden lg:inline-flex" />
+          <DemoCTA location="nav" label="Book a demo" size="sm" variant="dark" className="hidden lg:inline-flex" />
 
           <button
             className="lg:hidden p-2 -mr-2 text-[hsl(var(--primary))]"

@@ -15,7 +15,7 @@
     --secondary: 206 64% 49%;
     --secondary-foreground: 0 0% 100%;
     --muted: 210 30% 92%;
-    --muted-foreground: 210 30% 35%;
+    --muted-foreground: 213 6% 38%;
     --accent: 206 64% 49%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
@@ -25,7 +25,9 @@
     --ring: 206 64% 49%;
     --teal: 206 64% 49%;
     --amber: 37 92% 65%;
-    --cream: 36 45% 94%;
+    --cream: 0 0% 97%;
+    --ink: 213 12% 18%;
+    --hero: 206 60% 36%;
     --chart-1: 206 64% 49%;
     --chart-2: 208 72% 36%;
     --chart-3: 210 100% 12%;

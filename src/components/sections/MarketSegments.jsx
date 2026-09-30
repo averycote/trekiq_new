@@ -11,19 +11,19 @@ const audiences = [
   icon: Store,
   who: 'Businesses & organizations',
   why: 'See how visitors experience your space and what to do next.',
-  gets: ['Baseline report', 'Improvement plan', 'Matched funding', 'Public profile']
+  gets: 'Baseline report · Improvement plan · Matched funding · Public profile'
 },
 {
   icon: ClipboardCheck,
   who: 'Accessibility consultants',
   why: 'Deliver audits faster with reporting built in, and serve more clients, including smaller spaces.',
-  gets: ['Audits, billing and booking in one place', 'The same report, plan and profile for your clients']
+  gets: 'Audits, billing and booking in one place'
 },
 {
   icon: Network,
   who: 'Networks & large organizations',
   why: 'Run your own accessibility program on our technology.',
-  gets: ['Consistent audits across many sites', 'White-label option']
+  gets: 'Consistent audits across many sites · White-label option'
 }];
 
 const sectors = [
@@ -33,48 +33,48 @@ const sectors = [
 { label: 'Churches & faith spaces', path: '/markets/churches' },
 { label: 'Clinics & health', path: '/markets/health-adjacent' }];
 
+// Dark section with speech-bubble cards, in the style of the Ayro theme.
 export default function MarketSegments() {
   return (
-    <section className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-[hsl(var(--ink))] text-white">
       <div className="max-w-7xl mx-auto">
-        <Reveal className="max-w-3xl mb-12">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[hsl(var(--secondary))] mb-3">Who uses it</p>
-          <h2 className="text-3xl lg:text-4xl font-bold text-[hsl(var(--primary))] mb-4">
-            Same copilot, whoever runs the audit
-          </h2>
-          <p className="text-lg text-[hsl(var(--muted-foreground))]">
+        <Reveal className="text-center max-w-2xl mx-auto mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4">Same copilot, whoever runs the audit</h2>
+          <p className="text-lg text-white/75">
             Run it yourself, or have your accessibility consultant run it for you. Either way, you get the same report, plan, funding matches and profile.
           </p>
         </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {audiences.map(({ icon: Icon, ...a }, idx) =>
           <motion.div
             key={a.who}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.4, delay: idx * 0.08, ease }}
-            className="flex flex-col rounded-2xl p-7 ring-1 ring-[hsl(var(--border))]">
-              <Icon className="w-7 h-7 text-[hsl(var(--secondary))] mb-5" aria-hidden="true" />
-              <h3 className="text-xl font-bold text-[hsl(var(--primary))] mb-2">{a.who}</h3>
-              <p className="text-[hsl(var(--muted-foreground))] leading-relaxed mb-5">{a.why}</p>
-              <ul className="mt-auto space-y-2 border-t border-[hsl(var(--border))] pt-5">
-                {a.gets.map((g) =>
-              <li key={g} className="text-sm font-medium text-[hsl(var(--primary))]">{g}</li>
-              )}
-              </ul>
+            transition={{ duration: 0.4, delay: idx * 0.08, ease }}>
+              <div className="relative rounded-sm bg-white/10 p-8 mb-8">
+                <h3 className="text-xl font-bold mb-3">{a.who}</h3>
+                <p className="text-white/80 leading-relaxed">{a.why}</p>
+                <span className="absolute -bottom-3 left-10 h-0 w-0 border-x-[12px] border-t-[12px] border-x-transparent border-t-white/10" aria-hidden="true" />
+              </div>
+              <div className="flex items-center gap-3 pl-4">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10">
+                  <Icon className="w-5 h-5 text-white" aria-hidden="true" />
+                </span>
+                <p className="text-sm text-white/70 leading-snug">{a.gets}</p>
+              </div>
             </motion.div>
           )}
         </div>
 
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-3">
-          <span className="text-sm font-semibold text-[hsl(var(--muted-foreground))] mr-1">By sector:</span>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <span className="w-full sm:w-auto text-center text-sm font-extrabold uppercase tracking-[0.12em] text-white/70 sm:mr-2">By sector</span>
           {sectors.map((s) =>
           <Link
             key={s.path}
             to={s.path}
-            className="group inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-[hsl(var(--primary))] ring-1 ring-[hsl(var(--border))] transition hover:ring-[hsl(var(--secondary))]/50 hover:text-[hsl(var(--secondary))]">
+            className="group inline-flex items-center gap-1 rounded-full px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-inset ring-white/30 transition hover:ring-white hover:bg-white/10">
               {s.label}
               <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
             </Link>
