@@ -1,75 +1,59 @@
 import React from 'react';
-import { X, CheckCircle2 } from 'lucide-react';
+import { Smartphone, Footprints, Landmark, Eye, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Reveal from '@/components/Reveal';
 
 const ease = [0.22, 1, 0.36, 1];
 
+const advantages = [
+{
+  icon: Smartphone,
+  title: 'Every space is worth documenting',
+  body: 'A guided audit on a phone takes 30 minutes or less, so even a small space can understand how visitors experience it.'
+},
+{
+  icon: Footprints,
+  title: 'See where friction happens',
+  body: 'Understand how people with disabilities and their families experience your space, from parking to the washroom, and what to improve first.'
+},
+{
+  icon: Landmark,
+  title: 'Funding to pay for it',
+  body: 'Matched grants and funding programs, plus service providers to do the work.'
+},
+{
+  icon: Eye,
+  title: 'A profile visitors can trust',
+  body: 'Verified photos show what a visitor will actually find, not just whether there\'s a ramp.'
+}];
+
 export default function ComparisonSection() {
   return (
-    <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-[hsl(210_100%_12%)] text-white">
-      {/* Glow accents - hidden on mobile for performance */}
-      <div className="hidden lg:block absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-[hsl(206_64%_49%)] opacity-10 blur-[120px]" />
-      <div className="hidden lg:block absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-[hsl(206_80%_60%)] opacity-08 blur-[100px]" />
-
-      <div className="relative max-w-7xl mx-auto">
-        <Reveal className="text-center mb-16">
-          
-
-          
-          <h2 className="text-4xl font-bold mb-4">
-            Accessibility Documentation Reimagined
-          </h2>
-          <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            Organizations struggle to document and communicate accessibility information. Poor information creates uncertainty, increases staff workload, and limits participation. There's a better way.
+    <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <Reveal className="text-center max-w-2xl mx-auto mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold tracking-tight text-[hsl(var(--ink))] mb-4">Why Trek iQ</h2>
+          <p className="text-lg text-[hsl(var(--muted-foreground))]">
+            One flow from "where do we stand?" to "here's the fix and who pays for it."
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-14 text-center">
+          {advantages.map(({ icon: Icon, title, body }, idx) =>
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            key={title}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.5, ease }}>
-            
-            <div className="rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 h-full">
-              <h3 className="text-2xl font-bold mb-6 text-white/80">Today</h3>
-              <ul className="space-y-4">
-                {['Accessibility documentation often takes months', 'Updates require external consultants each time', 'No public-facing accessibility profile', 'Fragmented, outdated information'].map((item, i) =>
-                <li key={i} className="flex items-start gap-3">
-                    <X className="w-5 h-5 text-red-400 flex-shrink-0 mt-1" />
-                    <span className="text-white/70">{item}</span>
-                  </li>
-                )}
-              </ul>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.5, delay: 0.1, ease }}>
-            
-            <div className="rounded-2xl bg-[hsl(206_64%_49%)]/10 backdrop-blur-sm border border-[hsl(206_64%_49%)]/30 p-8 h-full shadow-xl shadow-[hsl(206_64%_49%)]/10">
-              <h3 className="text-2xl font-bold mb-6 text-[hsl(206_80%_65%)]">With Trek iQ</h3>
-              <ul className="space-y-4">
-                {[
-                'Comprehensive accessibility documentation in days',
-                'Documentation your team can maintain and update',
-                'Public accessibility profiles build visitor confidence',
-                'Dynamic profiles that grow with your venue'].
-                map((item, i) =>
-                <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-1 text-[#2dcd68]" />
-                    <span className="text-white/90">{item}</span>
-                  </li>
-                )}
-              </ul>
-            </div>
-          </motion.div>
+            transition={{ duration: 0.45, delay: idx * 0.08, ease }}
+            className="flex flex-col items-center">
+              <Icon className="w-16 h-16 text-[hsl(var(--ink))]/25 mb-7" strokeWidth={1.25} aria-hidden="true" />
+              <h3 className="text-xl font-bold text-[hsl(var(--ink))] mb-3">{title}</h3>
+              <p className="text-[hsl(var(--muted-foreground))] leading-relaxed mb-6">{body}</p>
+              <Check className="mt-auto w-7 h-7 text-[hsl(var(--secondary))]" strokeWidth={3.5} aria-hidden="true" />
+            </motion.div>
+          )}
         </div>
       </div>
     </section>);
-
 }

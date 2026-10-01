@@ -1,66 +1,55 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Check } from 'lucide-react';
 import Reveal from '@/components/Reveal';
+import DemoCTA from '@/components/DemoCTA';
+import { Phone, InViewVideo } from '@/components/DeviceFrames';
 
-const ease = [0.22, 1, 0.36, 1];
+const steps = [
+{ title: 'Onboard', description: 'Tell us a little about your space and get a link to your audit.' },
+{ title: 'Guided audit', description: 'The app walks you through step by step (entrance, doors, washrooms and more) and prompts the photos it needs. Anything that doesn\'t apply gets skipped.' },
+{ title: 'Analysis', description: 'Our computer vision reads the photos to understand how people with disabilities and their families would arrive, move through and use your space.' },
+{ title: 'Report', description: 'A clear picture of where your space works well, and where visitors are likely to run into friction.' },
+{ title: 'Improvement plan', description: 'Next steps, ordered by the difference they make for your visitors.' },
+{ title: 'Fund and fix', description: 'Matched grants and funding programs, plus service providers to do the work.' },
+{ title: 'Public profile', description: 'Visitors see what to expect before they arrive.' }];
 
 export default function HowItWorks() {
-  const steps = [
-  {
-    number: '01',
-    title: 'Document Your Space',
-    description: 'Trek iQ captures photo-backed accessibility documentation across every area of your venue: entrances, restrooms, pathways, parking, and more.'
-  },
-  {
-    number: '02',
-    title: 'Identify & Prioritize',
-    description: 'Trek iQ identifies barriers and recommends improvements, helping you plan accessibility upgrades with confidence and clarity.'
-  },
-  {
-    number: '03',
-    title: 'Communicate with Confidence',
-    description: 'Your public accessibility profile goes live, giving visitors the information they need to plan their visit with confidence.'
-  }];
-
-
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
-      <div className="max-w-7xl mx-auto">
-        <Reveal className="text-center mb-16">
-          
+    <section id="how-it-works" className="overflow-hidden py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-[hsl(var(--cream))]">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-14 items-center">
+        <div className="lg:col-span-7">
+          <Reveal className="mb-10">
+            <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-[hsl(var(--secondary))] mb-4">How it works</p>
+            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight text-[hsl(var(--ink))]">
+              One phone, one walk-through, 30 minutes or less
+            </h2>
+          </Reveal>
 
-          
-          <h2 className="text-4xl font-bold text-primary mb-4">
-            How It Works
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Three simple steps to better visitor confidence and accessibility transparency.
-          </p>
-        </Reveal>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          <div className="hidden md:block absolute top-32 left-1/4 right-1/4 h-px bg-gradient-to-r from-secondary/0 via-secondary/40 to-secondary/0" />
-
-          {steps.map((step, idx) =>
-          <motion.div
-            key={idx}
-            className="relative z-10"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.5, delay: idx * 0.15, ease }}>
-            
-              <div className="group rounded-2xl bg-white border border-border p-8 h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-[hsl(206_64%_49%)]/10 flex items-center justify-center mb-6">
-                  <span className="text-xl font-bold text-[hsl(206_64%_49%)]">{step.number}</span>
+          <ol className="grid sm:grid-cols-2 gap-x-10 gap-y-7 mb-12">
+            {steps.map((step, idx) =>
+            <li key={step.title} className="flex gap-3">
+                <Check className="mt-1 w-5 h-5 flex-shrink-0 text-[hsl(var(--secondary))]" strokeWidth={3.5} aria-hidden="true" />
+                <div>
+                  <h3 className="text-lg font-bold text-[hsl(var(--ink))] leading-snug">
+                    <span className="sr-only">Step {idx + 1}: </span>{step.title}
+                  </h3>
+                  <p className="text-[hsl(var(--muted-foreground))] leading-relaxed">{step.description}</p>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-primary">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-              </div>
-            </motion.div>
-          )}
+              </li>
+            )}
+          </ol>
+          <DemoCTA location="how_it_works" />
         </div>
+
+        <Reveal className="lg:col-span-5 flex justify-center" delay={0.1}>
+          <Phone className="w-[260px] sm:w-[300px] rotate-[4deg]">
+            <InViewVideo
+              src="/video/trekiq-vertical.mp4"
+              poster="/video/trekiq-vertical-poster.jpg"
+              startAt={12}
+              label="Trek iQ on a phone: a guided audit and its accessibility report" />
+          </Phone>
+        </Reveal>
       </div>
     </section>);
-
 }

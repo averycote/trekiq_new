@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import HeroSection from '../components/sections/HeroSection';
 import SocialProof from '../components/sections/SocialProof';
+import StatBand from '../components/sections/StatBand';
+import StatementBand from '../components/sections/StatementBand';
 import ComparisonSection from '../components/sections/ComparisonSection';
 import HowItWorks from '../components/sections/HowItWorks';
 import MarketSegments from '../components/sections/MarketSegments';
-import RiskCallout from '../components/sections/RiskCallout';
+import Objections from '../components/sections/Objections';
+import StickyDemoBar from '../components/StickyDemoBar';
 import FinalCTA from '../components/sections/FinalCTA';
 
 export default function Home() {
@@ -18,13 +19,16 @@ export default function Home() {
       <main>
         <HeroSection />
         <SocialProof />
+        <StatBand />
         <ComparisonSection />
+        <StatementBand />
         <HowItWorks />
         <MarketSegments />
-        <RiskCallout />
+        <Objections />
         <FinalCTA />
       </main>
       <Footer />
+      <StickyDemoBar />
     </div>
   );
 }
