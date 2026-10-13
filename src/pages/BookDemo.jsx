@@ -1,31 +1,56 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { CheckCircle2, Clock, Video } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { demoAgenda } from '../components/sections/FinalCTA';
-import { trackEvent } from '@/lib/track';
+import { trackEvent, getTrafficSource } from '@/lib/track';
 
 const CALENDLY_URL = 'https://calendly.com/founder-trekiq-qpue/30min';
 
+function calendlyUrl() {
+  const params = new URLSearchParams({ hide_gdpr_banner: '1', ...getTrafficSource() });
+  return `${CALENDLY_URL}?${params.toString()}`;
+}
+
 export default function BookDemo() {
+  const widgetRef = useRef(null);
+
   useEffect(() => {
-    // Load Calendly widget script once
-    if (!document.getElementById('calendly-script')) {
-      const script = document.createElement('script');
-      script.id = 'calendly-script';
-      script.src = 'https://assets.calendly.com/assets/external/widget.js';
-      script.async = true;
-      document.body.appendChild(script);
+    // The Calendly script only scans the page for widgets when it first loads.
+    // On a single-page site, coming back to this page later would leave an
+    // empty box, so we draw the widget ourselves every time the page mounts.
+    const render = () => {
+      const el = widgetRef.current;
+      if (!el || !window.Calendly) return;
+      el.innerHTML = '';
+      window.Calendly.initInlineWidget({ url: calendlyUrl(), parentElement: el });
+    };
+
+    let script = document.getElementById('calendly-script');
+    if (window.Calendly) {
+      render();
+    } else {
+      if (!script) {
+        script = document.createElement('script');
+        script.id = 'calendly-script';
+        script.src = 'https://assets.calendly.com/assets/external/widget.js';
+        script.async = true;
+        document.body.appendChild(script);
+      }
+      script.addEventListener('load', render);
     }
 
     // Calendly posts messages to the parent page; a scheduled event is the
     // conversion we care about.
     const onMessage = (e) => {
       if (e.origin !== 'https://calendly.com') return;
-      if (e.data?.event === 'calendly.event_scheduled') trackEvent('demo_booked');
+      if (e.data?.event === 'calendly.event_scheduled') trackEvent('demo_booked', getTrafficSource());
     };
     window.addEventListener('message', onMessage);
-    return () => window.removeEventListener('message', onMessage);
+    return () => {
+      script?.removeEventListener('load', render);
+      window.removeEventListener('message', onMessage);
+    };
   }, []);
 
   return (
@@ -59,8 +84,8 @@ export default function BookDemo() {
           </div>
           <div className="lg:col-span-7">
             <div
-              className="calendly-inline-widget rounded-2xl overflow-hidden bg-white shadow-xl ring-1 ring-[hsl(var(--border))]"
-              data-url={`${CALENDLY_URL}?hide_gdpr_banner=1`}
+              ref={widgetRef}
+              className="rounded-2xl overflow-hidden bg-white shadow-xl ring-1 ring-[hsl(var(--border))]"
               style={{ minWidth: '320px', height: '720px' }} />
           </div>
         </div>
